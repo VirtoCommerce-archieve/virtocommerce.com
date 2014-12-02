@@ -1,4 +1,4 @@
-virtocommerce.com
+VirtoCommerce.com
 =================
 
 Contains complete source code for Virto Commerce Public Site. 
