@@ -1,0 +1,55 @@
+/* HTML 5 elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{ 
+	display: block;
+}
+
+*
+{
+	margin: 0;
+	outline: none;
+	padding: 0;
+}
+
+html, body
+{
+	height: 100%;
+	width: 100%;
+}
+
+html
+{
+	font-size: 100%;
+
+	-webkit-text-size-adjust: 100%;
+}
+
+body
+{
+	background: #fff;
+	color: #363636;
+	font-family: 'Segoe UI';
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+/* Clearfix */
+.clearfix:after
+{
+	clear: both;
+	content: '';
+	display: block;
+	font-size: 0;
+}
+
+/* Images */
+img
+{
+	border: none;
+}
+
+/* Headings */
+h1, h2, h3
+{
+	font-weight: normal;
+}
