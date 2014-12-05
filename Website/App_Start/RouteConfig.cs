@@ -15,10 +15,10 @@ namespace VirtoCommerce
 
 			routes.MapMvcAttributeRoutes();
 
-			routes.MapRoute(
-				name: "Mail",
-				url: "mail/{action}",
-				defaults: new { controller = "Page", action = "Index" });
+			//routes.MapRoute(
+			//	name: "Mail",
+			//	url: "mail/{action}",
+			//	defaults: new { controller = "Page", action = "Index" });
 
 			routes.MapRoute(
 				name: "Default",

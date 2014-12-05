@@ -74,7 +74,8 @@
 					<a href="">Windows Azure</a>
 				</div>
 			</div>
-			<form class="subscribe">
+			<form class="subscribe" id="subscribe">
+				@Html.AntiForgeryToken()
 				<h2 class="title">Signup for news</h2>
 				<p>
 					If you want to get our lastest
@@ -82,7 +83,9 @@
 					about our product, sign up
 					for our news ...
 				</p>
-				<input type="text" placeholder="Enter email ..." class="form-input">
+				<input type="text" placeholder="Enter email ..." class="form-input" name="To">
+				<input type="hidden" value="Signup for news" name="Subject"/>
+				<input type="hidden" value="false" name="IsResend"/>
 				<input type="submit" value="Submit" class="button mini white">
 			</form>
 		</div>

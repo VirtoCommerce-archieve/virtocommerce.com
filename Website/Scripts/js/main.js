@@ -1,3 +1,8 @@
+//Формируем ссылку с учетом базовой
+$.url = function (url) {
+	return $("base").attr("href") + url.substr(1);
+}
+
 var VC = {
 
 	mobileNav: function() {
@@ -60,6 +65,42 @@ var VC = {
 }
 
 $(function () {
+	$('[type="submit"]').on('click', function (e) {
+		e.preventDefault();
+		var $form = $(this).parents('form');
+		var form = $(this).parents('form')[0];
+
+		$form.validate({
+			rules: {
+				To: {
+					email: true,
+					required: true
+				}
+			},
+			errorPlacement: function (error, element) { }
+		});
+
+		if ($form.valid()) {
+			$.ajax({
+				url: $.url('/mail/send'),
+				method: 'POST',
+				data: new FormData(form),
+				async: true,
+				cache: false,
+				processData: false,
+				contentType: false,
+				success: function (response) {
+					alert('Ok');
+				},
+				error: function (a, b, c) {
+					alert('Error');
+				}
+			});
+		}
+		else {
+			alert('Enter valid e-mail');
+		}
+	});
 
 	$('body').delegate('.mobile-btn', 'click', function () {
 		VC.mobileNav();

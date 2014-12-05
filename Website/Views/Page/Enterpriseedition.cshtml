@@ -56,16 +56,19 @@
 					we willbe in contact with you shortly
 				</p>
 			</div>
-			<div class="price-form clearfix">
+			<form class="price-form clearfix">
+				@Html.AntiForgeryToken()
+				<input type="hidden" value="Prices" name="Subject" />
+				<input type="hidden" value="true" name="IsResend" />
 				<div class="control-group">
-					<input type="text" placeholder="Full name ..." class="form-input">
-					<input type="text" placeholder="Your email ..." class="form-input">
+					<input type="text" placeholder="Full name ..." class="form-input" name="FullName">
+					<input type="text" placeholder="Your email ..." class="form-input" name="To">
 				</div>
 				<div class="control-group">
-					<textarea placeholder="Comments ..." rows="5" cols="5" id="" name="" class="form-text"></textarea>
+					<textarea placeholder="Comments ..." rows="5" cols="5" id="" name="Comment" class="form-text"></textarea>
 				</div>
-				<button class="button fill">Submit request</button>
-			</div>
+				<button class="button fill" type="submit">Submit request</button>
+			</form>
 		</div>
 	</div>
 	@Html.Partial("_LearnMorePartial")

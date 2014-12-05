@@ -110,12 +110,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Binders\MailModelBinder.cs" />
     <Compile Include="Controllers\MailController.cs" />
     <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Extensions\CssRewriteUrlTransform.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\MailModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -282,7 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Helpers\" />
     <Folder Include="Views\Mail\" />
   </ItemGroup>
   <ItemGroup>

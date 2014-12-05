@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using VirtoCommerce.Binders;
 
 namespace VirtoCommerce
 {
@@ -12,6 +13,8 @@ namespace VirtoCommerce
     {
         protected void Application_Start()
         {
+			ModelBinders.Binders[typeof(MailModelBinder)] = new MailModelBinder();
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

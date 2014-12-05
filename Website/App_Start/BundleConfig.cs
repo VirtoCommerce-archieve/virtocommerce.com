@@ -26,7 +26,9 @@ namespace VirtoCommerce
 			bundles.Add(new ScriptBundle("~/defaultJS").Include(
 					  "~/Scripts/js/main.js",
 					  "~/Scripts/js/modernizr.js",
-					  "~/Scripts/jquery-{version}.js"));
+					  "~/Scripts/jquery-{version}.js",
+					  "~/Scripts/jquery.validate.js",
+					  "~/Scripts/jquery.validate.unobtrusive.js"));
 
 			bundles.Add(new StyleBundle("~/defaultCSS").
 				Include("~/Content/css/reset.css", new CssRewriteUrlTransform()).
@@ -37,7 +39,7 @@ namespace VirtoCommerce
 
 			// Set EnableOptimizations to false for debugging. For more information,
 			// visit http://go.microsoft.com/fwlink/?LinkId=301862
-			BundleTable.EnableOptimizations = true;
+			BundleTable.EnableOptimizations = false;
 		}
 	}
 }
