@@ -128,6 +128,9 @@
     <Content Include="Content\css\main.css" />
     <Content Include="Content\css\reset.css" />
     <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\fonts\segoeui.svg" />
+    <Content Include="Content\fonts\segoeuib.svg" />
+    <Content Include="Content\fonts\seguisb.svg" />
     <Content Include="Content\images\advantages\1.jpg" />
     <Content Include="Content\images\advantages\2.jpg" />
     <Content Include="Content\images\advantages\3.jpg" />
@@ -220,6 +223,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\fonts\segoeui.eot" />
+    <Content Include="Content\fonts\segoeui.woff" />
+    <Content Include="Content\fonts\segoeuib.eot" />
+    <Content Include="Content\fonts\segoeuib.woff" />
+    <Content Include="Content\fonts\seguisb.eot" />
+    <Content Include="Content\fonts\seguisb.woff" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
