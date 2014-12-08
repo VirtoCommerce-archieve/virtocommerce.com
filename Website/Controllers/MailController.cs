@@ -16,17 +16,14 @@ namespace VirtoCommerce.Controllers
 	{
 		// GET: Mail
 		[ValidateAntiForgeryToken]
-		public ActionResult Send([ModelBinder(typeof(MailModelBinder))]MailModel model, bool isResend)
+		public ActionResult Send([ModelBinder(typeof(MailModelBinder))]MailModel model, bool isResend, string redirectUrl)
 		{
 			var username = ConfigurationManager.AppSettings["SendGridUsername"];
 			var password = ConfigurationManager.AppSettings["SendGridPassword"];
 
 			SendGridMessage message = new SendGridMessage();
-			message.AddTo(model.To);
-			if(isResend)
-			{
-				message.AddTo(ConfigurationManager.AppSettings["SupportToEmail"]);
-			}
+
+			message.AddTo(ConfigurationManager.AppSettings["SupportToEmail"]);
 			message.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"]);
 			message.Subject = model.Subject;
 			message.Text = model.MailBody;
@@ -35,7 +32,17 @@ namespace VirtoCommerce.Controllers
 			var transportWeb = new Web(credentials);
 			transportWeb.Deliver(message);
 
-			return Json(new { }, JsonRequestBehavior.DenyGet);
+			if (isResend)
+			{
+				message = new SendGridMessage();
+				message.AddTo(model.To);
+				message.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"]);
+				message.Subject = model.Subject;
+				message.Text = model.FullMailBody;
+				transportWeb.Deliver(message);
+			}
+
+			return Json(new { IsSuccess = true, RedirectUrl = redirectUrl }, JsonRequestBehavior.DenyGet);
 		}
 	}
 }

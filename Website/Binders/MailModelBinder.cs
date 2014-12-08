@@ -38,6 +38,9 @@ namespace VirtoCommerce.Binders
 
 			retVal.MailBody = builder.ToString();
 
+			builder.AppendLine(string.Format("EmailTo: {0}", form["To"]));
+			retVal.FullMailBody = builder.ToString();
+
 			return retVal;
 		}
 

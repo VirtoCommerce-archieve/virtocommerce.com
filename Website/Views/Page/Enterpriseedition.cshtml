@@ -51,7 +51,7 @@
 		<div class="responsive">
 			<div class="price-descr">
 				<p>
-					To lern more about Enterprise edition pricing,
+					To learn more about Enterprise edition pricing,
 					please completethe brief frome below and
 					we willbe in contact with you shortly
 				</p>
@@ -60,6 +60,7 @@
 				@Html.AntiForgeryToken()
 				<input type="hidden" value="Prices" name="Subject" />
 				<input type="hidden" value="true" name="IsResend" />
+				<input type="hidden" value="/thank-you-page" name="RedirectUrl" />
 				<div class="control-group">
 					<input type="text" placeholder="Full name ..." class="form-input" name="FullName">
 					<input type="text" placeholder="Your email ..." class="form-input" name="To">

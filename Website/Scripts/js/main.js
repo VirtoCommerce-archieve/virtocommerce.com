@@ -90,7 +90,12 @@ $(function () {
 				processData: false,
 				contentType: false,
 				success: function (response) {
-					alert('Ok');
+					if (Boolean(response.IsSuccess)) {
+						window.location = response.RedirectUrl;
+					}
+					else {
+						alert('Error');
+					}
 				},
 				error: function (a, b, c) {
 					alert('Error');
