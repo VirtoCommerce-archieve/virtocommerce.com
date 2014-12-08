@@ -216,6 +216,7 @@
     <Content Include="Content\images\partners\olympic.jpg" />
     <Content Include="Content\images\promise.jpg" />
     <Content Include="Content\images\schema.png" />
+    <Content Include="Content\images\technologies\AngularJS_logo.png" />
     <Content Include="Content\images\technologies\azure.jpg" />
     <Content Include="Content\images\technologies\elasticsearch.jpg" />
     <Content Include="Content\images\technologies\net.jpg" />
