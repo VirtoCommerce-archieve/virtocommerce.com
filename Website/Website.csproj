@@ -324,7 +324,7 @@
     <Content Include="Views\Page\ThankYouPartner.cshtml" />
     <Content Include="Views\Page\ThankYouContactUs.cshtml" />
     <Content Include="Views\Page\ThankYouContributor.cshtml" />
-    <Content Include="Views\Page\ThankYouNewsSingup.cshtml" />
+    <Content Include="Views\Page\ThankYouNewsSignup.cshtml" />
     <Content Include="Views\Page\ThankYouDownload.cshtml" />
   </ItemGroup>
   <ItemGroup>
