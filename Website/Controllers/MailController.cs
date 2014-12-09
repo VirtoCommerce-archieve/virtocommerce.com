@@ -30,7 +30,7 @@ namespace VirtoCommerce.Controllers
 			message.AddTo(ConfigurationManager.AppSettings["SupportToEmail"]);
 			message.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"]);
 			message.Subject = model.Subject;
-			message.Text = model.MailBody;
+			message.Text = model.FullMailBody;
 
 			var credentials = new NetworkCredential(username, password);
 			var transportWeb = new Web(credentials);
@@ -42,7 +42,11 @@ namespace VirtoCommerce.Controllers
 				message.AddTo(model.To);
 				message.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"]);
 				message.Subject = model.Subject;
-				message.Text = model.FullMailBody;
+
+				if (string.IsNullOrEmpty(model.MailBody))
+					message.Text = "Thank you";
+				else
+					message.Text = model.MailBody;
 				transportWeb.Deliver(message);
 			}
 
