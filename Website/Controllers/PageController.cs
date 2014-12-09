@@ -19,6 +19,9 @@ namespace MarketplaceWeb.Controllers
 		[Route("{pagename}")]
 		public ActionResult DisplayPage(string pageName)
 		{
+			var telemetry = new Microsoft.ApplicationInsights.TelemetryClient();
+			telemetry.TrackTrace("page request");
+
 			pageName = pageName.Replace("-", string.Empty);
 			return View(pageName);
 		}
