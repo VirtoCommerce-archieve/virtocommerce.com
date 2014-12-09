@@ -78,17 +78,13 @@
 				</div>
 			</div>
 			<form class="subscribe" id="subscribe">
+				<h2 class="title">Contact Us</h2>
+				<p class="text" style="color:#fff"><a href="mailto: sales@virtocommerce.com">sales@virtocommerce.com</a> <br><span itemprop="telephone">+1 (800) 980-5288</span></p>
 				@Html.AntiForgeryToken()
 				<h2 class="title">Signup for news</h2>
-				<p>
-					If you want to get our lastest
-					news and useful information
-					about our product, sign up
-					for our news ...
-				</p>
 				<input type="text" placeholder="Enter email ..." class="form-input" name="To">
 				<input type="hidden" value="Signup for news" name="Subject"/>
-				<input type="hidden" value="false" name="IsResend"/>
+				<input type="hidden" value="true" name="IsResend"/>
 				<input type="hidden" value="/thank-you-page" name="RedirectUrl" />
 				<input type="submit" value="Submit" class="button mini white">
 			</form>
