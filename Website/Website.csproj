@@ -320,6 +320,12 @@
     <Content Include="Views\Page\TryNowDownload.cshtml" />
     <Content Include="Views\Page\_TechnologiesPartial.cshtml" />
     <Content Include="Views\Page\_LearnMorePartial.cshtml" />
+    <Content Include="Views\Page\ThankYou.cshtml" />
+    <Content Include="Views\Page\ThankYouPartner.cshtml" />
+    <Content Include="Views\Page\ThankYouContactUs.cshtml" />
+    <Content Include="Views\Page\ThankYouContributor.cshtml" />
+    <Content Include="Views\Page\ThankYouNewsSingup.cshtml" />
+    <Content Include="Views\Page\ThankYouDownload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
