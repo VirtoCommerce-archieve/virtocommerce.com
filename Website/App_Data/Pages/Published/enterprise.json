@@ -1,0 +1,25 @@
+﻿{
+    "id": "enterpriseedition",
+    "type": "page",
+    "version": "1xjsha7",
+    "tags": [
+        "editor",
+        "github"
+    ],
+    "data": {
+        "name": {
+            "type": "Text",
+            "value": "Enterprise Edition"
+        },
+        "body": {
+            "type": "StructuredText",
+            "value": [
+                {
+                    "type": "header1",
+                    "text": "Enterprise Edition"
+                }
+            ]
+        }
+    },
+    "author": "Development Seed"
+}
