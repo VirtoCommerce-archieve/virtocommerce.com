@@ -28,13 +28,13 @@
 						<a href="http://docs.virtocommerce.com/" target="_blank" class="link-white">Documentation</a>
 					</li>
 					<li class="menu-item downloads">
-						<a href="/try-now-dowwnload" target="_blank" class="link-white">Downloads</a>
+						<a href="/try-now-download" class="link-white">Downloads</a>
 					</li>
 					<li class="menu-item code">
 						<a href="https://virtocommerce.codeplex.com/" target="_blank" class="link-white">Code repository</a>
 					</li>
 					<li class="menu-item roadmap">
-						<a href="/roadmap" target="_blank" class="link-white">Roadmap</a>
+						<a href="/roadmap" class="link-white">Roadmap</a>
 					</li>
 				</ul>
 				<ul class="menu">
@@ -79,7 +79,7 @@
 			</div>
 			<form class="subscribe" id="subscribe">
 				<h2 class="title">Contact Us</h2>
-				<p class="text" style="color:#fff"><a href="mailto: sales@virtocommerce.com">sales@virtocommerce.com</a> <br><span itemprop="telephone">+1 (800) 980-5288</span></p>
+				<p class="text"><a class="footer-text" href="mailto: sales@virtocommerce.com">sales@virtocommerce.com</a> <br><span itemprop="telephone">+1 (800) 980-5288</span></p>
 				@Html.AntiForgeryToken()
 				<h2 class="title">Signup for news</h2>
 				<input type="text" placeholder="Enter email ..." class="form-input" name="To">
@@ -88,6 +88,9 @@
 				<input type="hidden" value="/thank-you" name="RedirectUrl" />
 				<input type="submit" value="Submit" class="button mini white">
 			</form>
+		</div>
+		<div>
+			<p class="footer-text">Copyright © 2014 Virto Commerce. All rights reserved <a href="/terms" class="footer-text">Terms</a> <a href="/privacy" class="footer-text">Privacy</a></p>
 		</div>
 	</footer>
 </div>

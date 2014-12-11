@@ -33,7 +33,7 @@ namespace VirtoCommerce.Binders
 			var builder = new StringBuilder();
 			foreach (var key in allKeys)
 			{
-				builder.AppendLine(string.Format("{0}: {1}", key, form[key]));
+				builder.AppendLine(string.Format("{0}: {1} <br>", key, form[key]));
 			}
 
 			retVal.MailBody = builder.ToString();

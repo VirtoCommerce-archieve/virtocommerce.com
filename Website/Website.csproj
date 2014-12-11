@@ -148,6 +148,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Binders\MailModelBinder.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\MailController.cs" />
     <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Extensions\CssRewriteUrlTransform.cs" />
@@ -247,7 +248,7 @@
     <Content Include="Content\images\partners\olympic.jpg" />
     <Content Include="Content\images\promise.jpg" />
     <Content Include="Content\images\schema.png" />
-    <Content Include="Content\images\technologies\AngularJS_logo.png" />
+    <Content Include="Content\images\technologies\angularjs.png" />
     <Content Include="Content\images\technologies\azure.jpg" />
     <Content Include="Content\images\technologies\elasticsearch.jpg" />
     <Content Include="Content\images\technologies\net.jpg" />
@@ -271,6 +272,9 @@
     <Content Include="Content\fonts\seguisb.woff" />
     <Content Include="ApplicationInsights.config" />
     <Content Include="App_Data\Pages\Published\enterprise.json" />
+    <Content Include="Files\Feature-Guide.pdf" />
+    <Content Include="Files\Kitmall-case-study.pdf" />
+    <Content Include="Files\rtb-case-study.pdf" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -319,7 +323,7 @@
     <Content Include="Views\Page\RoadMap.cshtml" />
     <Content Include="Views\Page\TryNow.cshtml" />
     <Content Include="Views\Page\TryNowDownload.cshtml" />
-    <Content Include="Views\Page\_TechnologiesPartial.cshtml" />
+    <Content Include="Views\Shared\_TechnologiesPartial.cshtml" />
     <Content Include="Views\Page\_LearnMorePartial.cshtml" />
     <Content Include="Views\Page\ThankYou.cshtml" />
     <Content Include="Views\Page\ThankYouPartner.cshtml" />
@@ -327,6 +331,17 @@
     <Content Include="Views\Page\ThankYouContributor.cshtml" />
     <Content Include="Views\Page\ThankYouNewsSignup.cshtml" />
     <Content Include="Views\Page\ThankYouDownload.cshtml" />
+    <Content Include="Views\Page\Demo.cshtml" />
+    <Content Include="Views\Page\ThankYouDemo.cshtml" />
+    <Content Include="Views\Page\OpenSourceLicense.cshtml" />
+    <Content Include="Views\Page\RequestCommunityLicense.cshtml" />
+    <Content Include="Views\Page\ThankYouCommunityRequestLicense.cshtml" />
+    <Content Include="Views\Page\Znode.cshtml" />
+    <Content Include="Views\Page\Terms.cshtml" />
+    <Content Include="Views\Page\Privacy.cshtml" />
+    <Content Include="Views\Error\Error404.cshtml" />
+    <Content Include="Views\Error\Error500.cshtml" />
+    <Content Include="Views\Shared\_GoogleTagManagerPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Pages\Drafts\" />

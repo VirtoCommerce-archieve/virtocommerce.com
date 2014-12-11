@@ -434,6 +434,25 @@
 
 }
 
+	.brand a:first-child
+	{
+		border-right: 1px solid #e6e6e6;
+		margin: 0 10px 0 0;
+		padding: 0 10px 0 0;
+	}
+
+	.brand a {
+		display: inline-block;
+		font-size: 11px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		line-height: 15px;
+		text-decoration: none;
+		text-transform: uppercase;
+		vertical-align: top;
+	}
+
+
 	/* Enterprise block */
 	.main-enterprise
 	{
@@ -707,6 +726,8 @@
 				{
 					background-color: #fcb040;
 				}
+
+
 
 				.your-costumers .planet.marketplace,
 				.your-costumers .planet .satelite.marketplace .ico,
@@ -1942,6 +1963,11 @@
 			word-spacing: -6px;
 		}
 
+		.partner form option, .partner form select, .partner form label, .partner form button
+		{
+			word-spacing: 0px;
+		}
+
 		.partner form label
 		{
 			color: #fff;
@@ -1951,6 +1977,8 @@
 			{
 				margin: 0 20px 20px 0;
 			}
+
+
 
 		.partner .list-item
 		{
@@ -2146,6 +2174,15 @@
 			width: 220px;
 		}
 
+			.footer-text
+			{
+				word-spacing:0px;
+				color:#e6e6e6;
+				font-size: 12px;
+				font-weight: 400;
+				margin: 0 0 0 10px;
+			}
+
 			.footer-wrap .column .subscribe p
 			{
 				color: #fff;
@@ -2169,6 +2206,13 @@
 
 				-webkit-border-radius: 5px;
 						border-radius: 5px;
+			}
+
+			.footer-wrap .column .subscribe .form-input.error
+			{
+				border-color: #ea5564;
+				border-width: 1px;
+				border-style: solid;
 			}
 
 		.footer-wrap .column .title
@@ -2482,11 +2526,24 @@
 		height: 42px;
 	}
 
+	.control-group .form-input.error
+	{
+		border-width: 1px;
+		border-color: #ea5564;
+	}
+
 	.control-group .form-text
 	{
 		border-width: 1px 0 0;
 		padding-top: 7px;
 		resize: none;
+	}
+
+	.control-group .form-text.error
+	{
+		border-width: 1px;
+		border-style: solid;
+		border-color: #ea5564;
 	}
 
 	/* Lists */

@@ -77,7 +77,9 @@ $(function () {
 					required: true
 				}
 			},
-			errorPlacement: function (error, element) { }
+			errorPlacement: function (error, element) {
+				element.addClass('error');
+			}
 		});
 
 		if ($form.valid()) {
@@ -101,9 +103,6 @@ $(function () {
 					alert('Error');
 				}
 			});
-		}
-		else {
-			alert('Enter valid e-mail');
 		}
 	});
 

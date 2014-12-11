@@ -66,11 +66,11 @@
 				<input type="hidden" value="true" name="IsResend" />
 				<input type="hidden" value="/thank-you" name="RedirectUrl" />
 				<div class="control-group">
-					<input type="text" placeholder="Full name ..." class="form-input" name="FullName">
-					<input type="text" placeholder="Your email ..." class="form-input" name="To">
+					<input type="text" placeholder="Full name ..." class="form-input" name="FullName" required>
+					<input type="text" placeholder="Your email ..." class="form-input" name="To" required>
 				</div>
 				<div class="control-group">
-					<textarea placeholder="Comments ..." rows="5" cols="5" id="" name="Comment" class="form-text"></textarea>
+					<textarea placeholder="Comments ..." rows="5" cols="5" id="" name="Comment" class="form-text" required></textarea>
 				</div>
 				<button class="button fill" type="submit">Submit request</button>
 			</form>
