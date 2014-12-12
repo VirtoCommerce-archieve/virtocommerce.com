@@ -34,25 +34,32 @@ namespace VirtoCommerce.Publishing
 
         public ContentItem GetContentItem(string name)
         {
-            var path = Path.Combine(_context.SourceFolder, name);
-            // 1: Read raw contents and meta data. Determine contents format and read it into Contents property, create RawContentItem.
-            var rawItem = this.CreateRawItem(path);
-
-            // 2: Use convert engines to get html contents and create ContentItem object
-            foreach (var templateEngine in _templateEngines)
+            try
             {
-                if (templateEngine.CanProcess(rawItem.ContentType, "html"))
-                {
-                    var content = templateEngine.Process(rawItem.Content, rawItem.Settings);
-                    var page = new ContentItem
-                    {
-                        Content = content
-                    };
+                var path = Path.Combine(_context.SourceFolder, name);
+                // 1: Read raw contents and meta data. Determine contents format and read it into Contents property, create RawContentItem.
+                var rawItem = this.CreateRawItem(path);
 
-                    page.SetHeaderSettings(rawItem.Settings);
-                    page.Settings = rawItem.Settings;
-                    return page;
+                // 2: Use convert engines to get html contents and create ContentItem object
+                foreach (var templateEngine in _templateEngines)
+                {
+                    if (templateEngine.CanProcess(rawItem.ContentType, "html"))
+                    {
+                        var content = templateEngine.Process(rawItem.Content, rawItem.Settings);
+                        var page = new ContentItem
+                        {
+                            Content = content
+                        };
+
+                        page.SetHeaderSettings(rawItem.Settings);
+                        page.Settings = rawItem.Settings;
+                        return page;
+                    }
                 }
+            }
+            catch (Exception)
+            {
+                throw;
             }
 
             return null;
@@ -75,8 +82,9 @@ namespace VirtoCommerce.Publishing
 
                 return page;
             }
-            catch (Exception e)
+            catch (Exception)
             {
+                throw;
                 //Tracing.Info(String.Format("Failed to build post from File: {0}", file));
                 //Tracing.Info(e.Message);
                 //Tracing.Debug(e.ToString());
