@@ -60,6 +60,7 @@
     <Compile Include="Extensions\YamlExtensions.cs" />
     <Compile Include="ITemplateEngine.cs" />
     <Compile Include="Model\ContentItem.cs" />
+    <Compile Include="Model\ContentSite.cs" />
     <Compile Include="Model\RawContentItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiteContext.cs" />

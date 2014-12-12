@@ -23,6 +23,9 @@ namespace VirtoCommerce.Publishing
         static readonly Markdown Markdown = new Markdown();
 
         private SiteContext _context;
+        private FileSystem _fileSystem;
+
+        private Dictionary<string, object> _Config;
 
         private ITemplateEngine[] _templateEngines;
 
@@ -30,11 +33,42 @@ namespace VirtoCommerce.Publishing
         {
             _context = new SiteContext() { SourceFolder = sourceFolder };
             _templateEngines = templateEngines;
+            _fileSystem = new FileSystem();
+
+            _Config = new Dictionary<string, object>();
+            var configPath = Path.Combine(_context.SourceFolder, "config.yml");
+            if (_fileSystem.File.Exists(configPath))
+                _Config = (Dictionary<string, object>)_fileSystem.File.ReadAllText(configPath).YamlHeader(true);
         }
 
         public ContentItem GetContentItem(string name)
         {
             var path = Path.Combine(_context.SourceFolder, name);
+            return this.CreateContentItem(path, _Config);
+        }
+
+        /// <summary>
+        /// Loads all content items in the certain collection
+        /// </summary>
+        /// <param name="collectioName"></param>
+        /// <returns></returns>
+        public ContentItem[] GetCollectionContentItems(string collectioName)
+        {
+            var items = new List<ContentItem>();
+            var collectionFolder = Path.Combine(_context.SourceFolder, collectioName);
+            if (_fileSystem.Directory.Exists(collectionFolder))
+            {
+                items.AddRange(_fileSystem.Directory
+                    .GetFiles(collectionFolder, "*.*", SearchOption.AllDirectories)
+                    .Select(file => CreateContentItem(file, _Config))
+                    .Where(post => post != null)
+                );
+            }
+            return items.ToArray();
+        }
+
+        private ContentItem CreateContentItem(string path, Dictionary<string, object> config)
+        {
             // 1: Read raw contents and meta data. Determine contents format and read it into Contents property, create RawContentItem.
             var rawItem = this.CreateRawItem(path);
 
@@ -109,24 +143,23 @@ namespace VirtoCommerce.Publishing
 
         private string SafeReadContents(string file)
         {
-            var fileSystem = new FileSystem();
             try
             {
-                return fileSystem.File.ReadAllText(file);
+                return _fileSystem.File.ReadAllText(file);
             }
             catch (IOException)
             {
-                var fileInfo = fileSystem.FileInfo.FromFileName(file);
+                var fileInfo = _fileSystem.FileInfo.FromFileName(file);
                 var tempFile = Path.Combine(Path.GetTempPath(), fileInfo.Name);
                 try
                 {
                     fileInfo.CopyTo(tempFile, true);
-                    return fileSystem.File.ReadAllText(tempFile);
+                    return _fileSystem.File.ReadAllText(tempFile);
                 }
                 finally
                 {
-                    if (fileSystem.File.Exists(tempFile))
-                        fileSystem.File.Delete(tempFile);
+                    if (_fileSystem.File.Exists(tempFile))
+                        _fileSystem.File.Delete(tempFile);
                 }
             }
         }
