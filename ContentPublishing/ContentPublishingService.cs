@@ -43,6 +43,8 @@ namespace VirtoCommerce.Publishing
 
         public ContentItem GetContentItem(string name)
         {
+            try
+            {
             var path = Path.Combine(_context.SourceFolder, name);
             return this.CreateContentItem(path, _Config);
         }
@@ -87,6 +89,11 @@ namespace VirtoCommerce.Publishing
                     page.Settings = rawItem.Settings;
                     return page;
                 }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
 
             return null;
@@ -109,8 +116,9 @@ namespace VirtoCommerce.Publishing
 
                 return page;
             }
-            catch (Exception e)
+            catch (Exception)
             {
+                throw;
                 //Tracing.Info(String.Format("Failed to build post from File: {0}", file));
                 //Tracing.Info(e.Message);
                 //Tracing.Debug(e.ToString());
