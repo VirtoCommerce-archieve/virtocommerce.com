@@ -5,14 +5,14 @@ using System.Web;
 
 namespace VirtoCommerce.Helpers.Models
 {
-    public class ContentPage
+    public class ContentItem
     {
-        public ContentPage()
+        public ContentItem()
         {
             Categories = Enumerable.Empty<string>();
         }
 
-        public void SetHeaderSettings(Dictionary<string, object> settings)
+        public void SetHeaderSettings(IDictionary<string, object> settings)
         {
             foreach (var setting in settings)
             {
@@ -69,7 +69,7 @@ namespace VirtoCommerce.Helpers.Models
                     case "tags":
                     case "keywords":
                         {
-                            Keywords = (string)setting.Value;
+                            //Keywords = (string)setting.Value;
 
                             break;
                         }
