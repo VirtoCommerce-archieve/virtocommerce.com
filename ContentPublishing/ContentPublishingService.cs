@@ -43,8 +43,6 @@ namespace VirtoCommerce.Publishing
 
         public ContentItem GetContentItem(string name)
         {
-            try
-            {
             var path = Path.Combine(_context.SourceFolder, name);
             return this.CreateContentItem(path, _Config);
         }
@@ -89,11 +87,6 @@ namespace VirtoCommerce.Publishing
                     page.Settings = rawItem.Settings;
                     return page;
                 }
-                }
-            }
-            catch (Exception)
-            {
-                throw;
             }
 
             return null;
