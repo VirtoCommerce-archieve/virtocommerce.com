@@ -286,7 +286,7 @@
     <Content Include="ApplicationInsights.config" />
     <Content Include="App_Data\Contents\Pages\Published\enterprise.json" />
     <Content Include="App_Data\Contents\Includes\learn-more.html" />
-    <None Include="App_Data\Contents\Pages\Published\enterprise.md" />
+    <Content Include="App_Data\Contents\Pages\Published\enterprise.md" />
     <Content Include="Files\Feature-Guide.pdf" />
     <Content Include="Files\Kitmall-case-study.pdf" />
     <Content Include="Files\rtb-case-study.pdf" />
