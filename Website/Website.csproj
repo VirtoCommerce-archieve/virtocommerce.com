@@ -398,7 +398,7 @@
     <ItemGroup>
       <_CustomFiles Include="App_Data\**\*" />
       <FilesForPackagingFromProject Include="%(_CustomFiles.Identity)">
-        <DestinationRelativePath>Modules\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+        <DestinationRelativePath>App_Data\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
       </FilesForPackagingFromProject>
     </ItemGroup>
   </Target>
