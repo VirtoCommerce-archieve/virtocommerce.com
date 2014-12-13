@@ -12,7 +12,7 @@ namespace MarketplaceWeb.Controllers
 	using VirtoCommerce.Publishing;
 	using VirtoCommerce.Publishing.Engines;
 
-    [RoutePrefix("")]
+    //[RoutePrefix("")]
 	public class PageController : Controller
 	{
 		public ActionResult Index()
@@ -20,7 +20,7 @@ namespace MarketplaceWeb.Controllers
 			return View();
 		}
 
-		[Route("{pagename}")]
+		//[Route("{pagename}")]
 		public ActionResult DisplayPage(string pageName)
 		{
 			var telemetry = new Microsoft.ApplicationInsights.TelemetryClient();
@@ -39,6 +39,9 @@ namespace MarketplaceWeb.Controllers
                 if(item != null)
 		         return this.View(item.Layout, item);
 		    }
+
+		    if (String.IsNullOrEmpty(pageName))
+		        viewName = "Index";
 
             return View(viewName);
 		}

@@ -27,7 +27,10 @@ namespace VirtoCommerce.Binders
 
 			CheckAndRemoveKeys(allKeys);
 
-			retVal.To = form["To"];
+            if (allKeys.Contains("FullName"))
+                retVal.FullName = form["FullName"];
+			
+            retVal.To = form["To"];
 			retVal.Subject = form["Subject"];
 
 			var builder = new StringBuilder();

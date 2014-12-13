@@ -68,7 +68,7 @@ tags :
 				</p>
 			</div>
 			<form class="price-form clearfix">
-				<input type="hidden" value="Prices" name="Subject" />
+				<input type="hidden" value="Virto Commerce Enterprise Edition Pricing Request" name="Subject" />
 				<input type="hidden" value="true" name="IsResend" />
 				<input type="hidden" value="/thank-you" name="RedirectUrl" />
 				<div class="control-group">

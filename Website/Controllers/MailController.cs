@@ -12,23 +12,25 @@ using VirtoCommerce.Models;
 
 namespace VirtoCommerce.Controllers
 {
+    [RoutePrefix("mail")]
 	public class MailController : Controller
 	{
 		// GET: Mail
 		//[ValidateAntiForgeryToken]
+        [Route("send")]
 		public ActionResult Send([ModelBinder(typeof(MailModelBinder))]MailModel model, bool isResend, string redirectUrl)
 		{
 			var username = ConfigurationManager.AppSettings["SendGridUsername"];
 			var password = ConfigurationManager.AppSettings["SendGridPassword"];
 
 			var telemetry = new Microsoft.ApplicationInsights.TelemetryClient();
-			telemetry.TrackTrace(username);
-			telemetry.TrackTrace(password);
+			//telemetry.TrackTrace(username);
+			//telemetry.TrackTrace(password);
 
-			SendGridMessage message = new SendGridMessage();
+			var message = new SendGridMessage();
 
 			message.AddTo(ConfigurationManager.AppSettings["SupportToEmail"]);
-			message.From = new MailAddress(ConfigurationManager.AppSettings["FromEmail"]);
+			message.From = new MailAddress(model.To, model.FullName);
 			message.Subject = model.Subject;
 			message.Html = model.FullMailBody;
 
@@ -36,6 +38,7 @@ namespace VirtoCommerce.Controllers
 			var transportWeb = new Web(credentials);
 			transportWeb.Deliver(message);
 
+            /*
 			if (isResend)
 			{
 				message = new SendGridMessage();
@@ -47,8 +50,10 @@ namespace VirtoCommerce.Controllers
 					message.Html = "Thank you";
 				else
 					message.Html = model.MailBody;
+
 				transportWeb.Deliver(message);
 			}
+             * */
 
 			return Json(new { IsSuccess = true, RedirectUrl = redirectUrl }, JsonRequestBehavior.DenyGet);
 		}
