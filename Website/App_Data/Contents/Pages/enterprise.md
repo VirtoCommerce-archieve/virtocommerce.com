@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Enterprise Edition
 description: Enterprise Edition
