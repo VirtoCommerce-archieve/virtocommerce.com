@@ -68,7 +68,6 @@ tags :
 				</p>
 			</div>
 			<form class="price-form clearfix">
-				@Html.AntiForgeryToken()
 				<input type="hidden" value="Prices" name="Subject" />
 				<input type="hidden" value="true" name="IsResend" />
 				<input type="hidden" value="/thank-you" name="RedirectUrl" />
