@@ -135,8 +135,8 @@ namespace VirtoCommerce.Publishing
 
                     page.SetHeaderSettings(rawItem.Settings);
                     page.Settings = rawItem.Settings;
-                    page.Url = rawItem.Settings.ContainsKey("url")
-                        ? rawItem.Settings["url"]
+                    page.Url = rawItem.Settings.ContainsKey("permalink")
+                        ? rawItem.Settings["permalink"]
                         : EvaluateLink(context, path);
                     return page;
                 }
