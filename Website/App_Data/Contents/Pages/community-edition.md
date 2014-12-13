@@ -8,10 +8,6 @@ tags :
 - enterprise
 - commerce
 ---
-
-@{
-	ViewBag.Title = "CommunityEdition";
-}
 <div class="slider">
 	<img alt="" src="/Content/images/bg-community.jpg" class="slider-bg">
 	<div class="responsive">
