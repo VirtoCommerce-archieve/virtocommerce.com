@@ -10,7 +10,7 @@ namespace VirtoCommerce.Binders
 {
 	public class MailModelBinder : IModelBinder
 	{
-		private string[] RemovedKeys = new string[] { "To", "Subject", "__RequestVerificationToken", "IsResend", "RedirectUrl" };
+		private string[] RemovedKeys = new [] { "To", "Subject", /*"__RequestVerificationToken",*/ "IsResend", "RedirectUrl" };
 
 		public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
 		{
