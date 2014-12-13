@@ -15,7 +15,7 @@ namespace VirtoCommerce.Controllers
 	public class MailController : Controller
 	{
 		// GET: Mail
-		[ValidateAntiForgeryToken]
+		//[ValidateAntiForgeryToken]
 		public ActionResult Send([ModelBinder(typeof(MailModelBinder))]MailModel model, bool isResend, string redirectUrl)
 		{
 			var username = ConfigurationManager.AppSettings["SendGridUsername"];
