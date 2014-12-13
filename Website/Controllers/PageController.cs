@@ -35,7 +35,7 @@ namespace MarketplaceWeb.Controllers
                 var filesPath = HostingEnvironment.MapPath("~/App_Data/Contents");
                 var service = new ContentPublishingService(filesPath, new[] { new LiquidTemplateEngine(filesPath) });
 
-                var item = service.GetContentItem(String.Format("pages\\published\\{0}.md", pageName));
+                var item = service.GetContentItem(String.Format("/pages/{0}", pageName));
 		        return this.View(item.Layout, item);
 		    }
 

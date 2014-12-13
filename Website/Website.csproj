@@ -284,10 +284,10 @@
     <Content Include="Content\fonts\seguisb.eot" />
     <Content Include="Content\fonts\seguisb.woff" />
     <Content Include="ApplicationInsights.config" />
-    <Content Include="App_Data\Contents\Pages\Published\enterprise.json" />
+    <Content Include="App_Data\Contents\Pages\enterprise.json" />
     <Content Include="App_Data\Contents\Includes\learn-more.html" />
     <Content Include="App_Data\Contents\config.yml" />
-    <None Include="App_Data\Contents\Pages\Published\enterprise.md" />
+    <None Include="App_Data\Contents\Pages\enterprise.md" />
     <Content Include="Files\Feature-Guide.pdf" />
     <Content Include="Files\Kitmall-case-study.pdf" />
     <Content Include="Files\rtb-case-study.pdf" />
@@ -361,7 +361,6 @@
     <Content Include="Views\Page\Post.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Contents\Pages\Drafts\" />
     <Folder Include="Helpers\" />
     <Folder Include="Views\Mail\" />
   </ItemGroup>

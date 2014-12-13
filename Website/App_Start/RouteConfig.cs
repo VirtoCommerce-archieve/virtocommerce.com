@@ -13,7 +13,16 @@ namespace VirtoCommerce
 		{
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute(
+                name: "ControllerDefault",
+                url: "{controller}/{action}/{id}",
+                defaults: new { id = UrlParameter.Optional }
+            );
+
+
 			routes.MapMvcAttributeRoutes();
+
+            //routes.MapRoute("NoCmsRoute", "{*pageName}", new { controller = "Page", action = "DisplayPage" });
 
 			//routes.MapRoute(
 			//	name: "Mail",
