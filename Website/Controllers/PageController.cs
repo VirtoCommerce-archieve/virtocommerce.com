@@ -36,7 +36,8 @@ namespace MarketplaceWeb.Controllers
                 var service = new ContentPublishingService(filesPath, new[] { new LiquidTemplateEngine(filesPath) });
 
                 var item = service.GetContentItem(String.Format("/pages/{0}", pageName));
-		        return this.View(item.Layout, item);
+                if(item != null)
+		         return this.View(item.Layout, item);
 		    }
 
             return View(viewName);
