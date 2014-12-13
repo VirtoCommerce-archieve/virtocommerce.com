@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Enterprise Edition
 description: Enterprise Edition
@@ -7,7 +7,6 @@ tags :
 - enterprise
 - commerce
 ---
-
 <div class="slider">
 	<img alt="" src="/Content/images/bg-enterprise.jpg" class="slider-bg">
 	<div class="responsive">
