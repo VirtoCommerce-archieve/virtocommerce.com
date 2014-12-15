@@ -434,25 +434,6 @@
 
 }
 
-	.brand a:first-child
-	{
-		border-right: 1px solid #e6e6e6;
-		margin: 0 10px 0 0;
-		padding: 0 10px 0 0;
-	}
-
-	.brand a {
-		display: inline-block;
-		font-size: 11px;
-		font-weight: 400;
-		letter-spacing: 1px;
-		line-height: 15px;
-		text-decoration: none;
-		text-transform: uppercase;
-		vertical-align: top;
-	}
-
-
 	/* Enterprise block */
 	.main-enterprise
 	{
@@ -726,8 +707,6 @@
 				{
 					background-color: #fcb040;
 				}
-
-
 
 				.your-costumers .planet.marketplace,
 				.your-costumers .planet .satelite.marketplace .ico,
@@ -1068,20 +1047,15 @@
 		height: 85px;
 		margin: 0 0 30px;
 		padding: 15px 0 30px;
-		text-align: justify;
 		width: 100%;
-	}
-
-	.technologies .list:after
-	{
-		content: '';
-		display: inline-block;
-		width: 100%;
+		word-spacing: -6px;
 	}
 
 		.technologies .list-item
 		{
+			text-align: center;
 			vertical-align: bottom;
+			width: 20%;
 		}
 
 			.technologies .list-item img
@@ -1128,6 +1102,7 @@
 			.proposal .list-item
 			{
 				margin: 0 0 50px;
+				min-height: 150px;
 				padding: 0 0 0 205px;
 				position: relative;
 			}
@@ -1963,11 +1938,6 @@
 			word-spacing: -6px;
 		}
 
-		.partner form option, .partner form select, .partner form label, .partner form button
-		{
-			word-spacing: 0px;
-		}
-
 		.partner form label
 		{
 			color: #fff;
@@ -1977,8 +1947,6 @@
 			{
 				margin: 0 20px 20px 0;
 			}
-
-
 
 		.partner .list-item
 		{
@@ -2174,15 +2142,6 @@
 			width: 220px;
 		}
 
-			.footer-text
-			{
-				word-spacing:0px;
-				color:#e6e6e6;
-				font-size: 12px;
-				font-weight: 400;
-				margin: 0 0 0 10px;
-			}
-
 			.footer-wrap .column .subscribe p
 			{
 				color: #fff;
@@ -2208,13 +2167,6 @@
 						border-radius: 5px;
 			}
 
-			.footer-wrap .column .subscribe .form-input.error
-			{
-				border-color: #ea5564;
-				border-width: 1px;
-				border-style: solid;
-			}
-
 		.footer-wrap .column .title
 		{
 			color: #fff;
@@ -2223,15 +2175,48 @@
 			margin: 0 0 20px;
 		}
 
+		.footer-wrap .column .email
+		{
+			font-size: 15px;
+		}
+
 		.footer-wrap .column .menu-item
 		{
 			margin: 10px 0 0;
+			padding: 0;
 		}
 
 			.footer-wrap .column .menu-item .link-white
 			{
 				font-size: 15px;
 			}
+
+.footer-copy
+{
+	background: #76797b;
+	padding: 10px 0;
+}
+
+	.footer-copy p,
+	.footer-copy .menu
+	{
+		display: inline-block;
+		margin: 0 20px 0 0;
+	}
+
+	.footer-copy p,
+	.footer-copy .menu-item
+	{
+		color: #fff;
+		font-size: 12px;
+		line-height: 30px;
+		vertical-align: middle;
+	}
+
+	.footer-copy .menu-item
+	{
+		margin: 0 5px 0 0;
+	}
 
 
 
@@ -2526,24 +2511,11 @@
 		height: 42px;
 	}
 
-	.control-group .form-input.error
-	{
-		border-width: 1px;
-		border-color: #ea5564;
-	}
-
 	.control-group .form-text
 	{
 		border-width: 1px 0 0;
 		padding-top: 7px;
 		resize: none;
-	}
-
-	.control-group .form-text.error
-	{
-		border-width: 1px;
-		border-style: solid;
-		border-color: #ea5564;
 	}
 
 	/* Lists */
