@@ -112,12 +112,7 @@
 	.technologies .list
 	{
 		height: auto;
-		padding: 30px 0 0;
-	}
-
-	.technologies .list-item img
-	{
-		max-width: 100%;
+		padding: 30px 0;
 	}
 
 	/* About VC */
@@ -599,6 +594,11 @@
 		padding: 0 0 0 145px;
 	}
 
+	.proposal .list-item
+	{
+		min-height: 120px;
+	}
+
 	.roadmap .list-item
 	{
 		padding: 0;
@@ -935,6 +935,11 @@
 	.footer-wrap .column .subscribe
 	{
 		float: none;
+	}
+
+	.footer-copy p
+	{
+		padding: 0 0 0 20px;
 	}
 
 	.column,
@@ -1324,10 +1329,11 @@
 		padding: 0;
 	}
 
-	.proposal-ico,
+	.proposal-ico
 	{
 		background-size: 640px 80px;
 		height: 80px;
+		min-height: 80px;
 		width: 80px;
 	}
 
@@ -1719,6 +1725,11 @@
 	.footer-wrap .column .list.__socials
 	{
 		margin: 0;
+	}
+
+	.footer-copy
+	{
+		display: none;
 	}
 
 	.column,
