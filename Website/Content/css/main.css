@@ -1940,6 +1940,7 @@
 	.partner .title
 	{
 		margin: 45px 0 10px;
+		word-spacing: 0;
 	}
 
 		.partner form
@@ -2564,7 +2565,7 @@
 	{
 		max-width: 100%;
 	}
-	
+
 	img.border
 	{
 		border: 1px solid #ccc;
