@@ -1045,7 +1045,7 @@
 	{
 		border-top: 1px solid #e6e6e6;
 		height: 85px;
-		margin: 0 0 30px;
+		margin: 30px 0;
 		padding: 15px 0 30px;
 		width: 100%;
 		word-spacing: -6px;
@@ -1759,7 +1759,7 @@
 	.list li
 	{
 		color: #787878;
-		font-size: 18px;
+		font-size: inherit;
 		margin: 5px 0;
 		padding: 0 0 0 20px;
 		text-indent: -20px;
@@ -1875,6 +1875,12 @@
 	}
 
 	.documentation .title
+	{
+		margin: 45px 0 0;
+	}
+
+	/* Znode */
+	.znode h2.title
 	{
 		margin: 45px 0 0;
 	}
@@ -2617,6 +2623,32 @@
 	.no-touch .footer-wrap .column .partner a:hover
 	{
 		background-color: #fcb040;
+	}
+
+	/* Table */
+	table
+	{
+		border-collapse: collapse;
+		border-spacing: 0;
+		margin: 50px 0;
+		padding: 0;
+	}
+
+	table th,
+	table td
+	{
+		border: 1px solid #ccc;
+		font-size: 15px;
+		font-weight: normal;
+		padding: 10px;
+		text-align: left;
+		vertical-align: top;
+	}
+
+	table th,
+	table td:first-child
+	{
+		font-family: 'Segoe UI Bold';
 	}
 
 	/* Text */

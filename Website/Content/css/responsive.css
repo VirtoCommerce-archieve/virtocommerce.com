@@ -788,7 +788,8 @@
 
 	/* Trynow */
 	.try-now,
-	.documentation
+	.documentation,
+	.znode
 	{
 		margin-bottom: 60px;
 		padding: 0 20px;
@@ -953,6 +954,11 @@
 	.column .column
 	{
 		width: 50%;
+	}
+
+	.columns .block
+	{
+		margin: 30px 0 0 ;
 	}
 
 	/* Partner */
@@ -1772,6 +1778,12 @@
 	.presentation_sub-title
 	{
 		font-size: 15px;
+	}
+
+	table,
+	.znode .exchange
+	{
+		display: none;
 	}
 }
 
