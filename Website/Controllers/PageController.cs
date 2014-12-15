@@ -23,6 +23,7 @@ namespace MarketplaceWeb.Controllers
 		//[Route("{pagename}")]
 		public ActionResult DisplayPage(string pageName)
 		{
+			SetMeta();
 			var telemetry = new Microsoft.ApplicationInsights.TelemetryClient();
 			telemetry.TrackTrace("page request");
 
@@ -45,6 +46,16 @@ namespace MarketplaceWeb.Controllers
 			}
 
 			return View(viewName);
+		}
+
+		private void SetMeta()
+		{
+			ViewBag.Author = "Virto Commerce";
+			ViewBag.Description = "VirtoCommerce offers an enterprise level ecommerce framework designed to expand sales with simple and exciting ecommerce solutions.";
+			ViewBag.Keywords = "Virto Commerce, Enterprise eCommerce, ASP.NET eCommerce, Azure eCommerce, Cloud eCommerce, MVC eCommerce, .net shopping cart";
+			ViewBag.ItemPropName = "Virto Commerce";
+			ViewBag.ItemPropDescription = "Multi Channel Ecommerce Platform | Enterprise Shopping Cart Software | VirtoCommerce";
+			ViewBag.ItemPropImage = "/Content/images/virtocommerce.png";
 		}
 	}
 }
