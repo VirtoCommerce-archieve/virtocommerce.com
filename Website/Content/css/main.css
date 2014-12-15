@@ -431,7 +431,7 @@
 ========================================================================== */
 .main
 {
-
+	margin: 0 0 30px;
 }
 
 	/* Enterprise block */
@@ -1045,7 +1045,7 @@
 	{
 		border-top: 1px solid #e6e6e6;
 		height: 85px;
-		margin: 0 0 30px;
+		margin: 30px 0;
 		padding: 15px 0 30px;
 		width: 100%;
 		word-spacing: -6px;
@@ -1759,7 +1759,7 @@
 	.list li
 	{
 		color: #787878;
-		font-size: 18px;
+		font-size: inherit;
 		margin: 5px 0;
 		padding: 0 0 0 20px;
 		text-indent: -20px;
@@ -1869,7 +1869,18 @@
 	}
 
 	/* Documentation */
+	.documentation
+	{
+		padding: 0 0 30px;
+	}
+
 	.documentation .title
+	{
+		margin: 45px 0 0;
+	}
+
+	/* Znode */
+	.znode h2.title
 	{
 		margin: 45px 0 0;
 	}
@@ -2177,6 +2188,7 @@
 
 		.footer-wrap .column .email
 		{
+			color: #fff;
 			font-size: 15px;
 		}
 
@@ -2242,6 +2254,7 @@
 	h2.title
 	{
 		font-family: 'Segoe UI';
+		margin: 45px 0 0;
 	}
 
 	h3
@@ -2546,6 +2559,17 @@
 			display: none;
 		}
 
+	/* Images */
+	img
+	{
+		max-width: 100%;
+	}
+	
+	img.border
+	{
+		border: 1px solid #ccc;
+	}
+
 	/* Socials */
 	.list.__socials
 	{
@@ -2611,6 +2635,32 @@
 	.no-touch .footer-wrap .column .partner a:hover
 	{
 		background-color: #fcb040;
+	}
+
+	/* Table */
+	table
+	{
+		border-collapse: collapse;
+		border-spacing: 0;
+		margin: 50px 0;
+		padding: 0;
+	}
+
+	table th,
+	table td
+	{
+		border: 1px solid #ccc;
+		font-size: 15px;
+		font-weight: normal;
+		padding: 10px;
+		text-align: left;
+		vertical-align: top;
+	}
+
+	table th,
+	table td:first-child
+	{
+		font-family: 'Segoe UI Bold';
 	}
 
 	/* Text */

@@ -210,6 +210,7 @@
 	.responsive,
 	.__responsive
 	{
+		padding: 0 20px;
 		width: 750px;
 	}
 
@@ -788,7 +789,8 @@
 
 	/* Trynow */
 	.try-now,
-	.documentation
+	.documentation,
+	.znode
 	{
 		margin-bottom: 60px;
 		padding: 0 20px;
@@ -887,7 +889,6 @@
 
 	.footer-wrap .column
 	{
-		padding: 0 20px;
 		width: 70%;
 
 		-webkit-box-sizing: border-box;
@@ -953,6 +954,11 @@
 	.column .column
 	{
 		width: 50%;
+	}
+
+	.columns .block
+	{
+		margin: 30px 0 0 ;
 	}
 
 	/* Partner */
@@ -1773,6 +1779,12 @@
 	{
 		font-size: 15px;
 	}
+
+	table,
+	.znode .exchange
+	{
+		display: none;
+	}
 }
 
 @media (max-width: 460px) {
@@ -2000,6 +2012,12 @@
 	.partner .button
 	{
 		display: block;
+		width: 100%;
+	}
+
+	.button
+	{
+		font-size: 16px;
 		width: 100%;
 	}
 }
