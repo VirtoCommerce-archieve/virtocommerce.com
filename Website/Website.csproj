@@ -333,8 +333,8 @@
     <Content Include="Views\Page\Features.cshtml" />
     <Content Include="Views\Page\ForBusinessProfessionals.cshtml" />
     <Content Include="Views\Page\ForDevelopers.cshtml" />
-    <Content Include="Views\Page\Partner.cshtml" />
-    <Content Include="Views\Page\PartnerList.cshtml" />
+    <Content Include="Views\Page\BecomePartner.cshtml" />
+    <Content Include="Views\Page\ListOfPartners.cshtml" />
     <Content Include="Views\Page\Research.cshtml" />
     <Content Include="Views\Page\RoadMap.cshtml" />
     <Content Include="Views\Page\TryNow.cshtml" />
@@ -359,6 +359,7 @@
     <Content Include="Views\Error\Error500.cshtml" />
     <Content Include="Views\Shared\_GoogleTagManagerPartial.cshtml" />
     <Content Include="Views\Page\Post.cshtml" />
+    <Content Include="Views\Page\OnlineDemo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />

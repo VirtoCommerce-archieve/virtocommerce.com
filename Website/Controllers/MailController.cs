@@ -12,12 +12,12 @@ using VirtoCommerce.Models;
 
 namespace VirtoCommerce.Controllers
 {
-    [RoutePrefix("mail")]
+	[RoutePrefix("mail")]
 	public class MailController : Controller
 	{
 		// GET: Mail
 		//[ValidateAntiForgeryToken]
-        [Route("send")]
+		[Route("send")]
 		public ActionResult Send([ModelBinder(typeof(MailModelBinder))]MailModel model, bool isResend, string redirectUrl)
 		{
 			var username = ConfigurationManager.AppSettings["SendGridUsername"];
@@ -34,7 +34,7 @@ namespace VirtoCommerce.Controllers
 			var transportWeb = new Web(credentials);
 			transportWeb.Deliver(message);
 
-            /*
+			/*
 			if (isResend)
 			{
 				message = new SendGridMessage();
@@ -49,7 +49,7 @@ namespace VirtoCommerce.Controllers
 
 				transportWeb.Deliver(message);
 			}
-             * */
+			 * */
 
 			return Json(new { IsSuccess = true, RedirectUrl = redirectUrl }, JsonRequestBehavior.DenyGet);
 		}
