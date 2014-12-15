@@ -1957,6 +1957,7 @@
 		.partner form label
 		{
 			color: #fff;
+			word-spacing: 0;
 		}
 
 			.partner .column .control-group
