@@ -1742,13 +1742,17 @@
 
 		.try-now .column .button.large
 		{
+			display: block;
+			margin: 0 auto;
 			width: 240px;
 		}
 
 	.try-now .list
 	{
+		display: inline-block;
 		margin: 40px 0;
 		list-style: none;
+		text-align: left;
 	}
 
 	.try-now .list li
