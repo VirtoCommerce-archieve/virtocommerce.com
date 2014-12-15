@@ -22,35 +22,36 @@ namespace VirtoCommerce
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
 		}
 
-        /*
-		protected void Application_Error(object sender, EventArgs e)
-		{
-			Exception exception = Server.GetLastError();
-			Response.Clear();
+		//protected void Application_Error(object sender, EventArgs e)
+		//{
+		//	Exception exception = Server.GetLastError();
+		//	Response.Clear();
 
-			HttpException httpException = exception as HttpException ?? new HttpException(500, "Internal Server Error", exception);
+		//	var telemetry = new Microsoft.ApplicationInsights.TelemetryClient();
+		//	telemetry.TrackTrace("error request");
 
-			var routeData = new RouteData();
-			routeData.Values.Add("controller", "Error");
-			routeData.Values.Add("fromAppErrorEvent", true);
+		//	HttpException httpException = exception as HttpException ?? new HttpException(500, "Internal Server Error", exception);
 
-			switch (httpException.GetHttpCode())
-			{
-				case 404:
-					routeData.Values.Add("action", "Error404");
-					break;
+		//	var routeData = new RouteData();
+		//	routeData.Values.Add("controller", "Error");
+		//	routeData.Values.Add("fromAppErrorEvent", true);
 
-				default:
-					routeData.Values.Add("action", "Error500");
-					break;
-			}
+		//	switch (httpException.GetHttpCode())
+		//	{
+		//		case 404:
+		//			routeData.Values.Add("action", "Error404");
+		//			break;
 
-			Server.ClearError();
+		//		default:
+		//			routeData.Values.Add("action", "Error500");
+		//			break;
+		//	}
 
-			IController controller = new ErrorController();
-			controller.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
-			Response.End();
-		}
-         * */
+		//	Server.ClearError();
+
+		//	IController controller = new ErrorController();
+		//	controller.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
+		//	Response.End();
+		//}
 	}
 }
