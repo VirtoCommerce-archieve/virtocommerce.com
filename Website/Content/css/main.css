@@ -1869,6 +1869,11 @@
 	}
 
 	/* Documentation */
+	.documentation
+	{
+		padding: 0 0 30px;
+	}
+
 	.documentation .title
 	{
 		margin: 45px 0 0;
@@ -2177,6 +2182,7 @@
 
 		.footer-wrap .column .email
 		{
+			color: #fff;
 			font-size: 15px;
 		}
 
