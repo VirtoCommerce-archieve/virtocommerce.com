@@ -23,11 +23,7 @@ namespace VirtoCommerce.Controllers
 			var username = ConfigurationManager.AppSettings["SendGridUsername"];
 			var password = ConfigurationManager.AppSettings["SendGridPassword"];
 
-			var telemetry = new Microsoft.ApplicationInsights.TelemetryClient();
-			//telemetry.TrackTrace(username);
-			//telemetry.TrackTrace(password);
-
-			var message = new SendGridMessage();
+			SendGridMessage message = new SendGridMessage();
 
 			message.AddTo(ConfigurationManager.AppSettings["SupportToEmail"]);
 			message.From = new MailAddress(model.To, model.FullName);
