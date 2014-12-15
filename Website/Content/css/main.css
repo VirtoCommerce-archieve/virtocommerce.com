@@ -431,7 +431,7 @@
 ========================================================================== */
 .main
 {
-
+	margin: 0 0 30px;
 }
 
 	/* Enterprise block */
@@ -2254,6 +2254,7 @@
 	h2.title
 	{
 		font-family: 'Segoe UI';
+		margin: 45px 0 0;
 	}
 
 	h3
@@ -2557,6 +2558,17 @@
 		{
 			display: none;
 		}
+
+	/* Images */
+	img
+	{
+		max-width: 100%;
+	}
+	
+	img.border
+	{
+		border: 1px solid #ccc;
+	}
 
 	/* Socials */
 	.list.__socials
