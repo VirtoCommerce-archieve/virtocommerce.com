@@ -1,0 +1,14 @@
+﻿defaults:
+  -
+   scope:
+     path: ""
+     type: "posts"
+   values:
+     layout: "my-site"
+  -
+   scope:
+     path: "projects"
+     type: "pages"
+   values:
+     layout: "project" # overrides previous default layout
+     author: "Mr. Hyde"

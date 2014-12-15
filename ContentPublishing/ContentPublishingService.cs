@@ -8,6 +8,8 @@ namespace VirtoCommerce.Publishing
 {
     using System.IO;
     using System.IO.Abstractions;
+    using System.Web;
+    using System.Web.Caching;
     using System.Web.Configuration;
 
     using DotLiquid;
@@ -22,47 +24,147 @@ namespace VirtoCommerce.Publishing
     {
         static readonly Markdown Markdown = new Markdown();
 
-        private SiteContext _context;
+        private SiteContext Context;
+        private FileSystem _fileSystem;
+
+        private Dictionary<string, object> _Config;
 
         private ITemplateEngine[] _templateEngines;
 
         public ContentPublishingService(string sourceFolder, ITemplateEngine[] templateEngines )
         {
-            _context = new SiteContext() { SourceFolder = sourceFolder };
             _templateEngines = templateEngines;
+            _fileSystem = new FileSystem();
+
+            // Now lets build the context
+            Context = BuildSiteContext(sourceFolder);
         }
 
         public ContentItem GetContentItem(string name)
         {
-            try
+            return
+                Context.Collections.SelectMany(pages => pages.Value).SingleOrDefault(page => page.Url.Equals(name, StringComparison.OrdinalIgnoreCase));
+
+            /*
+            var path = Path.Combine(_context.SourceFolder, name);
+            return this.CreateContentItem(path, _Config);
+             * */
+        }
+
+        public ContentItem[] GetCollectionContentItems(string collectioName)
+        {
+            return Context.Collections.Where(col => col.Key.Equals(collectioName, StringComparison.OrdinalIgnoreCase)).Select(x => x.Value).SingleOrDefault();
+        }
+
+        /// <summary>
+        /// Loads all content items in the certain collection
+        /// </summary>
+        /// <param name="collectioName"></param>
+        /// <returns></returns>
+        private ContentItem[] GetCollectionContentItemsInternal(SiteContext context, string collectionFolder)
+        {
+            var items = new List<ContentItem>();
+            if (_fileSystem.Directory.Exists(collectionFolder))
             {
-                var path = Path.Combine(_context.SourceFolder, name);
-                // 1: Read raw contents and meta data. Determine contents format and read it into Contents property, create RawContentItem.
-                var rawItem = this.CreateRawItem(path);
-
-                // 2: Use convert engines to get html contents and create ContentItem object
-                foreach (var templateEngine in _templateEngines)
-                {
-                    if (templateEngine.CanProcess(rawItem.ContentType, "html"))
-                    {
-                        var content = templateEngine.Process(rawItem.Content, rawItem.Settings);
-                        var page = new ContentItem
-                        {
-                            Content = content
-                        };
-
-                        page.SetHeaderSettings(rawItem.Settings);
-                        page.Settings = rawItem.Settings;
-                        return page;
-                    }
-                }
+                items.AddRange(_fileSystem.Directory
+                    .GetFiles(collectionFolder, "*.*", SearchOption.AllDirectories)
+                    .Select(file => CreateContentItem(context, file, _Config))
+                    .Where(post => post != null)
+                );
             }
-            catch (Exception)
+            return items.ToArray();
+        }
+
+        private SiteContext BuildSiteContext(string sourceFolder)
+        {
+            var contextKey = "vc-no-cms";
+            var value = HttpRuntime.Cache.Get(contextKey);
+
+            if (value != null)
             {
-                throw;
+                return value as SiteContext;
+            }
+
+            _Config = new Dictionary<string, object>();
+            var configPath = Path.Combine(sourceFolder, "config.yml");
+            if (_fileSystem.File.Exists(configPath))
+                _Config = (Dictionary<string, object>)_fileSystem.File.ReadAllText(configPath).YamlHeader(true);
+
+            var context = new SiteContext() { SourceFolder = sourceFolder, Config = _Config };
+
+            var collections = new Dictionary<string, ContentItem[]>();
+
+            // list all directories
+            var collectionFolders = _fileSystem.Directory.GetDirectories(sourceFolder, "*", SearchOption.TopDirectoryOnly).Where(name => !name.EndsWith("includes", StringComparison.OrdinalIgnoreCase));
+
+            // now for each directory get a list of content items
+            foreach (var collectionFolder in collectionFolders)
+            {
+                var items = this.GetCollectionContentItemsInternal(context, collectionFolder).Where(item => item != null).ToArray();
+
+                var collectionName = GetPageTitle(collectionFolder);
+                collections.Add(collectionName, items);
+            }
+
+            // populate collection object
+            context.Collections = collections;
+
+            // add to cache
+            var allDirectories = _fileSystem.Directory.GetDirectories(sourceFolder, "*", SearchOption.AllDirectories);
+            HttpRuntime.Cache.Insert(contextKey, context, new CacheDependency(allDirectories));
+
+            // return context
+            return context;
+        }
+
+        private ContentItem CreateContentItem(SiteContext context, string path, Dictionary<string, object> config)
+        {
+            // 1: Read raw contents and meta data. Determine contents format and read it into Contents property, create RawContentItem.
+            var rawItem = this.CreateRawItem(path);
+
+            // 2: Use convert engines to get html contents and create ContentItem object
+            foreach (var templateEngine in _templateEngines)
+            {
+                if (templateEngine.CanProcess(rawItem.ContentType, "html"))
+                {
+                    var content = templateEngine.Process(rawItem.Content, rawItem.Settings);
+                    var page = new ContentItem
+                    {
+                        Content = content
+                    };
+
+                    page.SetHeaderSettings(rawItem.Settings);
+                    page.Settings = rawItem.Settings;
+                    page.Url = rawItem.Settings.ContainsKey("permalink")
+                        ? rawItem.Settings["permalink"]
+                        : EvaluateLink(context, path);
+                    return page;
+                }
             }
 
             return null;
+        }
+
+        private string EvaluateLink(SiteContext context, string path)
+        {
+            var directory = Path.GetDirectoryName(path);
+            var relativePath = directory.Replace(context.SourceFolder, string.Empty);
+            var fileExtension = Path.GetExtension(path);
+
+            var htmlExtensions = new[] { ".markdown", ".mdown", ".mkdn", ".mkd", ".md", ".textile" };
+
+            if (htmlExtensions.Contains(fileExtension, StringComparer.InvariantCultureIgnoreCase))
+                fileExtension = "";
+
+            var link = relativePath.Replace('\\', '/').TrimStart('/') + "/" + GetPageTitle(path) + fileExtension;
+            if (!link.StartsWith("/"))
+                link = "/" + link;
+            return link;
+        }
+
+        private string GetPageTitle(string file)
+        {
+            return Path.GetFileNameWithoutExtension(file);
         }
 
         #region Step 1
@@ -117,24 +219,23 @@ namespace VirtoCommerce.Publishing
 
         private string SafeReadContents(string file)
         {
-            var fileSystem = new FileSystem();
             try
             {
-                return fileSystem.File.ReadAllText(file);
+                return _fileSystem.File.ReadAllText(file);
             }
             catch (IOException)
             {
-                var fileInfo = fileSystem.FileInfo.FromFileName(file);
+                var fileInfo = _fileSystem.FileInfo.FromFileName(file);
                 var tempFile = Path.Combine(Path.GetTempPath(), fileInfo.Name);
                 try
                 {
                     fileInfo.CopyTo(tempFile, true);
-                    return fileSystem.File.ReadAllText(tempFile);
+                    return _fileSystem.File.ReadAllText(tempFile);
                 }
                 finally
                 {
-                    if (fileSystem.File.Exists(tempFile))
-                        fileSystem.File.Delete(tempFile);
+                    if (_fileSystem.File.Exists(tempFile))
+                        _fileSystem.File.Delete(tempFile);
                 }
             }
         }

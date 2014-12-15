@@ -110,16 +110,8 @@ namespace VirtoCommerce.Helpers.Models
         public IDictionary<string, dynamic> Settings { get; set; }
         public string FileName { get; set; }
 
-        public int Year { get; set; }
-        public int Month { get; set; }
-        public int Day { get; set; }
         public string Url { get; set; }
 
         public DateTime Date { get; set; }
-
-        /// <summary>
-        /// Raw unparsed header from markdown file
-        /// </summary>
-        public string MarkdownHeader { get; set; }
     }
 }

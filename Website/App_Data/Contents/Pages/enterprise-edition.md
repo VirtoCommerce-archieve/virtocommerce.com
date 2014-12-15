@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Enterprise Edition
 description: Enterprise Edition
@@ -7,7 +7,6 @@ tags :
 - enterprise
 - commerce
 ---
-
 <div class="slider">
 	<img alt="" src="/Content/images/bg-enterprise.jpg" class="slider-bg">
 	<div class="responsive">
@@ -68,8 +67,7 @@ tags :
 				</p>
 			</div>
 			<form class="price-form clearfix">
-				@Html.AntiForgeryToken()
-				<input type="hidden" value="Prices" name="Subject" />
+				<input type="hidden" value="Virto Commerce Enterprise Edition Pricing Request" name="Subject" />
 				<input type="hidden" value="true" name="IsResend" />
 				<input type="hidden" value="/thank-you" name="RedirectUrl" />
 				<div class="control-group">

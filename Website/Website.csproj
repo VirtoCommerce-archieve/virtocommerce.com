@@ -284,9 +284,10 @@
     <Content Include="Content\fonts\seguisb.eot" />
     <Content Include="Content\fonts\seguisb.woff" />
     <Content Include="ApplicationInsights.config" />
-    <Content Include="App_Data\Contents\Pages\Published\enterprise.json" />
+    <Content Include="App_Data\Contents\Pages\enterprise.json" />
     <Content Include="App_Data\Contents\Includes\learn-more.html" />
-    <Content Include="App_Data\Contents\Pages\Published\enterprise.md" />
+    <Content Include="App_Data\Contents\config.yml" />
+    <None Include="App_Data\Contents\Pages\enterprise-edition.md" />
     <Content Include="Files\Feature-Guide.pdf" />
     <Content Include="Files\Kitmall-case-study.pdf" />
     <Content Include="Files\rtb-case-study.pdf" />
@@ -325,10 +326,10 @@
     <Content Include="Views\Page\Index.cshtml" />
     <Content Include="Views\Shared\_SwipePartial.cshtml" />
     <Content Include="Views\Shared\_HeaderPartial.cshtml" />
-    <Content Include="Views\Page\CommunityEdition.cshtml" />
+    <Content Include="Views\Page\old\CommunityEdition.cshtml" />
     <Content Include="Views\Shared\_FooterPartial.cshtml" />
     <Content Include="Views\Page\Documentation.cshtml" />
-    <Content Include="Views\Page\EnterpriseEdition.cshtml" />
+    <Content Include="Views\Page\old\EnterpriseEdition.cshtml" />
     <Content Include="Views\Page\Features.cshtml" />
     <Content Include="Views\Page\ForBusinessProfessionals.cshtml" />
     <Content Include="Views\Page\ForDevelopers.cshtml" />
@@ -360,7 +361,6 @@
     <Content Include="Views\Page\Post.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Contents\Pages\Drafts\" />
     <Folder Include="Helpers\" />
     <Folder Include="Views\Mail\" />
   </ItemGroup>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace VirtoCommerce.Publishing.Engines
 {
@@ -79,5 +80,18 @@ namespace VirtoCommerce.Publishing.Engines
                 return string.Empty;
             }
         }
+
+        /*
+        public class FormToken : DotLiquid.Tag
+        {
+            public override void Render(Context context, TextWriter result)
+            {
+                var httpContextWrapper = new HttpContextWrapper(HttpContext.Current);
+                MvcHandler mvcHandler = httpContextWrapper.CurrentHandler as MvcHandler;
+                mvcHandler.RequestContext
+                result.Write(new HtmlHelper(new ViewContext()).AntiForgeryToken().ToString());
+            }
+        }
+         * */
     }
 }
