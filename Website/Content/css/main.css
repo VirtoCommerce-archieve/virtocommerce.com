@@ -1954,10 +1954,14 @@
 			word-spacing: -6px;
 		}
 
+		form.fixed
+		{
+			word-spacing: 0;
+		}
+
 		.partner form label
 		{
 			color: #fff;
-			word-spacing: 0;
 		}
 
 			.partner .column .control-group
@@ -2252,7 +2256,7 @@
 	h2
 	{
 		color: #000;
-		font-family: 'Segoe UI Semibold';
+		font-family: 'Segoe UI';
 		font-size: 40px;
 		margin: 45px 0 35px;
 	}
