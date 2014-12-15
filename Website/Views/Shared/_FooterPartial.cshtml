@@ -79,7 +79,8 @@
 			</div>
 			<form class="subscribe" id="subscribe">
 				<h2 class="title">Contact Us</h2>
-				<p class="text"><a class="footer-text" href="mailto: sales@virtocommerce.com">sales@virtocommerce.com</a> <br><span itemprop="telephone">+1 (800) 980-5288</span></p>
+				<a class="email" href="mailto: sales@virtocommerce.com ">sales@virtocommerce.com </a>
+				<p class="phone">+1 (800) 980-5288</p>
 				@Html.AntiForgeryToken()
 				<h2 class="title">Signup for news</h2>
 				<input type="text" placeholder="Enter email ..." class="form-input" name="To">
@@ -89,8 +90,18 @@
 				<input type="submit" value="Submit" class="button mini white">
 			</form>
 		</div>
-		<div>
-			<p class="footer-text">Copyright © 2014 Virto Commerce. All rights reserved <a href="/terms" class="footer-text">Terms</a> <a href="/privacy" class="footer-text">Privacy</a></p>
-		</div>
 	</footer>
+</div>
+<div class="footer-copy">
+	<div class="responsive">
+		<p>Copyright &copy; 2014 Virto Commerce. All rights reserved</p>
+		<ul class="menu __inline">
+			<li class="menu-item">
+				<a href="#">Terms</a>
+			</li>
+			<li class="menu-item">
+				<a href="#">Privacy</a>
+			</li>
+		</ul>
+	</div>
 </div>
