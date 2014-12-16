@@ -3,7 +3,7 @@ layout: post
 title: Virto commerce - Free download .NET open-source ecommerce platform
 description: Virto commerce - Free download .NET open-source ecommerce platform
 date: 2014-01-30
-permalink: /pages/try-now
+permalink: /pages/try-now-download
 tags : 
 - thank-you
 - commerce
