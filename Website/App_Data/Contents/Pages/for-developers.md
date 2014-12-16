@@ -49,7 +49,6 @@ tags :
 					<span class="descr">Built using Microsoft .Net 4.5 framework, it encompasses latest architecture practices and technologies for .Net platform. Some of them are: Entity Framework 5, MVC4/Razor, WCF, OData, Workflow Foundation, Unity, WPF, ClickOnce, HTML5.</span>
 					<span class="title">Use what you need, replace what you don't</span>
 					<span class="descr">Virto Commerce is designed to be a flexible and non-monolithic framework where each part can be replaced or changed when needed. If you have an existing e-Commerce product and simply like how product catalogs are managed in Virto Commerce, you can integrate just the catalog module leaving all other parts of your existing commerce solution intact. This design paradigm minimizes risks of upgrading or creating e-Commerce solution.</span>
-					<a class="link" href="">Read more</a>
 				</div>
 				<img alt="" src="/Content/images/for-dev/features-architecture.png" class="list-img">
 			</li>
@@ -64,7 +63,6 @@ tags :
 				<img alt="" src="/Content/images/for-dev/features-architecture-dependency.png">
 				<span class="title">Dependency Injection &amp; IoC</span>
 				<span class="descr">To make sure Virto Commerce is loosely coupled and can be easily extended, the Unity Dependency Injection Container is used both in Front-end Accelerator and back-end application (Commerce Manager).</span>
-				<a class="link" href="">Read more</a>
 			</div>
 			<div class="column">
 				<img alt="" src="/Content/images/for-dev/features-architecture-search.png">
