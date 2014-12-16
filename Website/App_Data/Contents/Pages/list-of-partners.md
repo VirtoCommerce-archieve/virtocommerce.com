@@ -11,7 +11,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="partner __responsive">
-		<h2 class="title">Partners</h2>
+		<h2>Partners</h2>
 		<p class="sub-title">Solution Partners</p>
 		<p class="text">These are hand picked companies with expertise reviewed by us. They all have experiences delivering successful e-commerce solutions for medium and large businesses.</p>
 		<ul class="list">

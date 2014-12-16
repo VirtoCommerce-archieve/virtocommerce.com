@@ -11,7 +11,7 @@ tags :
 <article role="main" class="main">
 	<!-- Roadmap -->
 	<div class="roadmap __responsive">
-		<h2 class="title">Roadmap</h2>
+		<h2>Roadmap</h2>
 		<ul class="list">
 			<li class="list-item">
 				<div class="roadmap-ico"></div>

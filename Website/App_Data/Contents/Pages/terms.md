@@ -10,7 +10,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="for-business __responsive">
-		<h2 class="title">Terms of service</h2>
+		<h2>Terms of service</h2>
 		<p class="text">
 			Please review the following terms and conditions prior to using Virto Commerce's website. Any use of the website and its content is subject to the following terms and conditions. By using or accessing the website, you agree to be bound by the terms and conditions of this Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access or use the website and it’s content.  
 		</p>

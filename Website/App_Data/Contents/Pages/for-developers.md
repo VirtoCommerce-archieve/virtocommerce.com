@@ -11,7 +11,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="for-dev __responsive">
-		<h2 class="title">Features of VirtoCommerce</h2>
+		<h2>Features of VirtoCommerce</h2>
 		<p class="sub-title">Create Cloud-powered Multichannel Ecommerce Platform</p>
 		<ul class="list">
 			<li class="list-item">

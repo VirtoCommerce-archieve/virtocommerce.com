@@ -11,7 +11,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="responsive">
-		<h2 class="title">Try Virto Commerce</h2>
+		<h2>Try Virto Commerce</h2>
 		<p class="sub-title">Explore our Online Demo</p>
 		<div class="columns">
 			<div class="column">

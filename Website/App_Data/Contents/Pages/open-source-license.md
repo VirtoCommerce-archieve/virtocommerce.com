@@ -11,7 +11,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="for-business __responsive">
-		<h2 class="title">Virto Commerce Open Software License</h2>
+		<h2>Virto Commerce Open Software License</h2>
 		<p>The Virto Commerce Open Software License Version 3.0 ("VCOSL") consists of the Open Software License 3.0 (OSL-3.0) with the Additional Terms in Exhibit A. The original Open Software License 3.0 (OSL-3.0) can be found at:&nbsp;<a href="http://opensource.org/licenses/OSL-3.0" target="_blank">http://opensource.org/licenses/OSL-3.0</a></p>
 		<br />
 		<p>1)&nbsp;<span class="bold">Grant of Copyright License.</span>&nbsp;Licensor grants You a worldwide, royalty-free, non-exclusive, sublicensable license, for the duration of the copyright, to do the following:</p>

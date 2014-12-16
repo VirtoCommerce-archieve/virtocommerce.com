@@ -10,7 +10,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="for-business __responsive">
-		<h2 class="title">Privacy policy</h2>
+		<h2>Privacy policy</h2>
 		<p class="text">
 			As used in this Privacy Policy, “Virto Commerce” refers to website virtocommerce.com and other on-line services related to Virto Commerce (for example, support system). This policy is based on our goal to provide our visitors with quality information and resources while maintaining individual anonymity and personal privacy.
 		</p>

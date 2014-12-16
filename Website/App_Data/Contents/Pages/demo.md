@@ -10,7 +10,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="partner __responsive">
-		<h2 class="title">Personal Demo</h2>
+		<h2>Personal Demo</h2>
 		<p class="text">Tell us about your project and requirements and we’ll organize a personalized walk-through of Virto Commerce for you and your colleagues in ways to best address your needs.</p>
 		<div class="columns">
 			<div class="column">

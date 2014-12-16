@@ -25,7 +25,7 @@ tags :
 <article role="main" class="main">
 	<!-- Proposal -->
 	<div class="proposal __responsive">
-		<h2 class="title">From whom this proposal</h2>
+		<h2>From whom this proposal</h2>
 		<ul class="list">
 			<li class="list-item access">
 				<div class="proposal-ico"></div>
