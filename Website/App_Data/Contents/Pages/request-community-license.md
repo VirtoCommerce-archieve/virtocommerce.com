@@ -1,6 +1,14 @@
-﻿@{
-	ViewBag.Title = "Enterprise .NET open-source ecommerce cloud platform. Request community license";
-}
+﻿---
+layout: post
+title: Enterprise .NET open-source ecommerce cloud platform. Request community license
+description: Enterprise .NET open-source ecommerce cloud platform. Request community license
+date: 2014-01-30
+permalink: /pages/request-community-license
+tags : 
+- request-community-license
+- license
+- commerce
+---
 <article role="main" class="main">
 	<div class="partner __responsive">
 		<h2 class="title">Community License</h2>
@@ -10,7 +18,6 @@
 			<div class="column">
 				<div class="block">
 					<form action="">
-						@Html.AntiForgeryToken()
 						<input type="hidden" value="Signup for news" name="Subject" />
 						<input type="hidden" value="true" name="IsResend" />
 						<input type="hidden" value="/thank-you-demo" name="RedirectUrl" />

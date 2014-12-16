@@ -1,0 +1,168 @@
+﻿---
+layout: post
+title: Virto commerce - Enterprise ASP.NET open-source ecommerce cloud platform
+description: Virto commerce - Enterprise ASP.NET open-source ecommerce cloud platform
+date: 2014-01-30
+permalink: /pages/index
+tags : 
+- index
+- commerce
+---
+<article role="main" class="main">
+	<!-- Enetrprise -->
+	<div class="main-enterprise">
+		<div class="presentation responsive">
+			<div class="presentation-info">
+				<h2 class="presentation-title">Enterprise open-source <span></span>e-commerce platform <span></span>for Microsoft Cloud</h2>
+				<p class="presentation_sub-title">Free Community Edition license <span></span>available for small businesses</p>
+				<div class="presentation-buttons">
+					<a class="button fill" href="/try-now">Try it now</a>
+					<!-- <a href="" class="button white">Watch video</a> -->
+				</div>
+			</div>
+		</div>
+		<div class="costumers">
+			<div class="responsive">
+				<ul class="list __inline">
+					<li class="list-item"></li>
+					<li class="list-item kalla"></li>
+					<li class="list-item caromba"></li>
+					<li class="list-item ns"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Your costumers -->
+	<div class="your-costumers">
+		<div class="responsive">
+			<h2>Expand and Customize Your Business</h2>
+			<div class="planet pc">
+				<div class="satelite mobile">
+					<a class="ico"></a>
+					<p>Mobile</p>
+				</div>
+				<div class="satelite marketplace">
+					<a class="ico"></a>
+					<p>Multichannel</p>
+				</div>
+				<div class="satelite pc">
+					<a class="ico"></a>
+					<p>B2C</p>
+				</div>
+				<div class="satelite b2b">
+					<a class="ico"></a>
+					<p>B2B</p>
+				</div>
+				<div class="satelite social">
+					<a class="ico"></a>
+					<p>Social network</p>
+				</div>
+				<div class="planet-info">
+					<div class="ico"></div>
+					<div class="planet-content social">
+						<p class="name">Social</p>
+						<p>Authenticate using popular social networks including Facebook, Linkedin, Google and many others. Create custom store front using our web api services and javascript libraries <a href="" class="all link-white">Link</a></p>
+					</div>
+					<div class="planet-content marketplace">
+						<p class="name">Multi Channel</p>
+						<p>Start selling on Amazon, Ebay and other channels with our integrated Multi Channel solution.</p>
+					</div>
+					<div class="planet-content mobile">
+						<p class="name">Mobile</p>
+						<p>Our site fully supports mobile, tablet and other devices using responsive approach. You can utilize Virto Commerce mobile friendly Web API to integrate iOS, Android and Windows apps with commerce</p>
+					</div>
+					<div class="planet-content pc opened">
+						<p class="name">B2C</p>
+						<p>Use our our sample site to launch your Business to Consumer store. Features include support for search, faceted filters, reviews, one page checkout and many more. Can be used to launch Fashion, Services, Digital Downloads and other types of stores.</p>
+					</div>
+					<div class="planet-content b2b">
+						<p class="name">B2B</p>
+						<p>Create custom solutions that fit your business. Create integration points for your partners. Utilize multiple master and virtual catalogs to create partner product lists. Define custom pricing using Price Lists for vendors, customers and partners.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Join -->
+	<div class="join">
+		<div class="responsive">
+			<h2>Designed for Developers</h2>
+			<div class="join-info">
+				<p class="joiner pro">Marketplace</p>
+				<p class="joiner flex">Modular Architecture</p>
+				<p class="joiner code">Open source</p>
+			</div>
+			<div class="join-dialog">
+				<div class="join-content pro opened">
+					<p class="name">Marketplace</p>
+					<p>Publish your solutions, modules and services to Virto Commerce Marketplace. Connect with potential customers and buyers.</p>
+				</div>
+				<div class="join-content flex">
+					<p class="name">Modular <br>architerture</p>
+					<p>Enhance or replace existing modules without modifying any of the core functionality. </p>
+				</div>
+				<div class="join-content code">
+					<p class="name">Open source</p>
+					<p>Download complete source code of Virto Commerce. Explore our development and feature branches to see whats coming next. Submit bug fixes and enhancements to be included in the next release.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- E-commerce Platform -->
+	<div class="ecommerce-platform">
+		<div class="responsive">
+			<h2>e-Commerce Platform as a Service</h2>
+			<img alt="" src="/Content/images/schema.png" class="schema">
+		</div>
+	</div>
+	<!-- Advantages -->
+	<div class="advantages __responsive">
+		<ul class="list">
+			<li class="list-item">
+				<img alt="" src="/Content/images/advantages/1.jpg">
+				<h3>Take Advantage of Open Platform</h3>
+				<p>
+					Customize anything and stay ahead of your competition. Evolve 
+					faster than SaaS offerings and stay ahead of proprietary based solutions.
+				</p>
+				<a class="link" href="">See how you can make your support work for you</a>
+			</li>
+			<li class="list-item">
+				<img alt="" src="/Content/images/advantages/2.jpg">
+				<h3>Browse, filter and search product catalogs</h3>
+				<p>
+					Provide your customers with tools to find a product 
+					they are looking for.
+				</p>
+				<a class="link" href="">Set and meet expectations with Service Levels</a>
+			</li>
+			<li class="list-item">
+				<img alt="" src="/Content/images/advantages/3.jpg">
+				<h3>Launch your solutions faster with automation tools</h3>
+				<p>
+					Using combination of azure and automation cmdlets, setup an 
+					automated deployments for your solutions. From development to 
+					staging to production.
+				</p>
+				<a class="link" href="">See how you can make your support work for you</a>
+			</li>
+		</ul>
+	</div>
+	<!-- Try it now -->
+	<div class="try-it">
+		<a class="button fill" href="/try-now">Try It Now!</a>
+	</div>
+	@Html.Partial("_TechnologiesPartial")
+	<!-- About Virtocommerce -->
+	<div class="about-vc __responsive">
+		<a class="link learn-link">Learn more about Virto Commerce</a>
+		<div class="about">
+			<p>
+				Virto Commerce was founded by a team that previously developed Mediachase eCommerce Framework, successfully used by thousands of merchants around the world. Since 2011 our team of architects and engineers has been developing Virto Commerce to be a new generation of .NET ecommerce platforms, and in June 2013 Virto Commerce v1.0 has been released.
+				We are company with a mission to make e-Commerce development simple and exciting.
+				Our main focus is professional developers and organizations looking for a framework that will help them deliver "more than expected" to their customers in less time. Our goal is to deliver software product that we can be proud of.
+				We are a global company with offices and local experience in USA, European and Asian markets.
+			</p>
+		</div>
+	</div>
+</article>

@@ -10,7 +10,7 @@ namespace VirtoCommerce.Binders
 {
 	public class MailModelBinder : IModelBinder
 	{
-		private string[] RemovedKeys = new [] { "To", "Subject", /*"__RequestVerificationToken",*/ "IsResend", "RedirectUrl" };
+		private string[] RemovedKeys = new[] { "To", "Subject", "IsResend", "RedirectUrl" };
 
 		public object BindModel(ControllerContext controllerContext, ModelBindingContext bindingContext)
 		{
@@ -27,10 +27,10 @@ namespace VirtoCommerce.Binders
 
 			CheckAndRemoveKeys(allKeys);
 
-            if (allKeys.Contains("FullName"))
-                retVal.FullName = form["FullName"];
-			
-            retVal.To = form["To"];
+			if (allKeys.Contains("FullName"))
+				retVal.FullName = form["FullName"];
+
+			retVal.To = form["To"];
 			retVal.Subject = form["Subject"];
 
 			var builder = new StringBuilder();
