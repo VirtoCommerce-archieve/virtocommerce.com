@@ -152,7 +152,7 @@ tags :
 	<div class="try-it">
 		<a class="button fill" href="/try-now">Try It Now!</a>
 	</div>
-	@Html.Partial("_TechnologiesPartial")
+	{% include technologies.html %}
 	<!-- About Virtocommerce -->
 	<div class="about-vc __responsive">
 		<a class="link learn-link">Learn more about Virto Commerce</a>
