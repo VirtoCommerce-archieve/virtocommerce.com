@@ -751,9 +751,11 @@
 					background-position: -456px 0;
 				}
 
-				.your-costumers .planet .satelite p
+				.your-costumers .planet .satelite p,
+				.your-costumers .planet .satelite h3
 				{
 					color: #000;
+					font-size: 20px;
 				}
 
 			.your-costumers .planet-info .ico
@@ -768,6 +770,7 @@
 
 			.your-costumers .planet-info .name
 			{
+				color: #fff;
 				font-size: 40px;
 				line-height: 1;
 				margin: 0 0 20px;
@@ -801,7 +804,7 @@
 			height: 100%;
 		}
 
-		.join h2
+		.join .head-title
 		{
 			color: #fff;
 			display: inline-block;
@@ -825,6 +828,7 @@
 				font-size: 24px;
 				font-family: 'Segoe UI Bold';
 				line-height: 1.2;
+				margin: 0;
 				padding: 50px 0 0;
 				position: absolute;
 				text-align: center;
@@ -941,7 +945,8 @@
 				background-position: -200px 0;
 			}
 
-			.join-dialog p
+			.join-dialog p,
+			.join-dialog h3
 			{
 				color: #fff;
 				font-size: 16px;
@@ -2253,7 +2258,9 @@
    ========================================================================== */
 	
 	/* Headings */
-	h2
+	h2,
+	.head_sub-title,
+	.head-title
 	{
 		color: #000;
 		font-family: 'Segoe UI';
@@ -2267,8 +2274,10 @@
 		margin: 45px 0 0;
 	}
 
-	h3
+	h3,
+	.advantages .list-item .title
 	{
+		color: inherit;
 		font-size: 24px;
 		margin: 0 0 25px;
 	}

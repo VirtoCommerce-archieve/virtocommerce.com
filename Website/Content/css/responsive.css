@@ -12,13 +12,16 @@
 		width: 1170px;
 	}
 
-	h2
+	h2,
+	.head_sub-title,
+	.head-title
 	{
 		font-size: 50px;
 		margin: 65px 0 55px;
 	}
 
-	h3
+	h3,
+	.advantages .list-item .title
 	{
 		font-size: 30px;
 		margin: 0 0 35px;
@@ -214,7 +217,8 @@
 		width: 750px;
 	}
 
-	h3
+	h3,
+	.advantages .list-item .title
 	{
 		font-size: 18px;
 		margin: 0 0 15px;
@@ -389,7 +393,8 @@
 		font-size: 34px;
 	}
 
-	.your-costumers .planet .satelite p
+	.your-costumers .planet .satelite p,
+	.your-costumers .planet .satelite h3
 	{
 		font-size: 18px;
 	}
@@ -989,12 +994,15 @@
 		width: auto;
 	}
 
-	h2
+	h2,
+	.head_sub-title,
+	.head-title
 	{
 		font-size: 34px;
 	}
 
-	h3
+	h3,
+	.advantages .list-item .title
 	{
 		font-size: 22px;
 		margin: 0 0 15px;
@@ -1246,7 +1254,8 @@
 		background-position: -160px 0;
 	}
 
-	.your-costumers .planet .satelite p
+	.your-costumers .planet .satelite p,
+	.your-costumers .planet .satelite h3
 	{
 		font-family: 'Segoe UI Semibold';
 		font-size: 12px;
@@ -1753,7 +1762,9 @@
 }
 
 @media (max-width: 640px) {
-	h2
+	h2,
+	.head_sub-title,
+	.head-title
 	{
 		font-size: 34px;
 	}
@@ -1788,12 +1799,15 @@
 }
 
 @media (max-width: 460px) {
-	h2
+	h2,
+	.head_sub-title,
+	.head-title
 	{
 		font-size: 24px;
 	}
 
-	h3
+	h3,
+	.advantages .list-item .title
 	{
 		font-size: 18px;
 	}
@@ -1888,7 +1902,8 @@
 		background-position: -360px 0;
 	}
 
-	.your-costumers .planet .satelite p
+	.your-costumers .planet .satelite p,
+	.your-costumers .planet .satelite h3
 	{
 		font-family: 'Segoe UI Semibold';
 		font-size: 15px;
