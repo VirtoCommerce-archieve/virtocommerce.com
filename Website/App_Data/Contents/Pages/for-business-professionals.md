@@ -62,5 +62,6 @@ tags :
 			<a class="link" href="/Files/Feature-Guide.pdf">Read our Feature Guide</a>
 		</div>
 	</div>
+	{% include learn-more.html %}
 	{% include technologies.html %}
 </article>

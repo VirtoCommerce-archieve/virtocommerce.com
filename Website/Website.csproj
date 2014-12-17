@@ -156,6 +156,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Binders\MailModelBinder.cs" />
@@ -173,6 +174,7 @@
     <Content Include="App_Data\Contents\Includes\technologies.html" />
     <None Include="App_Data\Contents\Pages\for-business-professionals.md" />
     <None Include="App_Data\Contents\Pages\index.md" />
+    <Content Include="App_Data\Contents\Pages\resources.md" />
     <None Include="App_Data\Contents\Pages\thank-you-demo.md" />
     <None Include="App_Data\Contents\Pages\thank-you-partner.md" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -330,6 +332,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\js\base64.js" />
+    <Content Include="Scripts\js\hider.js" />
     <Content Include="Scripts\js\main.js" />
     <Content Include="Scripts\js\modernizr.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />

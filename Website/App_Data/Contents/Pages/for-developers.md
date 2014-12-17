@@ -86,5 +86,6 @@ tags :
 			</div>
 		</div>
 	</div>
+	{% include learn-more.html %}
 	{% include technologies.html %}
 </article>

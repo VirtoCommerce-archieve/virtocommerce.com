@@ -9,3 +9,5 @@
 /// <reference path="respond.matchmedia.addlistener.js" />
 /// <reference path="js/main.js" />
 /// <reference path="js/modernizr.js" />
+/// <reference path="js/hider.js" />
+/// <reference path="js/base64.js" />
