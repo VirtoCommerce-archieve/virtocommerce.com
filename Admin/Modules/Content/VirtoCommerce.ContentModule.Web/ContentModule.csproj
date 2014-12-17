@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\..\bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -74,8 +74,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\app\blades\content-list.js" />
-    <Content Include="Scripts\app\blades\content-list.tpl.html" />
+    <Content Include="Scripts\app\blades\item-detail.js" />
+    <Content Include="Scripts\app\blades\item-detail.tpl.html" />
+    <Content Include="Scripts\app\blades\item-list.tpl.html" />
+    <Content Include="Scripts\app\blades\item-list.js" />
+    <Content Include="Scripts\app\blades\collection-list.js" />
+    <Content Include="Scripts\app\blades\collection-list.tpl.html" />
     <Content Include="Scripts\app\content.js" />
     <Content Include="Scripts\app\home.tpl.html" />
     <Content Include="Scripts\app\resources\contents.js" />

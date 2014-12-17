@@ -3,7 +3,8 @@
 
     return $resource('api/contents/:id', { id: '@id' }, {
         getCollections: { method: 'GET', url: 'api/contents/collections', isArray: true },
-        get: { method: 'GET', url: 'api/modules/:id', isArray: false },
+        getItems: { method: 'GET', url: 'api/contents/collections/:collectionId/items', isArray: true },
+        getItem: { method: 'GET', url: 'api/contents/collections/:collectionId/items/:itemId', isArray: false },
     });
 }]);
 

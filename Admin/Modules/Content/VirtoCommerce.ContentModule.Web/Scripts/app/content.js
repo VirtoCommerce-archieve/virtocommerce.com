@@ -8,7 +8,7 @@ if (AppDependencies != undefined) {
 }
 
 angular.module(moduleName, [
-    'virtoCommerce.content.blades.contentList'
+    'virtoCommerce.content.blades.collectionList'
 ])
 .config(
   ['$stateProvider', function ($stateProvider) {
@@ -20,10 +20,10 @@ angular.module(moduleName, [
                   '$scope', 'bladeNavigationService', function ($scope, bladeNavigationService) {
                       var blade = {
                           id: navigationId,
-                          title: 'Content Publishing',
-                          subtitle: 'Content Publishing',
-                          controller: 'contentsListController',
-                          template: tempateRoot + '/blades/content-list.tpl.html',
+                          title: 'Collections',
+                          subtitle: 'Pick content collection',
+                          controller: 'collectionListController',
+                          template: tempateRoot + '/blades/collection-list.tpl.html',
                           isClosingDisabled: true
                       };
                       bladeNavigationService.showBlade(blade);

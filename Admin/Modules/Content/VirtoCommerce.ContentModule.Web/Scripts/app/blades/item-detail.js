@@ -1,13 +1,18 @@
-﻿angular.module('virtoCommerce.content.blades.contentList', [
+﻿angular.module('virtoCommerce.content.blades.itemDetails', [
     'virtoCommerce.content.resources.contents'
 ])
-.controller('contentsListController', ['$rootScope', '$scope', 'bladeNavigationService', 'dialogService', 'contents', function ($rootScope, $scope, bladeNavigationService, dialogService, contents) {
+.controller('contentItemDetailsController', ['$rootScope', '$scope', 'bladeNavigationService', 'dialogService', 'contents', function ($rootScope, $scope, bladeNavigationService, dialogService, contents) {
     $scope.selectedEntityId = null;
 
+    //alert($scope.blade.currentEntity.id);
     $scope.blade.refresh = function () {
         $scope.blade.isLoading = true;
 
-        contents.getCollections({}, function (results) {
+        contents.getItem(
+        {
+            collectionId: $scope.blade.collectionId,
+            itemId: $scope.blade.itemId
+        }, function (results) {
             $scope.blade.isLoading = false;
             $scope.blade.currentEntities = results;
         });

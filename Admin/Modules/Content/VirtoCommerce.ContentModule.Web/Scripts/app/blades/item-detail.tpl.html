@@ -1,0 +1,27 @@
+﻿<div style="width: 460px">
+    <style>
+        .fixed-td {
+            width: 15px;
+        }
+    </style>
+    <table class="table hovered" ng-if="blade.currentEntities.length > 0">
+        <thead>
+            <tr>
+                <th class="text-left">ID</th>
+                <th class="text-left fixed-td">Last Modified</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="data in blade.currentEntities" ng-class="{'selected': data.id === selectedEntityId}" ng-click='selectItem(data)'>
+                <td style="max-width: 230px;">
+                    <span title="{{data.id}}">{{data.id}}</span>
+                    <span title="{{data.status}}" class="blade-sw-title" style="overflow: hidden; text-overflow: ellipsis;">{{data.status}}</span>
+                </td>
+                <td>
+                    <span>{{data.lastUpdated}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div ng-if="blade.currentEntities.length == 0" class="spacer">Content items yet</div>
+</div>
