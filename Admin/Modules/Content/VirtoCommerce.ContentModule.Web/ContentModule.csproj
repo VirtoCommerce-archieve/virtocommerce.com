@@ -81,6 +81,12 @@
     <Content Include="Scripts\app\blades\collection-list.js" />
     <Content Include="Scripts\app\blades\collection-list.tpl.html" />
     <Content Include="Scripts\app\content.js" />
+    <Content Include="Scripts\app\directives\bootstrap-markdown.js" />
+    <Content Include="Content\css\bootstrap-markdown.min.css" />
+    <Content Include="Scripts\app\directives\markdown-editpreview-ng.js" />
+    <Content Include="Scripts\app\directives\Markdown.Converter.js" />
+    <Content Include="Scripts\app\directives\Markdown.Sanitizer.js" />
+    <Content Include="Scripts\app\directives\PageDown-LICENSE.txt" />
     <Content Include="Scripts\app\home.tpl.html" />
     <Content Include="Scripts\app\resources\contents.js" />
   </ItemGroup>

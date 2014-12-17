@@ -1,8 +1,11 @@
 ﻿angular.module('virtoCommerce.content.blades.itemDetails', [
-    'virtoCommerce.content.resources.contents'
+    'virtoCommerce.content.resources.contents',
+    'codemwnci.markdown-edit-preview'
 ])
 .controller('contentItemDetailsController', ['$rootScope', '$scope', 'bladeNavigationService', 'dialogService', 'contents', function ($rootScope, $scope, bladeNavigationService, dialogService, contents) {
     $scope.selectedEntityId = null;
+    $scope.textarea = '**Welcome, I am some Bold Markdown text**';
+    $scope.liveedit = 'I am *ready* to be edited!';
 
     //alert($scope.blade.currentEntity.id);
     $scope.blade.refresh = function () {
@@ -18,19 +21,6 @@
         });
     };
 
-    /*
-    $scope.selectItem = function (listItem) {
-        var newBlade = {
-            id: 'moduleDetails',
-            title: 'Module information',
-            currentEntity: listItem,
-            controller: 'moduleDetailController',
-            template: 'Modules/Packaging/VirtoCommerce.PackagingModule.Web/Scripts/blades/module-detail.tpl.html'
-        };
-
-        bladeNavigationService.showBlade(newBlade, $scope.blade);
-    }
-
     $scope.blade.onClose = function (closeCallback) {
         closeChildrenBlades();
         closeCallback();
@@ -44,12 +34,21 @@
 
     $scope.bladeToolbarCommands = [
         {
-            name: "Add", icon: 'icon-plus',
+            name: "Publish", icon: 'icon-floppy',
             executeMethod: function () {
                 openAddEntityBlade();
             },
             canExecuteMethod: function () {
                 return true;
+            }
+        },
+        {
+            name: "Reset", icon: 'icon-undo',
+            executeMethod: function () {
+                angular.copy($scope.blade.origEntity, $scope.blade.currentEntity);
+            },
+            canExecuteMethod: function () {
+                return isDirty();
             }
         }
     ];
@@ -67,7 +66,6 @@
         };
         bladeNavigationService.showBlade(newBlade, $scope.blade);
     }
-    */
 
     $scope.blade.refresh();
 }]);

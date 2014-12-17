@@ -19,7 +19,11 @@
 
 	<assemblyFile>VirtoCommerce.ContentModule.Web.dll</assemblyFile>
 	<moduleType>VirtoCommerce.ContentModule.Web.Module, VirtoCommerce.ContentModule.Web</moduleType>
-	<scripts>
+
+  <styles>
+    <file virtualPath="$/Content/css/bootstrap-markdown.min.css" />
+  </styles>
+  <scripts>
 		<directory virtualPath="$/Scripts" searchPattern="*.js" searchSubdirectories="true" />
 	</scripts>
 </module>
