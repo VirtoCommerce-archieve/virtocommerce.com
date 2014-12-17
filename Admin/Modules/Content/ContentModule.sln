@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtoCommerce.ContentModule.Web", "VirtoCommerce.ContentModule.Web\ContentModule.csproj", "{BFF35473-069E-4607-BAED-6EA9FD3A9D0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentModule", "VirtoCommerce.ContentModule.Web\ContentModule.csproj", "{BFF35473-069E-4607-BAED-6EA9FD3A9D0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentModule.Tests", "ContentModule.Tests\ContentModule.Tests.csproj", "{127B2396-CC5D-45C1-AA8B-969F696A1045}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BFF35473-069E-4607-BAED-6EA9FD3A9D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFF35473-069E-4607-BAED-6EA9FD3A9D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFF35473-069E-4607-BAED-6EA9FD3A9D0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{127B2396-CC5D-45C1-AA8B-969F696A1045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{127B2396-CC5D-45C1-AA8B-969F696A1045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{127B2396-CC5D-45C1-AA8B-969F696A1045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{127B2396-CC5D-45C1-AA8B-969F696A1045}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
