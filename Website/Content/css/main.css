@@ -1818,6 +1818,7 @@
 		{
 			margin: 60px 0 0;
 			overflow: hidden;
+			padding: 0;
 		}
 
 		.for-dev .list-img
@@ -1827,10 +1828,20 @@
 			width: 20%;
 		}
 
+		.for-dev .list-item.big .list-img
+		{
+			width: 45%;
+		}
+
 		.for-dev .list-info
 		{
 			float: right;
 			width: 75%;
+		}
+
+		.for-dev .list-item.big .list-info
+		{
+			width: 50%;
 		}
 
 			.for-dev .list-info .title,

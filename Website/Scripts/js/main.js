@@ -106,6 +106,18 @@ $(function () {
 		}
 	});
 
+	$('body').delegate('[data-swipe="opened"]', 'click', function (e) {
+		e.preventDefault();
+		var li = $(this).parent('[data-id="swipeli"]');
+		if (li.hasClass('opened')) {
+			$('[data-id="swipeli"]').removeClass('opened');
+		}
+		else {
+			$('[data-id="swipeli"]').removeClass('opened');
+			li.addClass('opened');
+		}
+	});
+
 	$('body').delegate('.mobile-btn', 'click', function () {
 		VC.mobileNav();
 	});

@@ -14,7 +14,7 @@ tags :
 		<h2>Features of VirtoCommerce</h2>
 		<p class="sub-title">Create Cloud-powered Multichannel Ecommerce Platform</p>
 		<ul class="list">
-			<li class="list-item">
+			<li class="list-item big">
 				<div class="list-info">
 					<span class="title">On-Demand Scalability</span>
 					<span class="descr">Virto Commerce was specifically built for Microsoft Azure to allow on-demand scalability, performance and reliability. Virto Commerce can auto-scale based on the load or seasonal demand. The number of servers can be increased in a matter of minutes to support marketing campaigns. Scheduling and search services utilize queues to distribute job loads.</span>
