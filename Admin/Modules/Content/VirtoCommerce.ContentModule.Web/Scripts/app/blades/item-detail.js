@@ -4,8 +4,6 @@
 ])
 .controller('contentItemDetailsController', ['$rootScope', '$scope', 'bladeNavigationService', 'dialogService', 'contents', function ($rootScope, $scope, bladeNavigationService, dialogService, contents) {
     $scope.selectedEntityId = null;
-    $scope.textarea = '**Welcome, I am some Bold Markdown text**';
-    $scope.liveedit = 'I am *ready* to be edited!';
 
     //alert($scope.blade.currentEntity.id);
     $scope.blade.refresh = function () {
@@ -17,8 +15,13 @@
             itemId: $scope.blade.itemId
         }, function (results) {
             $scope.blade.isLoading = false;
-            $scope.blade.currentEntities = results;
+            $scope.blade.currentEntity = angular.copy(results);;
+            $scope.blade.origEntity = results;
         });
+    };
+
+    function isDirty() {
+        return !angular.equals($scope.blade.currentEntity, $scope.blade.origEntity);
     };
 
     $scope.blade.onClose = function (closeCallback) {
@@ -32,11 +35,42 @@
         });
     }
 
+    function saveChanges() {
+        $scope.blade.isLoading = true;
+        contents.saveItem(
+        {
+            collectionId: $scope.blade.collectionId,
+            itemId: $scope.blade.itemId,
+        }, $scope.blade.currentEntity, function (data, headers) {
+            $scope.blade.refresh(true);
+        });
+    };
+
+    function publishChanges() {
+        $scope.blade.isLoading = true;
+        contents.publishItem(
+        {
+            collectionId: $scope.blade.collectionId,
+            itemId: $scope.blade.itemId,
+        }, $scope.blade.currentEntity, function (data, headers) {
+            $scope.blade.refresh(true);
+        });
+    };
+
     $scope.bladeToolbarCommands = [
+        {
+            name: "Save", icon: 'icon-floppy',
+            executeMethod: function () {
+                saveChanges();
+            },
+            canExecuteMethod: function () {
+                return true;
+            }
+        },
         {
             name: "Publish", icon: 'icon-floppy',
             executeMethod: function () {
-                openAddEntityBlade();
+                publishChanges();
             },
             canExecuteMethod: function () {
                 return true;

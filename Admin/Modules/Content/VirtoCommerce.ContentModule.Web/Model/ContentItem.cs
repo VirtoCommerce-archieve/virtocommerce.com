@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace VirtoCommerce.ContentModule.Web.Model
 {
+    using Newtonsoft.Json;
+
     public class ContentItem
     {
         public string Id { get; set; }
@@ -15,5 +17,8 @@ namespace VirtoCommerce.ContentModule.Web.Model
         public DateTime LastUpdated { get; set; }
 
         public string Status { get; set; }
+
+        [JsonIgnore]
+        public string Filename { get; set; }
     }
 }

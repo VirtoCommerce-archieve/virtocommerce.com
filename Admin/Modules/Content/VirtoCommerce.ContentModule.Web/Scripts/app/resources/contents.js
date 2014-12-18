@@ -5,6 +5,8 @@
         getCollections: { method: 'GET', url: 'api/contents/collections', isArray: true },
         getItems: { method: 'GET', url: 'api/contents/collections/:collectionId/items', isArray: true },
         getItem: { method: 'GET', url: 'api/contents/collections/:collectionId/items/:itemId', isArray: false },
+        publishItem: { method: 'POST', url: 'api/contents/collections/:collectionId/items/:itemId/publish' },
+        saveItem: { method: 'POST', url: 'api/contents/collections/:collectionId/items/:itemId' },
     });
 }]);
 

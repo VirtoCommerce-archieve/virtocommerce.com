@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace VirtoCommerce.ContentModule.Web
 {
+    using System.IO.Abstractions;
+
     using Microsoft.Practices.Unity;
 
     using VirtoCommerce.Framework.Web.Modularity;
@@ -20,6 +17,8 @@ namespace VirtoCommerce.ContentModule.Web
 
         public void Initialize()
         {
+            _container.RegisterType<IFileSystem, FileSystem>();
+
         }
     }
 }
