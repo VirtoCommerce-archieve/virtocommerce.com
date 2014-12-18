@@ -11,7 +11,7 @@ tags :
 <article role="main" class="main">
 	<!-- Roadmap -->
 	<div class="roadmap __responsive">
-		<h2>Resources</h2>
+		<h2>Resources for developers</h2>
 		<ul class="list">
 			<li class="list-item">
 				<div class="columns">
@@ -20,7 +20,7 @@ tags :
 							<ul class="list">
 								<li>
 									<span class="title">Documentation</span>
-									<span class="descr"><a href="http://docs.virtocommerce.com/" target="_blank">Go To Docs</a></span>
+									<span class="descr"><a href="http://docs.virtocommerce.com/" target="_blank" rel="nofollow">Go To Docs</a></span>
 								</li>
 								<li>
 									<span class="title">Downloads</span>
@@ -42,11 +42,11 @@ tags :
 							<ul class="list">
 								<li>
 									<span class="title">Blog</span>
-									<span class="descr"><a href="http://blog.virtocommerce.com/" target="_blank">Go To Blog</a></span>
+									<span class="descr"><a href="http://blog.virtocommerce.com/" target="_blank" rel="nofollow">Go To Blog</a></span>
 								</li>
 								<li>
 									<span class="title">Support</span>
-									<span class="descr"><a href="http://help.virtocommerce.com/support/home" target="_blank">Go To Support</a></span>
+									<span class="descr"><a href="http://help.virtocommerce.com/support/home" target="_blank" rel="nofollow">Go To Support</a></span>
 								</li>
 								<li>
 									<span class="title">Stackoverflow</span>

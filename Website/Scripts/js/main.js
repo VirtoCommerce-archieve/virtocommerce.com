@@ -60,8 +60,14 @@ var VC = {
 				$('.join-content.' + name).addClass('opened');
 			});
 		}
-	}
+	},
 
+	getParameterByName: function(name) {
+		name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+			results = regex.exec(location.search);
+		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
 }
 
 $(function () {
@@ -141,5 +147,9 @@ $(function () {
 		VC.changeCostumers();
 		VC.changeJoined();
 	});
+
+	if ($('[name="PartnerId"]').length > 0) {
+		$('[name="PartnerId"]').val(VC.getParameterByName("pid"));
+	}
 
 });
