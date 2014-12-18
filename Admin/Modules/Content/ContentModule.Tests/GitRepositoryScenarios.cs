@@ -15,30 +15,31 @@ namespace ContentModule.Tests
         [Fact]
         public void Can_create_git_commit()
         {
+            var _owner = "VirtoCommerce";
+            var repoName = "virtocommerce.com";
+
             var client = new GitHubClient(new ProductHeaderValue("VirtoCommerce-ContentModule"), new Uri("https://github.com/"));
             client.Credentials = new Credentials("virtocommercecom","v1rtocommerce");
+            var fixture = client.GitDatabase.Blob;
+            var commintFixture = client.GitDatabase.Commit;
 
-            var sometext = "asdasdljalskdj lasdjklasdk jls adjlkas djlksad";
-
-            var list = client.Repository.GetAllBranches("VirtoCommerce", "virtocommerce.com").Result;
-            var repositories = client.Repository.GetAllForUser("VirtoCommerce").Result;
-            var commitsClient = client.Repository.Commits;
-
+            // Step 1: create blob
             var utf8Bytes = Encoding.UTF8.GetBytes("Hello World!");
             var base64String = Convert.ToBase64String(utf8Bytes);
 
+            
             var blob = new NewBlob
             {
                 Content = base64String,
                 Encoding = EncodingType.Base64
             };
 
-            var _owner = "VirtoCommerce";
-            var repoName = "virtocommerce.com";
-
-            var fixture = client.GitDatabase.Blob;
-            var commintFixture = client.GitDatabase.Commit;
             var blobResult = fixture.Create(_owner, repoName, blob).Result;
+
+            // Step 2: Get SHA1 for current branch
+            var masterBranchRef = client.GitDatabase.Reference.Get(_owner, repoName, "heads/master").Result;
+            var baseCommitRef = client.GitDatabase.Commit.Get(_owner, repoName, masterBranchRef.Object.Sha).Result;
+
 
             var newTree = new NewTree();
             newTree.Tree.Add(new NewTreeItem
