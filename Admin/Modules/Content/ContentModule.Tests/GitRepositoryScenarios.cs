@@ -23,6 +23,7 @@ namespace ContentModule.Tests
             client.Credentials = new Credentials("virtocommercecom", "v1rtocommerce");
             var repository = client.Repository.Get(_owner, repoName).Result;
             var tree = client.GetTree(repository).Result;
+            //client.GitDatabase.Blob.Get()
         }
 
         [Fact]
