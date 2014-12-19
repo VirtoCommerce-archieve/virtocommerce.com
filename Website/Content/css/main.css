@@ -1194,26 +1194,17 @@
 					background-position: -1050px 0;
 				}
 
-				.access .proposal-ico,
-				.team .proposal-ico,
-				.storage .proposal-ico,
-				.list-item .roadmap-ico
+				.list-item:nth-child(1) .proposal-ico
 				{
 					background-color: #ea5564;
 				}
 
-				.community .proposal-ico,
-				.support .proposal-ico,
-				.analytics .proposal-ico,
-				.list-item:nth-child(2n) .roadmap-ico
+				.list-item:nth-child(2) .proposal-ico
 				{
 					background-color: #fcb040;
 				}
 
-				.updates .proposal-ico,
-				.dev .proposal-ico,
-				.analys .proposal-ico,
-				.list-item:nth-child(3n) .roadmap-ico
+				.list-item:nth-child(3) .proposal-ico
 				{
 					background-color: #6c6f71;
 				}
