@@ -2216,7 +2216,7 @@
 			.footer-wrap .column .subscribe .form-input
 			{
 				background: #fff;
-				border: none;
+				border: 1px solid rgba(0,0,0,0);
 				color: #cdcdcd;
 				font-size: 15px;
 				height: 33px;
@@ -2229,6 +2229,11 @@
 
 				-webkit-border-radius: 5px;
 						border-radius: 5px;
+			}
+
+			.footer-wrap .column .subscribe .form-input.error
+			{
+				border-color: #ea5564;
 			}
 
 		.footer-wrap .column .title
