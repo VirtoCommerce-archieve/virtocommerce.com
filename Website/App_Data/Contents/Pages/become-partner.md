@@ -11,7 +11,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="partner __responsive">
-		<h2>Partner Program</h2>
+		<h1 class="head-title">Partner Program</h1>
 		<p class="text">We will be glad to have you among our partners. Please fill out the form below. We will be in contact with you shortly.</p>
 		<div class="columns">
 			<div class="column">

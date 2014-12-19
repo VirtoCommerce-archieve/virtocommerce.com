@@ -57,16 +57,19 @@ tags :
 				<p id="cont_2">All we ask from you is to complete the form below and share your experience with our community
 on Facebook or Twitter.</p>
 			</div>
-			<div class="price-form clearfix">
+			<form class="price-form clearfix">
+				<input type="hidden" value="Request Community License!" name="Subject"/>
+				<input type="hidden" value="true" name="IsResend"/>
+				<input type="hidden" value="/thank-you-community-request-license" name="RedirectUrl" />
 				<div class="control-group">
-					<input type="text" placeholder="Full name ..." class="form-input">
-					<input type="text" placeholder="Your email ..." class="form-input">
+					<input type="text" placeholder="Full name ..." class="form-input" required>
+					<input type="text" placeholder="Your email ..." class="form-input" required>
 				</div>
 				<div class="control-group">
-					<textarea placeholder="Comments ..." rows="5" cols="5" id="" name="" class="form-text"></textarea>
+					<textarea placeholder="Comments ..." rows="5" cols="5" id="" name="" class="form-text" required></textarea>
 				</div>
-				<button class="button fill">Submit request</button>
-			</div>
+				<button class="button fill" type="submit">Submit request</button>
+			</form>
 		</div>
 	</div>
 	{% include learn-more.html %}

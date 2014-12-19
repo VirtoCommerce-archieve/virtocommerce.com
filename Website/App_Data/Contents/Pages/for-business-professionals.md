@@ -13,7 +13,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="for-business __responsive">
-		<h2>For Business Professionals</h2>
+		<h1 class="head-title">For Business Professionals</h1>
 		<p class="text">Virto Commerce is a highly scalable eCommerce product for fast growing and large companies. It provides powerful enterprise-class features right out of box and gives you the flexibility to create your own unique eCommerce solution.</p>
 		<p class="text">Multiple store management, advanced promotion engines, dynamic content, as well as advanced product and price management are just a few of the tools you will receive with Virto Commerce. With the ability of full customization, you'll be able to achieve your unique business needs, convert browsers to buyers and increase online revenue!</p>
 		<div class="advantages">

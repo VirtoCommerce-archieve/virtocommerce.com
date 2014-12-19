@@ -10,7 +10,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="try-now download responsive">
-		<h2>Download / Install Virto Commerce</h2>
+		<h1 class="head-title">Download / Install Virto Commerce</h1>
 		<p class="text">Pick how you want to download and install Virto Commerce</p>
 		<div class="columns clearfix">
 			<div class="column">

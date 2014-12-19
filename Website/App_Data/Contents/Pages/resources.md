@@ -11,7 +11,7 @@ tags :
 <article role="main" class="main">
 	<!-- Roadmap -->
 	<div class="roadmap __responsive">
-		<h2>Resources for developers</h2>
+		<h1 class="head-title">Resources for developers</h1>
 		<ul class="list">
 			<li class="list-item">
 				<div class="columns">

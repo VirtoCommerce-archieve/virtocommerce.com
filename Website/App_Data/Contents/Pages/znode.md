@@ -10,7 +10,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="znode __responsive">
-		<h2>Virto Commerce vs Znode Comparison</h2>
+		<h1 class="head-title">Virto Commerce vs Znode Comparison</h1>
 		<div class="columns">
 			<div class="column">
 				<div class="block">

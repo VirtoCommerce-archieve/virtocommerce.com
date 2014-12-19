@@ -11,7 +11,7 @@ tags :
 <article class="main" role="main">
 	<div class="features">
 		<div class="responsive">
-			<h2>Thank you for signup</h2>
+			<h1 class="head-title">Thank you for signup</h1>
 		</div>
 	</div>
 	{% include technologies.html %}

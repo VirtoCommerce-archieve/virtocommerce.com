@@ -3,7 +3,7 @@ layout: post
 title: Enterprise .NET open-source ecommerce cloud platform. Try now online demo
 description: Enterprise .NET open-source ecommerce cloud platform. Try now online demo
 date: 2014-01-30
-permalink: /pages/online-demo
+permalink: try-now/online-demo
 tags : 
 - online-demo
 - demo

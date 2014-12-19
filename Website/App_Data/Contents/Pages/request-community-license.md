@@ -11,7 +11,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="partner __responsive">
-		<h2>Community License</h2>
+		<h1 class="head-title">Community License</h1>
 		<h3>Production License Community Edition of Virto Commerce is offered free of charge if you meet the requirements of the Community Edition License (mainly revenue restriction).</h3>
 		<p class="text">All we ask from you is to complete the form below and share your experience with our community on Facebook or Twitter.</p>
 		<div class="columns">

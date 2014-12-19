@@ -11,7 +11,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="for-dev __responsive">
-		<h2>Features of Cloud-powered Multichannel Ecommerce Platform</h2>
+		<h1 class="head-title">Features of Cloud-powered Multichannel Ecommerce Platform</h1>
 		<ul class="list">
 			<li class="list-item big">
 				<div class="list-info">

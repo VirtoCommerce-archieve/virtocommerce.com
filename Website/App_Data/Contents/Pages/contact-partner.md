@@ -11,7 +11,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="download responsive">
-		<h2 class="title">Contact Partner</h2>
+		<h1 class="head-title">Contact Partner</h1>
 		<p class="text">Use this form to contact partner directly.</p>
 		<form class="form" action="">
 			<input type="hidden" value="Download SDK" name="Subject"/>

@@ -10,7 +10,7 @@ tags :
 ---
 <article role="main" class="main">
 	<div class="try-now responsive">
-		<h2>Try Virto Commerce</h2>
+		<h1 class="head-title">Try Virto Commerce</h1>
 		<p class="text">Get «hands on» with Virto Commerce on your terms. Technical support is included!</p>
 		<div class="columns clearfix">
 			<div class="column">
