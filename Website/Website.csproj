@@ -175,6 +175,7 @@
     <None Include="App_Data\Contents\Pages\for-business-professionals.md" />
     <None Include="App_Data\Contents\Pages\index.md" />
     <None Include="App_Data\Contents\Pages\download-sdk.md" />
+    <None Include="App_Data\Contents\Pages\contact-partner.md" />
     <Content Include="App_Data\Contents\Pages\resources.md" />
     <None Include="App_Data\Contents\Pages\thank-you-demo.md" />
     <None Include="App_Data\Contents\Pages\thank-you-partner.md" />

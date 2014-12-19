@@ -13,11 +13,11 @@ tags :
 	<div class="responsive">
 		<div class="slider-info">
 			<h1 class="slider-title">Community edition</h1>
-			<p class="slider-descr">
+			<h2 class="slider-descr">
 				Virto Commerce Enterprise Edition gives you the <br>
 				ultimate support from our tech team, access to <br>
 				our architects
-			</p>
+			</h2>
 			<a class="button fill" href="/try-now">Try It Now</a>
 		</div>
 	</div>
@@ -54,14 +54,10 @@ tags :
 	</div>
 	<!-- Prices -->
 	<div class="prices clearfix">
-		<h2 class="title">Become a contributor </h2>
+		<p class="head-title">Become a contributor </p>
 		<div class="responsive">
 			<div class="price-descr">
-				<p>
-					To lern more about Community Edition,
-					please complete the brief frome below and
-					we will be in contact with you shortly
-				</p>
+				<p id="cont_2"></p>
 			</div>
 			<div class="price-form clearfix">
 				<div class="control-group">

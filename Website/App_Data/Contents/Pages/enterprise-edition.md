@@ -12,10 +12,10 @@ tags :
 	<div class="responsive">
 		<div class="slider-info">
 			<h1 class="slider-title">Enterprise Edition</h1>
-			<p class="slider-descr">
-				Build your business with the e-Commerce Platform <br /> 
+			<h2 class="slider-descr">
+				Build your business with the .NET open-source e-Commerce Platform <br /> 
 				that can evolve over time
-			</p>
+			</h2>
 			<a class="button fill" href="/try-now">Try It Now</a>
 		</div>
 	</div>
@@ -29,7 +29,7 @@ tags :
 				<div class="proposal-ico"></div>
 				<p class="proposal-title">Ensure Successful Implementation</p>
 				<p class="proposal-descr">
-					We understand that today’s e-commerce store is a complex integration solution that requires multiple teams from marketing to IT working together to make it a success. With Virto Commerce Enterprise you’ll gain access to a team of experienced developers and architects who will guide you to an elegant and simple solutions.
+					We understand that today’s e-commerce store is a complex integration solution that requires multiple teams from marketing to IT working together to make it a success. With Virto Commerce Enterprise e-commerce platform you’ll gain access to a team of experienced developers and architects who will guide you to an elegant and simple e-commerce solutions.
 				</p>
 			</li>
 			<li class="list-item support">
@@ -57,14 +57,10 @@ tags :
 	</div>
 	<!-- Prices -->
 	<div class="prices clearfix">
-		<h2 class="title">Prices</h2>
+		<p class="head-title">Prices</p>
 		<div class="responsive">
 			<div class="price-descr">
-				<p>
-					To learn more about Enterprise edition pricing,
-					please complete the brief form and
-					we will be in contact with you shortly
-				</p>
+				<p id="cont_1"></p>
 			</div>
 			<form class="price-form clearfix">
 				<input type="hidden" value="Virto Commerce Enterprise Edition Pricing Request" name="Subject" />

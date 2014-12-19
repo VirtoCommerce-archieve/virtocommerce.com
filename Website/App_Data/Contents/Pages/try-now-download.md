@@ -29,7 +29,7 @@ tags :
 				<div class="block">
 					<h3 class="title">Download Virto Commerce SDK Package</h3>
 					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi blanditiis qui maxime illo, exercitationem tempore.</p>
-					<a class="button fill" href="#">Pick Edition and Download</a>
+					<a class="button fill" href="/download-sdk">Pick Edition and Download</a>
 				</div>
 				<div class="block">
 					<h3 class="title">Download Virto Commerce Source Code</h3>

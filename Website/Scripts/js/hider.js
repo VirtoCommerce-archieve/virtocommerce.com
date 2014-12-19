@@ -1,5 +1,8 @@
 ﻿$(function () {
-	var seoContent = { };
+	var seoContent = {
+		"1": "VG8gbGVhcm4gbW9yZSBhYm91dCBFbnRlcnByaXNlIGVkaXRpb24gcHJpY2luZywgcGxlYXNlIGNvbXBsZXRlIHRoZSBicmllZiBmb3JtIGFuZCB3ZSB3aWxsIGJlIGluIGNvbnRhY3Qgd2l0aCB5b3Ugc2hvcnRseQ==",
+		"2": "VG8gbGVybiBtb3JlIGFib3V0IENvbW11bml0eSBFZGl0aW9uLCBwbGVhc2UgY29tcGxldGUgdGhlIGJyaWVmIGZyb21lIGJlbG93IGFuZCB3ZSB3aWxsIGJlIGluIGNvbnRhY3Qgd2l0aCB5b3Ugc2hvcnRseQ=="
+	};
 	var seoHrefs = {
 		"1": "L3RyeS1ub3c=",
 		"2": "L3RyeS1ub3c=",
@@ -16,8 +19,8 @@
 			case "href":
 				$element.attr("href", Base64.decode(seoHrefs[key]));
 				break;
-			case "content":
-				$element.replaceWith(Base64.decode(seoContent[key]));
+			case "cont":
+				$element.html(Base64.decode(seoContent[key]));
 				break;
 		}
 	}

@@ -1,6 +1,12 @@
 /* ==========================================================================
    Base layer
    ========================================================================== */
+ form .form-input.error, form .control-group .form-text.error
+{
+	border-color:red;
+	border-width: 2px;
+}
+
 #layout
 {
 	min-height: 100%;
@@ -408,6 +414,7 @@
 	{
 		display: block;
 		left: 49.9999%;
+		max-width: inherit;
 		position: relative;
 
 		-webkit-transform: translatex(-50%);
@@ -1240,7 +1247,7 @@
 		text-align: center;
 	}
 
-		.prices .title
+		.prices .head-title
 		{
 			color: #fff;
 			display: inline-block;
