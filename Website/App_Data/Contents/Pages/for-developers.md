@@ -1,9 +1,9 @@
-﻿---
+---
 layout: post
 title: Virto commerce - Multi store, Cloud based, MVC, ASP.NET ecommerce framework
 description: Virto commerce - Multi store, Cloud based, MVC, ASP.NET ecommerce framework
 date: 2014-01-30
-permalink: /pages/for-developers
+permalink: features/for-developers
 tags : 
 - for-developers
 - developers
