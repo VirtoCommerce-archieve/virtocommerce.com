@@ -51,14 +51,14 @@ tags :
 	</div>
 	<!-- Prices -->
 	<div class="prices clearfix">
-		<p class="head-title">Request Community License!</p>
+		<p class="head-title">Request Free Community License!</p>
 		<div class="responsive">
 			<div class="price-descr">
 				<p id="cont_2">All we ask from you is to complete the form below and share your experience with our community
 on Facebook or Twitter.</p>
 			</div>
 			<form class="price-form clearfix">
-				<input type="hidden" value="Request Community License!" name="Subject"/>
+				<input type="hidden" value="Request Free Community License!" name="Subject"/>
 				<input type="hidden" value="true" name="IsResend"/>
 				<input type="hidden" value="/thank-you-community-request-license" name="RedirectUrl" />
 				<div class="control-group">

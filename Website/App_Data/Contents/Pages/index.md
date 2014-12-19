@@ -60,7 +60,7 @@ tags :
 					<div class="ico"></div>
 					<div class="planet-content social">
 						<h2 class="name">Social</h2>
-						<p>Authenticate using popular social networks including Facebook, Linkedin, Google and many others. Create custom store front using our web api services and javascript libraries <a href="" class="all link-white">Link</a></p>
+						<p>Authenticate using popular social networks including Facebook, Linkedin, Google and many others. Create custom store front using our web api services and javascript libraries</p>
 					</div>
 					<div class="planet-content marketplace">
 						<h2 class="name">Multi Channel</h2>
