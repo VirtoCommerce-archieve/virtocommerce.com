@@ -12,10 +12,10 @@ tags :
 	<img alt="" src="/Content/images/bg-community.jpg" class="slider-bg">
 	<div class="responsive">
 		<div class="slider-info">
-			<h1 class="slider-title">Community Edition for Small Businesses</h1>
+			<h1 class="slider-title">Community Edition</h1>
 			<h2 class="slider-descr">
-				Virto Commerce Community Edition is a great<br>
-				product to start your online business
+				Use Community Edition to srart<br>
+				your Online Business
 			</h2>
 			<a class="button fill" href="/try-now">Try It Now</a>
 		</div>
@@ -37,16 +37,15 @@ tags :
 				<div class="proposal-ico"></div>
 				<p class="proposal-title">Community Support</p>
 				<p class="proposal-descr">
-					This is the easiest way to explore Virto Commerce. Our online demo runs in Azure
-					environment. You will be able to explore both front-end and back-end functionality. Get support and recommendations for a new installation or troubleshooting for
-					existing installations, as well as best practices for server and hosting environments,
-					including Azure Cloud.
+					Use our community forums and support site to receive support.
 				</p>
 			</li>
 			<li class="list-item updates">
 				<div class="proposal-ico"></div>
 				<p class="proposal-title">Join Community!</p>
-				<p class="proposal-descr">From catalog setup to advanced marketing, our experts are available to help with any need and answer any questions you have about using Virto Commerce. This is the easiest way to explore Virto Commerce. Our online demo runs in Azure environment. You will be able to explore both front-end and back-end functionality.</p>
+				<p class="proposal-descr">
+					Create custom solutions, themes, extensions and post them to our community. 
+				</p>
 			</li>
 		</ul>
 	</div>
