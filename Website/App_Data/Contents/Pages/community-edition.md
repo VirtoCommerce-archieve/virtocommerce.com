@@ -62,11 +62,11 @@ on Facebook or Twitter.</p>
 				<input type="hidden" value="true" name="IsResend"/>
 				<input type="hidden" value="/thank-you-community-request-license" name="RedirectUrl" />
 				<div class="control-group">
-					<input type="text" placeholder="Full name ..." class="form-input" required>
-					<input type="text" placeholder="Your email ..." class="form-input" required>
+					<input type="text" placeholder="Full name ..." name="FullName" class="form-input" required>
+					<input type="text" placeholder="Your email ..." name="To" class="form-input" required>
 				</div>
 				<div class="control-group">
-					<textarea placeholder="Comments ..." rows="5" cols="5" id="" name="" class="form-text" required></textarea>
+					<textarea placeholder="Comments ..." rows="5" cols="5" name="Comments" class="form-text" required></textarea>
 				</div>
 				<button class="button fill" type="submit">Submit request</button>
 			</form>
