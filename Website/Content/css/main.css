@@ -2051,6 +2051,17 @@
 				font-size: 15px;
 			}
 
+	/* Download */
+	.download .list
+	{
+		margin: 30px 0;
+	}
+
+	.download .list li
+	{
+		font-size: 14px;
+	}
+
 
 /* Footer
 ========================================================================== */
