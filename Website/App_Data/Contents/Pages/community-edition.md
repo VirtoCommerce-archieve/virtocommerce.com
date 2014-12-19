@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title: Virto commerce - Free Community edition of MVC ASP.NET open-source ecommerce framework
+title: Virto Commerce - Free Community Edition of MVC ASP.NET open-source ecommerce framework
 description: Community Edition
 date: 2014-01-30
 permalink: /pages/community-edition
@@ -12,11 +12,10 @@ tags :
 	<img alt="" src="/Content/images/bg-community.jpg" class="slider-bg">
 	<div class="responsive">
 		<div class="slider-info">
-			<h1 class="slider-title">Community edition</h1>
+			<h1 class="slider-title">Community Edition for Small Businesses</h1>
 			<h2 class="slider-descr">
-				Virto Commerce Enterprise Edition gives you the <br>
-				ultimate support from our tech team, access to <br>
-				our architects
+				Virto Commerce Community Edition is a great<br>
+				product to start your online business
 			</h2>
 			<a class="button fill" href="/try-now">Try It Now</a>
 		</div>
@@ -25,19 +24,18 @@ tags :
 <article role="main" class="main">
 	<!-- Proposal -->
 	<div class="proposal __responsive">
-		<h2>From whom this proposal</h2>
+		<h2>What can you expect with Community Edition</h2>
 		<ul class="list">
 			<li class="list-item access">
 				<div class="proposal-ico"></div>
-				<p class="proposal-title">Free access to functional and architecture</p>
+				<p class="proposal-title">Free for Small Businesses</p>
 				<p class="proposal-descr">
-					Virto Commerce Enterprise Edition gives you the ultimate support from our tech team, access to our architects, and assistance from our sales and marketing team.
-					Licensed on an annual subscription basis, Virto Commerce Enterprise Edition is packed with professional support.
+					With Community Edition License you get fully featured enterprise class product completely free with just a revenue restriction.
 				</p>
 			</li>
 			<li class="list-item community">
 				<div class="proposal-ico"></div>
-				<p class="proposal-title">Community support available</p>
+				<p class="proposal-title">Community Support</p>
 				<p class="proposal-descr">
 					This is the easiest way to explore Virto Commerce. Our online demo runs in Azure
 					environment. You will be able to explore both front-end and back-end functionality. Get support and recommendations for a new installation or troubleshooting for
@@ -47,7 +45,7 @@ tags :
 			</li>
 			<li class="list-item updates">
 				<div class="proposal-ico"></div>
-				<p class="proposal-title">Regular free updates</p>
+				<p class="proposal-title">Join Community!</p>
 				<p class="proposal-descr">From catalog setup to advanced marketing, our experts are available to help with any need and answer any questions you have about using Virto Commerce. This is the easiest way to explore Virto Commerce. Our online demo runs in Azure environment. You will be able to explore both front-end and back-end functionality.</p>
 			</li>
 		</ul>
