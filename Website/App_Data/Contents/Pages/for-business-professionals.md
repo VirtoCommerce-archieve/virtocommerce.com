@@ -1,9 +1,9 @@
-﻿---
+---
 layout: post
 title: Virto commerce - Features for B2B and B2C ecommerce solutions
 description: Virto commerce - Features for B2B and B2C ecommerce solutions
 date: 2014-01-30
-permalink: /pages/for-business-professionals
+permalink: features/for-business-professionals
 tags : 
 - for-business-professionals
 - business
