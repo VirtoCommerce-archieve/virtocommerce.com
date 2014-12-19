@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Enterprise .net open-source ecommerce cloud platform. Demo
 description: Enterprise .net open-source ecommerce cloud platform. Demo
