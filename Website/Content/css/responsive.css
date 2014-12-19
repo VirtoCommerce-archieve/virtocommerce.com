@@ -1202,18 +1202,18 @@
 	}
 
 	.your-costumers .planet.social .planet-info,
-	.your-costumers .planet.b2b .planet-info
+	.your-costumers .planet.mobile .planet-info
 	{
 		background-color: #fcb040;
 	}
 
-	.your-costumers .planet.mobile .planet-info
+	.your-costumers .planet.pc .planet-info
 	{
 		background-color: #6c6f71;
 	}
 
 	.your-costumers .planet.marketplace .planet-info,
-	.your-costumers .planet.pc .planet-info
+	.your-costumers .planet.b2b .planet-info
 	{
 		background-color: #ea5564;
 	}
