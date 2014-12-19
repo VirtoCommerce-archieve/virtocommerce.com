@@ -9,15 +9,22 @@
     $scope.blade.refresh = function () {
         $scope.blade.isLoading = true;
 
-        contents.getItem(
-        {
-            collectionId: $scope.blade.collectionId,
-            itemId: $scope.blade.itemId
-        }, function (results) {
+        if ($scope.blade.currentEntity == null) {
+            $scope.blade.origEntity = null;
             $scope.blade.isLoading = false;
-            $scope.blade.currentEntity = angular.copy(results);;
-            $scope.blade.origEntity = results;
-        });
+        } else {
+
+
+            contents.getItem(
+            {
+                collectionId: $scope.blade.collectionId,
+                itemId: $scope.blade.itemId
+            }, function(results) {
+                $scope.blade.isLoading = false;
+                $scope.blade.currentEntity = angular.copy(results);;
+                $scope.blade.origEntity = results;
+            });
+        }
     };
 
     function isDirty() {
@@ -37,12 +44,17 @@
 
     function saveChanges() {
         $scope.blade.isLoading = true;
+
+        var itemId = $scope.blade.itemId;
+        if(itemId == null)
+            itemId = $scope.blade.currentEntity.id;
+
         contents.saveItem(
         {
             collectionId: $scope.blade.collectionId,
-            itemId: $scope.blade.itemId,
+            itemId: itemId,
         }, $scope.blade.currentEntity, function (data, headers) {
-            $scope.blade.refresh(true);
+            $scope.blade.close();
         });
     };
 
@@ -53,7 +65,7 @@
             collectionId: $scope.blade.collectionId,
             itemId: $scope.blade.itemId,
         }, $scope.blade.currentEntity, function (data, headers) {
-            $scope.blade.refresh(true);
+            $scope.blade.close();
         });
     };
 
@@ -86,20 +98,6 @@
             }
         }
     ];
-
-    function openAddEntityBlade() {
-        closeChildrenBlades();
-
-        var newBlade = {
-            id: "moduleInstallWizard",
-            title: "Module install",
-            // subtitle: '',
-            controller: 'installWizardController',
-            bladeActions: 'Modules/Packaging/VirtoCommerce.PackagingModule.Web/Scripts/wizards/newModule/install-wizard-actions.tpl.html',
-            template: 'Modules/Packaging/VirtoCommerce.PackagingModule.Web/Scripts/wizards/newModule/install-wizard.tpl.html'
-        };
-        bladeNavigationService.showBlade(newBlade, $scope.blade);
-    }
 
     $scope.blade.refresh();
 }]);

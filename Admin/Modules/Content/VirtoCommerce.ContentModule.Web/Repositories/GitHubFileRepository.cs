@@ -83,7 +83,17 @@ namespace VirtoCommerce.ContentModule.Web.Repositories
             return item;
         }
 
+        public Task<CollectionItem> SaveCollectionItem(string collection, CollectionItem item)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task DeleteContentItem(string collection, string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteCollectionItem(string collection)
         {
             throw new NotImplementedException();
         }

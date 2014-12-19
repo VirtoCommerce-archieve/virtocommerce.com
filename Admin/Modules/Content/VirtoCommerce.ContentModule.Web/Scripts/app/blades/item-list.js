@@ -60,12 +60,13 @@
         closeChildrenBlades();
 
         var newBlade = {
-            id: "moduleInstallWizard",
-            title: "Module install",
-            // subtitle: '',
-            controller: 'installWizardController',
-            bladeActions: 'Modules/Packaging/VirtoCommerce.PackagingModule.Web/Scripts/wizards/newModule/install-wizard-actions.tpl.html',
-            template: 'Modules/Packaging/VirtoCommerce.PackagingModule.Web/Scripts/wizards/newModule/install-wizard.tpl.html'
+            id: "contentItemCreate",
+            title: "Content Item",
+            currentEntity: null,
+            collectionId: $scope.blade.collectionId,
+            subtitle: 'Create new content item',
+            controller: 'contentItemDetailsController',
+            template: 'Modules/Content/VirtoCommerce.ContentModule.Web/Scripts/app/blades/item-detail.tpl.html'
         };
         bladeNavigationService.showBlade(newBlade, $scope.blade);
     }

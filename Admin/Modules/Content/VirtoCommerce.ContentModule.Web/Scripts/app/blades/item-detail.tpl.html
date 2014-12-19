@@ -4,6 +4,13 @@
             display: inline-block;
         }
     </style>
+    <fieldset>
+        <label>File Name:</label>
+        <div data-role="input-control" class="input-control text">
+            <input focus-on="" required class="form-control" ng-model="blade.currentEntity.id" placeholder="Enter file name" />
+        </div>
+    </fieldset>
+
     <textarea ng-model="blade.currentEntity.content" markdownedit markdown-hidden-buttons="cmdPreview" style="width: 100%" rows="25"></textarea>
     <markdown bind-from="blade.currentEntity.content"></markdown>
 </div>
