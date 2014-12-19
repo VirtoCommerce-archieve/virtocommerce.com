@@ -6,15 +6,13 @@
     $scope.selectedEntityId = null;
 
     //alert($scope.blade.currentEntity.id);
-    $scope.blade.refresh = function () {
+    $scope.blade.refresh = function (parentRefresh) {
         $scope.blade.isLoading = true;
 
         if ($scope.blade.currentEntity == null) {
             $scope.blade.origEntity = null;
             $scope.blade.isLoading = false;
         } else {
-
-
             contents.getItem(
             {
                 collectionId: $scope.blade.collectionId,
@@ -24,6 +22,10 @@
                 $scope.blade.currentEntity = angular.copy(results);;
                 $scope.blade.origEntity = results;
             });
+        }
+
+        if (parentRefresh) {
+            $scope.blade.parentBlade.refresh();
         }
     };
 
@@ -54,7 +56,9 @@
             collectionId: $scope.blade.collectionId,
             itemId: itemId,
         }, $scope.blade.currentEntity, function (data, headers) {
-            $scope.blade.close();
+            $scope.blade.currentEntity = data;
+            $scope.blade.itemId = $scope.blade.currentEntity.id;
+            $scope.blade.refresh(true);
         });
     };
 
@@ -65,7 +69,7 @@
             collectionId: $scope.blade.collectionId,
             itemId: $scope.blade.itemId,
         }, $scope.blade.currentEntity, function (data, headers) {
-            $scope.blade.close();
+            $scope.blade.refresh(true);
         });
     };
 
@@ -79,6 +83,7 @@
                 return true;
             }
         },
+        /*
         {
             name: "Publish", icon: 'icon-floppy',
             executeMethod: function () {
@@ -88,6 +93,7 @@
                 return true;
             }
         },
+        */
         {
             name: "Reset", icon: 'icon-undo',
             executeMethod: function () {
@@ -99,5 +105,5 @@
         }
     ];
 
-    $scope.blade.refresh();
+    $scope.blade.refresh(false);
 }]);

@@ -2,7 +2,7 @@
     'virtoCommerce.content.resources.contents',
     'virtoCommerce.content.blades.itemDetails'
 ])
-.controller('contentItemsListController', ['$rootScope', '$scope', 'bladeNavigationService', 'dialogService', 'contents', function ($rootScope, $scope, bladeNavigationService, dialogService, contents) {
+.controller('contentItemsListController', ['$rootScope', '$scope', '$filter', 'bladeNavigationService', 'dialogService', 'contents', function ($rootScope, $scope, $filter, bladeNavigationService, dialogService, contents) {
     $scope.selectedEntityId = null;
 
     //alert($scope.blade.currentEntity.id);
@@ -53,8 +53,75 @@
             canExecuteMethod: function () {
                 return true;
             }
+        },
+        {
+            name: "Delete", icon: 'icon-remove',
+            executeMethod: function () {
+                deleteChecked();
+            },
+            canExecuteMethod: function () {
+                return isItemsChecked();
+            }
         }
     ];
+
+    $scope.delete = function () {
+        if (isItemsChecked()) {
+            deleteChecked();
+        } else {
+            var dialog = {
+                id: "notifyNoTargetContentItem",
+                title: "Message",
+                message: "Nothing selected. Check some Items first."
+            };
+            dialogService.showNotificationDialog(dialog);
+        }
+
+        //preventCategoryListingOnce = true;
+    };
+
+    function deleteChecked() {
+        var dialog = {
+            id: "confirmDeleteItem",
+            title: "Delete confirmation",
+            message: "Are you sure you want to delete selected Items?",
+            callback: function (remove) {
+                if (remove) {
+                    closeChildrenBlades();
+
+                    var selection = $filter('filter')($scope.blade.currentEntities, { selected: true }, true);
+
+                    var listEntryLinks = [];
+                    var categoryIds = [];
+                    var itemIds = [];
+                    angular.forEach(selection, function(listItem) {
+                        itemIds.push(listItem.id);
+                    });
+
+                    if (itemIds.length > 0) {
+                        contents.remove({ ids: itemIds }, function (data, headers) {
+                            $scope.blade.refresh();
+                        });
+                    }
+                }
+            }
+        }
+        dialogService.showConfirmationDialog(dialog);
+    }
+
+    $scope.checkAll = function (selected) {
+        angular.forEach($scope.blade.currentEntities, function (item) {
+            item.selected = selected;
+        });
+    };
+
+    function isItemsChecked() {
+        if ($scope.blade.currentEntities) {
+            return _.any($scope.blade.currentEntities, function (x) { return x.selected; });
+        } else {
+            return false;
+        }
+    }
 
     function openAddEntityBlade() {
         closeChildrenBlades();

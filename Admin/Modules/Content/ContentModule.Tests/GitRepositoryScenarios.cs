@@ -8,6 +8,7 @@ using VirtoCommerce.ContentModule.Web.Repositories;
 namespace ContentModule.Tests
 {
     using Octokit;
+    using Octokit.Models.Request;
 
     using Xunit;
 
@@ -24,6 +25,18 @@ namespace ContentModule.Tests
             var repository = client.Repository.Get(_owner, repoName).Result;
             //var tree = client.GetRootFolders(repository).Result;
             //client.GitDatabase.Blob.Get()
+        }
+
+        [Fact]
+        public void Can_create_content_item()
+        {
+            var _owner = "VirtoCommerce";
+            var repoName = "vc-content";
+
+            var client = new GitHubClient(new ProductHeaderValue("VirtoCommerce-ContentModule"), new Uri("https://github.com/"));
+            client.Credentials = new Credentials("virtocommercecom", "v1rtocommerce");
+            var utf8Bytes = Encoding.UTF8.GetBytes("Hello World!");
+            var repository = client.Repository.Contents.CreateFile(_owner, repoName, "test/sample.md", new CreateFileRequest() { Message = "creating!", Content = Convert.ToBase64String(utf8Bytes)}).Result;
         }
 
         [Fact]

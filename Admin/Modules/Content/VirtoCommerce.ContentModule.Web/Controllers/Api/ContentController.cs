@@ -79,12 +79,38 @@ namespace VirtoCommerce.ContentModule.Web.Controllers.Api
 
         [HttpPost]
         [ResponseType(typeof(ContentItem))]
+        [Route("collections/items/{itemId}")]
+        public async Task<IHttpActionResult> Save(string itemId, ContentItem item)
+        {
+            var contentItem = await _fileSystem.SaveContentItem(String.Empty, itemId, item);
+            return Ok(contentItem);
+        }
+
+        [HttpPost]
+        [ResponseType(typeof(ContentItem))]
         [Route("collections/{collection}/items/{itemId}/publish")]
         public async Task<IHttpActionResult> Publish(string collection, string itemId, ContentItem item)
         {
             var contentItem = await _fileSystem.SaveContentItem(collection, itemId, item);
             return Ok(contentItem);
         }
+
+        [HttpDelete]
+        [ResponseType(typeof(ContentItem))]
+        [Route("collections/{collection}/items/{itemId}")]
+        public async Task<IHttpActionResult> Delete(string collection, string itemId)
+        {
+            await _fileSystem.DeleteContentItem(collection, itemId);
+            return Ok();
+        }
+
+        public async Task<IHttpActionResult> Delete(string collection, [FromUri] string[] ids)
+        {
+            //await _fileSystem.DeleteContentItem(collection, itemId);
+            return Ok();
+        }
+
+        
 
         private void PublishFile(string collection, string oldItemId, ContentItem item)
         {
