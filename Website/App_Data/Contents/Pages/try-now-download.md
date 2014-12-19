@@ -15,14 +15,14 @@ tags :
 		<div class="columns clearfix">
 			<div class="column">
 				<div class="block">
-					<h3 class="title">Install using Microsoft Web Platform Installer</h3>
-					<p class="text">The Microsoft Web Platform Installer (Web PI) is a free tool that makes getting the latest components of the Microsoft Web Platform and 3rd party software easy and convenient.</p>
-					<a class="button fill" href="#">Install</a>
+					<h3 class="title">Online Demo</h3>
+					<p class="text">This is the easiest way to explore Virto Commerce. Our online demo runs in Azure environment. You will be able to explore both front-end and back-end functionality.</p>
+					<a class="button fill" href="/try-now/online-demo">View demo</a>
 				</div>
 				<div class="block">
-					<h3 class="title">Install on Microsoft Cloud (Azure)</h3>
-					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi blanditiis qui maxime illo, exercitationem tempore.</p>
-					<a class="button fill" href="#">Install</a>
+					<h3 class="title">Microsoft Web PI</h3>
+					<p class="text">The Microsoft Web Platform Installer (Web PI) is a free tool that makes getting the latest components of the Microsoft Web Platform and 3rd party software easy and convenient.</p>
+					<a class="button fill" href="http://www.microsoft.com/web/gallery/virtocommerce.aspx" target="_blank" rel="nofollow">Download</a>
 				</div>
 			</div>
 			<div class="column">
@@ -32,9 +32,9 @@ tags :
 					<a class="button fill" href="/download-sdk">Pick Edition and Download</a>
 				</div>
 				<div class="block">
-					<h3 class="title">Download Virto Commerce Source Code</h3>
-					<p class="text">For the ultimate developer experience simply download the source code package from CodePlex.com and follow the <a title="Getting started" href="http://docs.virtocommerce.com/x/XwB4" target="_blank">getting started</a>&nbsp;guide and <a href="http://docs.virtocommerce.com/display/vc1devguide/Source+Code+Azure+Deployment" target="_blank"> deploying to Azure</a> guide to set up.</p>
-					<a class="button fill" href="#">Open Github Repository</a>
+					<h3 class="title">Download Source Code</h3>
+					<p class="text">For the ultimate developer experience simply download the source code package from CodePlex.com and follow the <a title="Getting started" href="http://docs.virtocommerce.com/x/XwB4" target="_blank" rel="nofollow">getting started</a>&nbsp;guide and <a href="http://docs.virtocommerce.com/display/vc1devguide/Source+Code+Azure+Deployment" target="_blank" rel="nofollow"> deploying to Azure</a> guide to set up.</p>
+					<a class="button fill" href="https://virtocommerce.codeplex.com/" target="_blank" rel="nofollow">Download</a>
 				</div>
 			</div>
 		</div>
