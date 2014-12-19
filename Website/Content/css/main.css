@@ -1194,17 +1194,17 @@
 					background-position: -1050px 0;
 				}
 
-				.list-item:nth-child(1) .proposal-ico
+				.list-item:nth-child(1n) .proposal-ico
 				{
 					background-color: #ea5564;
 				}
 
-				.list-item:nth-child(2) .proposal-ico
+				.list-item:nth-child(2n) .proposal-ico
 				{
 					background-color: #fcb040;
 				}
 
-				.list-item:nth-child(3) .proposal-ico
+				.list-item:nth-child(3n) .proposal-ico
 				{
 					background-color: #6c6f71;
 				}
