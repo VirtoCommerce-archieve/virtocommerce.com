@@ -15,69 +15,45 @@ namespace VirtoCommerce.ContentModule.Web.Controllers.Api
     using Microsoft.Practices.Unity;
 
     using VirtoCommerce.ContentModule.Web.Model;
+    using VirtoCommerce.ContentModule.Web.Repositories;
 
     [RoutePrefix("api/contents")]
     public class PublishingContentController : ApiController
     {
-        private IFileSystem _fileSystem;
-        private string _folderSource;
+        private IFileRepository _fileSystem;
 
-        [InjectionConstructor]
-        public PublishingContentController(IFileSystem fileSystem) : this(fileSystem, "~/App_Data/Contents")
-        {
-        }
-
-        public PublishingContentController(IFileSystem fileSystem, string folderSource)
+        public PublishingContentController(IFileRepository fileSystem)
         {
             _fileSystem = fileSystem;
-
-            if (folderSource.StartsWith("~"))
-            {
-                folderSource = HostingEnvironment.MapPath(folderSource);
-                if (!_fileSystem.Directory.Exists(_folderSource))
-                {
-                    _fileSystem.Directory.CreateDirectory(folderSource);
-                }
-            }
-
-            _folderSource = folderSource;
         }
 
         // GET: api/contents/collections
         [HttpGet]
         [ResponseType(typeof(CollectionItem[]))]
         [Route("collections")]
-        public IHttpActionResult GetCollections()
+        public async Task<IHttpActionResult> GetCollections()
         {
             var items = new List<CollectionItem>();
-
-            if (_fileSystem.Directory.Exists(_folderSource))
-            {
-                items.AddRange(collection: _fileSystem.Directory
-                    .GetDirectories(_folderSource, "*", searchOption: SearchOption.TopDirectoryOnly)
-                    .Select(folder => new CollectionItem() { Id = GetPageTitle(folder) })
-                );
-            }
-
-            return this.Ok(items.ToArray());
+            var collections = await _fileSystem.GetCollections();
+            return this.Ok(collections.Items.ToArray());
         }
 
         [HttpGet]
         [ResponseType(typeof(ContentItem[]))]
         [Route("collections/{collection}/items")]
-        public IHttpActionResult GetCollectionItems(string collection)
+        public async Task<IHttpActionResult> GetCollectionItems(string collection)
         {
-            var items = this.GetCollectionItemsInternal(collection);
-
-            return Ok(items);
+            var collections = await _fileSystem.GetCollectionItems(collection, 0, 100);
+            return this.Ok(collections.Items.ToArray());
         }
 
         [HttpGet]
         [ResponseType(typeof(ContentItem))]
         [Route("collections/{collection}/items/{itemId}")]
-        public IHttpActionResult GetItem(string collection, string itemId)
+        public async Task<IHttpActionResult> GetItem(string collection, string itemId)
         {
-            var contentItem = GetItemByName(collection, itemId);
+
+            var contentItem = await _fileSystem.GetContentItem(collection, itemId);
             return Ok(contentItem);
         }
 
@@ -95,25 +71,27 @@ namespace VirtoCommerce.ContentModule.Web.Controllers.Api
         [HttpPost]
         [ResponseType(typeof(ContentItem))]
         [Route("collections/{collection}/items/{itemId}")]
-        public IHttpActionResult Save(string collection, string itemId, ContentItem item)
+        public async Task<IHttpActionResult> Save(string collection, string itemId, ContentItem item)
         {
-            PublishFile(collection, itemId, item);
-            return Ok(item);
+            var contentItem = await _fileSystem.SaveContentItem(collection, itemId, item);
+            return Ok(contentItem);
         }
 
         [HttpPost]
         [ResponseType(typeof(ContentItem))]
         [Route("collections/{collection}/items/{itemId}/publish")]
-        public IHttpActionResult Publish(string collection, string itemId, ContentItem item)
+        public async Task<IHttpActionResult> Publish(string collection, string itemId, ContentItem item)
         {
-            PublishFile(collection, itemId, item);
-            return Ok(item);
+            var contentItem = await _fileSystem.SaveContentItem(collection, itemId, item);
+            return Ok(contentItem);
         }
 
         private void PublishFile(string collection, string oldItemId, ContentItem item)
         {
+            /*
             var origContentItem = GetItemByName(collection, oldItemId);
             _fileSystem.File.WriteAllText(origContentItem.Filename, item.Content);
+             * */
         }
 
         private ContentItem GetItemByName(string collection, string itemId)
@@ -125,6 +103,8 @@ namespace VirtoCommerce.ContentModule.Web.Controllers.Api
 
         private ContentItem[] GetCollectionItemsInternal(string collection)
         {
+            var collections = _fileSystem.GetCollectionItems(collection, 0, 100).Result;
+            /*
             var items = new List<ContentItem>();
 
             if (_fileSystem.Directory.Exists(_folderSource))
@@ -136,10 +116,15 @@ namespace VirtoCommerce.ContentModule.Web.Controllers.Api
             }
             
             return items.ToArray();
+             * */
+            return collections.Items.ToArray();
         }
 
         private string SafeReadContents(string file)
         {
+            return null;
+            
+            /*
             try
             {
                 return _fileSystem.File.ReadAllText(file);
@@ -159,6 +144,7 @@ namespace VirtoCommerce.ContentModule.Web.Controllers.Api
                         _fileSystem.File.Delete(tempFile);
                 }
             }
+             * */
         }
 
         private string GetPageTitle(string file)

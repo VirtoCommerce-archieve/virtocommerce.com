@@ -5,6 +5,9 @@ namespace VirtoCommerce.ContentModule.Web
 
     using Microsoft.Practices.Unity;
 
+    using Octokit;
+
+    using VirtoCommerce.ContentModule.Web.Repositories;
     using VirtoCommerce.Framework.Web.Modularity;
 
     public class Module : IModule
@@ -17,7 +20,11 @@ namespace VirtoCommerce.ContentModule.Web
 
         public void Initialize()
         {
-            _container.RegisterType<IFileSystem, FileSystem>();
+            //_container.RegisterType<IFileSystem, FileSystem>();
+            _container.RegisterInstance(new Credentials("virtocommercecom", "v1rtocommerce"));
+            _container.RegisterInstance(new RepositoryInfo("VirtoCommerce", "vc-content"));
+
+            _container.RegisterType<IFileRepository, GitHubFileRepository>();
 
         }
     }

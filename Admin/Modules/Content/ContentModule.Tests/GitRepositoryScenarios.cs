@@ -22,7 +22,7 @@ namespace ContentModule.Tests
             var client = new GitHubClient(new ProductHeaderValue("VirtoCommerce-ContentModule"), new Uri("https://github.com/"));
             client.Credentials = new Credentials("virtocommercecom", "v1rtocommerce");
             var repository = client.Repository.Get(_owner, repoName).Result;
-            var tree = client.GetTree(repository).Result;
+            //var tree = client.GetRootFolders(repository).Result;
             //client.GitDatabase.Blob.Get()
         }
 

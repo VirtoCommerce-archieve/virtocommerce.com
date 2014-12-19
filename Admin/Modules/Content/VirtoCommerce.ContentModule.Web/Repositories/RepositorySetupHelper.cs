@@ -42,12 +42,21 @@ namespace VirtoCommerce.ContentModule.Web.Repositories
             return await client.GitDatabase.Commit.Create(repository.Owner.Login, repository.Name, newCommit);
         }
 
-        public static async Task<TreeResponse> GetTree(this IGitHubClient client, Repository repository)
+        public static async Task<DirectoryContent[]> GetRootFolders(this IGitHubClient client, Repository repository)
         {
-            var master = await client.GitDatabase.Reference.Get(repository.Owner.Login, repository.Name, "heads/master");
+            var directories = await client.Repository.Contents.GetRoot(repository.Owner.Login, repository.Name);
+            return directories.ToArray();
 
-            return await client.GitDatabase.Tree.Get(repository.Owner.Login, repository.Name, master.Object.Sha);
+            //var master = await client.GitDatabase.Reference.Get(repository.Owner.Login, repository.Name, "heads/master");
 
+            //return await client.GitDatabase.Tree.Get(repository.Owner.Login, repository.Name, master.Object.Sha);
+
+        }
+
+        public static async Task<DirectoryContent[]> GetFiles(this IGitHubClient client, Repository repository, string path)
+        {
+            var directories = await client.Repository.Contents.GetForPath(repository.Owner.Login, repository.Name, path);
+            return directories.ToArray();
         }
 
         public static async Task<Reference> SaveFiles(this IGitHubClient client, Repository repository, string comment, IEnumerable<KeyValuePair<string, string>> treeContents)
