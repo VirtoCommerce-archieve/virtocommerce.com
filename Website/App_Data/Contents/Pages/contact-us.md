@@ -57,16 +57,16 @@ tags :
 						<input type="hidden" value="true" name="IsResend" />
 						<input type="hidden" value="/thank-you-contact-us" name="RedirectUrl" />
 						<div class="control-group">
-							<label for="fullName">Full name</label>
-							<input type="text" name="name" id="fullName" class="form-input">
+							<label for="FullName">Full name</label>
+							<input type="text" name="FullName"class="form-input" required>
 						</div>
 						<div class="control-group">
-							<label for="email">Email</label>
-							<input type="text" name="email" id="email" class="form-input">
+							<label for="To">Email</label>
+							<input type="text" name="To" class="form-input" required>
 						</div>
 						<div class="control-group">
-							<label for="comments">Comments</label>
-							<textarea rows="10" cols="30" id="comments" name="comments" class="form-text"></textarea>
+							<label for="Comments">Comments</label>
+							<textarea rows="10" cols="30" name="Comments" class="form-text" required></textarea>
 						</div>
 						<div class="control-group">
 							<button class="button fill" type="submit">Submit request</button>
