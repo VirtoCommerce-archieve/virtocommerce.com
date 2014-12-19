@@ -1,12 +1,6 @@
 /* ==========================================================================
    Base layer
    ========================================================================== */
- form .form-input.error, form .control-group .form-text.error
-{
-	border-color:red;
-	border-width: 2px;
-}
-
 #layout
 {
 	min-height: 100%;
@@ -225,7 +219,7 @@
 				line-height: 1;
 				text-align: center;
 				vertical-align: text-top;
-				width: 110px;
+				width: 130px;
 			}
 
 			.no-touch .head-menu .menu.__inline .menu-item.dropdown:hover
@@ -298,7 +292,7 @@
 					background: #fff;
 					border: 1px solid #e8e9ea;
 					margin: 0 0 0 -1px;
-					min-width: 120px;
+					min-width: 130px;
 					opacity: 0;
 					position: absolute;
 					padding: 0 0 15px;
@@ -318,7 +312,7 @@
 					left: 0;
 					position: absolute;
 					top: -1px;
-					width: 110px;
+					width: 130px;
 				}
 
 				.no-touch .head-menu .menu-item.dropdown:hover .menu.__sub
@@ -2580,6 +2574,7 @@
 
 	.control-group .form-input
 	{
+
 		border-color: #939597;
 		border-style: solid;
 		border-width: 1px 0;
@@ -2591,6 +2586,12 @@
 		border-width: 1px 0 0;
 		padding-top: 7px;
 		resize: none;
+	}
+
+	.control-group .form-input.error,
+	.control-group .form-text.error
+	{
+		border: 1px solid #ea5564;
 	}
 
 	/* Forms */
@@ -2617,13 +2618,20 @@
 		margin: 0 0 5px;
 	}
 
-	.form .form-input
+	.form .form-input,
+	.form .form-text
 	{
 		border: 2px solid #ccc;
 		width: auto;
 
 		-webkit-box-shadow: none;
 				box-shadow: none;
+	}
+
+	.form .form-input,
+	.form .form-text
+	{
+		border-color: #ea5564;
 	}
 
 	.form .form-input:focus
