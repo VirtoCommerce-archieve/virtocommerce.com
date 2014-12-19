@@ -51,10 +51,11 @@ tags :
 	</div>
 	<!-- Prices -->
 	<div class="prices clearfix">
-		<p class="head-title">Request Community License</p>
+		<p class="head-title">Request Community License!</p>
 		<div class="responsive">
 			<div class="price-descr">
-				<p id="cont_2"></p>
+				<p id="cont_2">All we ask from you is to complete the form below and share your experience with our community
+on Facebook or Twitter.</p>
 			</div>
 			<div class="price-form clearfix">
 				<div class="control-group">
