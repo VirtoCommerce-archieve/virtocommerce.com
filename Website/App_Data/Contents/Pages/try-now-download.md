@@ -16,7 +16,7 @@ tags :
 			<div class="column">
 				<div class="block">
 					<h3 class="title">Install using Microsoft Web Platform Installer</h3>
-					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi blanditiis qui maxime illo, exercitationem tempore.</p>
+					<p class="text">The Microsoft Web Platform Installer (Web PI) is a free tool that makes getting the latest components of the Microsoft Web Platform and 3rd party software easy and convenient.</p>
 					<a class="button fill" href="#">Install</a>
 				</div>
 				<div class="block">
@@ -33,7 +33,7 @@ tags :
 				</div>
 				<div class="block">
 					<h3 class="title">Download Virto Commerce Source Code</h3>
-					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi blanditiis qui maxime illo, exercitationem tempore.</p>
+					<p class="text">For the ultimate developer experience simply download the source code package from CodePlex.com and follow the <a title="Getting started" href="http://docs.virtocommerce.com/x/XwB4" target="_blank">getting started</a>&nbsp;guide and <a href="http://docs.virtocommerce.com/display/vc1devguide/Source+Code+Azure+Deployment" target="_blank"> deploying to Azure</a> guide to set up.</p>
 					<a class="button fill" href="#">Open Github Repository</a>
 				</div>
 			</div>
