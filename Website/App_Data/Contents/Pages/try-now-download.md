@@ -28,7 +28,7 @@ tags :
 			<div class="column">
 				<div class="block">
 					<h3 class="title">Download Virto Commerce SDK Package</h3>
-					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi blanditiis qui maxime illo, exercitationem tempore.</p>
+					<p class="text">SDK allows you to install and run Virto Commerce locally on your own Windows machine. The SDK contains all required applications and is easy to setup without much knowledge of developer tools.</p>
 					<a class="button fill" href="/download-sdk">Pick Edition and Download</a>
 				</div>
 				<div class="block">
