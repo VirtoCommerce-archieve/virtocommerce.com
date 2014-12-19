@@ -14,7 +14,7 @@ tags :
 		<div class="slider-info">
 			<h1 class="slider-title">Community Edition</h1>
 			<h2 class="slider-descr">
-				Use Community Edition to srart<br>
+				Use Community Edition to start<br>
 				your Online Business
 			</h2>
 			<a class="button fill" href="/try-now">Try It Now</a>
@@ -30,7 +30,7 @@ tags :
 				<div class="proposal-ico"></div>
 				<p class="proposal-title">Free for Small Businesses</p>
 				<p class="proposal-descr">
-					With Community Edition License you get fully featured enterprise class product completely free with just a revenue restriction.
+					We understand it takes a lot to start a new business. With Community Edition License, you get fully featured enterprise class product completely free with just a revenue restriction. That way when your business becomes a success, your e-commerce platform will scale with it.
 				</p>
 			</li>
 			<li class="list-item community">
