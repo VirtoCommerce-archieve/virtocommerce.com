@@ -1812,6 +1812,14 @@
 		font-size: 18px;
 	}
 
+	/* Images */
+	.img-300,
+	.img-400,
+	.img-500
+	{
+		width: auto;
+	}
+
 	.text,
 	.list li
 	{

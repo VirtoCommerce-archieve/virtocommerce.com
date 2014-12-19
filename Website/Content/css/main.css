@@ -2676,6 +2676,21 @@
 		}
 
 	/* Images */
+	.img-300
+	{
+		width: 300px;
+	}
+
+	.img-400
+	{
+		width: 400px;
+	}
+
+	.img-500
+	{
+		width: 500px;
+	}
+
 	img
 	{
 		max-width: 100%;
