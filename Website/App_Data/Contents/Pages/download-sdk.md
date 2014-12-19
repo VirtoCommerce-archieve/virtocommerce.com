@@ -19,11 +19,11 @@ tags :
 			<input type="hidden" value="/pickedition" name="RedirectUrl" />
 			<div class="control-group">
 				<label for="" class="form-label">Full name:</label>
-				<input type="text" class="form-input" name="Fullname" />
+				<input type="text" class="form-input" name="Fullname" required/>
 			</div>
 			<div class="control-group">
 				<label for="" class="form-label">Email:</label>
-				<input type="text" class="form-input" name="To" />
+				<input type="text" class="form-input" name="To" required/>
 			</div>
 			<div class="control-group">
 				<button class="button fill" type="submit">Download SDK</button>
