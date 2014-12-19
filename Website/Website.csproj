@@ -195,6 +195,7 @@
     <Content Include="Content\images\advantages\1.jpg" />
     <Content Include="Content\images\advantages\2.jpg" />
     <Content Include="Content\images\advantages\3.jpg" />
+    <Content Include="Content\images\advantages\demo-console.png" />
     <Content Include="Content\images\azure.png" />
     <Content Include="Content\images\azurex2.png" />
     <Content Include="Content\images\bg-community.jpg" />
