@@ -3,7 +3,7 @@ layout: post
 title: Virto Commerce - Free Community Edition of MVC ASP.NET open-source ecommerce framework
 description: Community Edition
 date: 2014-01-30
-permalink: /our-offers/enterprise-edition
+permalink: our-offers/community-edition
 tags : 
 - enterprise
 - commerce

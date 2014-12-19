@@ -39,6 +39,7 @@ namespace VirtoCommerce
 			);
 			 * */
 
+            /*
 			routes.MapRoute(
 				name: "DefaultFeatures",
 				url: "features/{pageName}",
@@ -62,6 +63,7 @@ namespace VirtoCommerce
 				url: "try-now/{pageName}",
 				defaults: new { controller = "Page", action = "DisplayPage" }
 			);
+             * */
 
 			routes.MapRoute(
 				name: "Default",
