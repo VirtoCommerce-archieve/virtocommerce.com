@@ -2634,15 +2634,15 @@
 				box-shadow: none;
 	}
 
-	.form .form-input,
-	.form .form-text
-	{
-		border-color: #ea5564;
-	}
-
 	.form .form-input:focus
 	{
 		border-color: #999;
+	}
+
+	.form .form-input.error,
+	.form .form-text.error
+	{
+		border: 2px solid #ea5564;
 	}
 
 	/* Lists */
