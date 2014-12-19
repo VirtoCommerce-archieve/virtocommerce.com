@@ -58,7 +58,7 @@ tags :
 		<div class="responsive">
 			<div class="price-descr">
 				<p>
-					To lern more about Enterprise edition pricing,
+					To learn more about Enterprise edition pricing,
 					please completethe brief frome below and
 					we willbe in contact with you shortly
 				</p>
