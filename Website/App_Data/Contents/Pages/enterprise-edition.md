@@ -2,6 +2,7 @@
 layout: post
 title: Virto commerce - Enterprise ASP.NET open-source b2b  b2c ecommerce software
 description: Enterprise Edition
+permlink: our-offers/enterprise-edition
 date: 2014-01-30
 tags : 
 - enterprise
