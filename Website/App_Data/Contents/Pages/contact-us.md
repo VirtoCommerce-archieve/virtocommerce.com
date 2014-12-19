@@ -53,6 +53,9 @@ tags :
 				<div class="block">
 					<p class="title">Contact us if you have any questions</p>
 					<form action="">
+						<input type="hidden" value="Contact us form" name="Subject" />
+						<input type="hidden" value="true" name="IsResend" />
+						<input type="hidden" value="/thank-you-contact-us" name="RedirectUrl" />
 						<div class="control-group">
 							<label for="fullName">Full name</label>
 							<input type="text" name="name" id="fullName" class="form-input">
@@ -66,7 +69,7 @@ tags :
 							<textarea rows="10" cols="30" id="comments" name="comments" class="form-text"></textarea>
 						</div>
 						<div class="control-group">
-							<button class="button fill">Submit request</button>
+							<button class="button fill" type="submit">Submit request</button>
 						</div>
 					</form>
 				</div>
