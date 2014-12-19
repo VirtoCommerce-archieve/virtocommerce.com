@@ -16,7 +16,7 @@ tags :
 		<form class="form" action="">
 			<input type="hidden" value="Download SDK" name="Subject"/>
 			<input type="hidden" value="true" name="IsResend"/>
-			<input type="hidden" value="/thank-you-download" name="RedirectUrl" />
+			<input type="hidden" value="/pickedition" name="RedirectUrl" />
 			<div class="control-group">
 				<label for="" class="form-label">Full name:</label>
 				<input type="text" class="form-input" name="Fullname" />

@@ -14,7 +14,8 @@ tags :
 		<div class="slider-info">
 			<h1 class="slider-title">Enterprise Edition</h1>
 			<h2 class="slider-descr">
-				Build your business with the .NET open-source e-Commerce Platform <br /> 
+				Build your business with the .NET <br /> 
+				open-source e-Commerce Platform <br /> 
 				that can evolve over time
 			</h2>
 			<a class="button fill" href="/try-now">Try It Now</a>
@@ -33,7 +34,7 @@ tags :
 					We understand that today’s e-commerce store is a complex integration solution that requires multiple teams from marketing to IT working together to make it a success. With Virto Commerce Enterprise e-commerce platform you’ll gain access to a team of experienced developers and architects who will guide you to an elegant and simple e-commerce solutions.
 				</p>
 			</li>
-			<li class="list-item support">
+			<li class="list-item updates">
 				<div class="proposal-ico"></div>
 				<p class="proposal-title">Take Advantage of New Opportunities</p>
 				<p class="proposal-descr">
