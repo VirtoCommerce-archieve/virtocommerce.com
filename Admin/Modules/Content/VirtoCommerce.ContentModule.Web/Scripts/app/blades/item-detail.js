@@ -56,9 +56,14 @@
             collectionId: $scope.blade.collectionId,
             itemId: itemId,
         }, $scope.blade.currentEntity, function (data, headers) {
-            $scope.blade.currentEntity = data;
-            $scope.blade.itemId = $scope.blade.currentEntity.id;
-            $scope.blade.refresh(true);
+            if ($scope.blade.origEntity == null) {
+                $scope.bladeClose();
+                $scope.blade.parentBlade.refresh();
+            } else {
+                $scope.blade.currentEntity = data;
+                $scope.blade.itemId = $scope.blade.currentEntity.id;
+                $scope.blade.refresh(true);
+            }
         });
     };
 

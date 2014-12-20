@@ -91,15 +91,14 @@
 
                     var selection = $filter('filter')($scope.blade.currentEntities, { selected: true }, true);
 
-                    var listEntryLinks = [];
-                    var categoryIds = [];
                     var itemIds = [];
                     angular.forEach(selection, function(listItem) {
                         itemIds.push(listItem.id);
                     });
 
                     if (itemIds.length > 0) {
-                        contents.remove({ ids: itemIds }, function (data, headers) {
+                        contents.remove({ collectionId: $scope.blade.collectionId, ids: itemIds }, function (data, headers) {
+                            //$scope.blade.parentBlade.refresh();
                             $scope.blade.refresh();
                         });
                     }
