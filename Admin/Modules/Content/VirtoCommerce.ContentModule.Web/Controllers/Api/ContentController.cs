@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Practices.ObjectBuilder2;
 
 namespace VirtoCommerce.ContentModule.Web.Controllers.Api
 {
@@ -104,13 +106,18 @@ namespace VirtoCommerce.ContentModule.Web.Controllers.Api
             return Ok();
         }
 
-        public async Task<IHttpActionResult> Delete(string collection, [FromUri] string[] ids)
+        [HttpDelete]
+        [ResponseType(typeof(void))]
+        [Route("collections/{collection}/items")]
+        public async Task<IHttpActionResult> Delete(string collection, [FromUri]string[] ids)
         {
-            //await _fileSystem.DeleteContentItem(collection, itemId);
-            return Ok();
+            foreach (var id in ids)
+            {
+                await _fileSystem.DeleteContentItem(collection, id);
+            }
+            
+            return StatusCode(HttpStatusCode.NoContent);
         }
-
-        
 
         private void PublishFile(string collection, string oldItemId, ContentItem item)
         {
