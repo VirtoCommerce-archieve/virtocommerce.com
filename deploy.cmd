@@ -65,8 +65,9 @@ IF NOT DEFINED MSBUILD_PATH (
 :: Deployment
 :: ----------
 
+echo Running git module update to latest remote in folder %DEPLOYMENT_SOURCE%
 cd %DEPLOYMENT_SOURCE%
-git submodule update --init --recursive
+git submodule update --remote
 
 echo Handling .NET Web Application deployment.
 
