@@ -1,3 +1,4 @@
 [submodule "Website/App_Data/vc-contents"]
 	path = Website/App_Data/vc-contents
 	url = git://github.com/virtocommerce/vc-content.git
+	branch = master
