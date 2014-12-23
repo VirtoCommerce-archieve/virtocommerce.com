@@ -1791,6 +1791,16 @@
 		text-indent: -20px;
 	}
 
+	.list li a
+	{
+		color: #787878;
+	}
+
+	.list li a:hover
+	{
+		color: #fcb040;
+	}
+
 	.list li:before
 	{
 		content: '— ';
