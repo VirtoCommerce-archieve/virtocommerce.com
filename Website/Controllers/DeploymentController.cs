@@ -17,8 +17,8 @@ namespace VirtoCommerce.Controllers
     public class DeploymentController : ApiController
     {
         [Route("")]
-        [HttpGet]
-        public async Task<HttpResponseMessage> Deploy()
+        [HttpPost]
+        public async Task<HttpResponseMessage> Deploy(string token)
         {
             await DeployGit();
 
