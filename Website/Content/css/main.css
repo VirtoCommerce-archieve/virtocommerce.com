@@ -686,7 +686,7 @@
 
 			.your-costumers .planet .satelite.pc
 			{
-				bottom: -90px;
+				bottom: -145px;
 				left: 220px;
 			}
 
@@ -1789,6 +1789,16 @@
 		margin: 5px 0;
 		padding: 0 0 0 20px;
 		text-indent: -20px;
+	}
+
+	.list li a
+	{
+		color: #787878;
+	}
+
+	.list li a:hover
+	{
+		color: #fcb040;
 	}
 
 	.list li:before
