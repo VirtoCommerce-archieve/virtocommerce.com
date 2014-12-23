@@ -18,9 +18,11 @@ namespace VirtoCommerce.Controllers
     {
         [Route("")]
         [HttpGet]
-        public async void Deploy()
+        public async Task<HttpResponseMessage> Deploy()
         {
             await DeployGit();
+
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
         public async Task DeployGit()
