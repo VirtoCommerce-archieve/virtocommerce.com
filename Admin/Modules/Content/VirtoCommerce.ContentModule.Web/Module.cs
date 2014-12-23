@@ -21,7 +21,7 @@ namespace VirtoCommerce.ContentModule.Web
         public void Initialize()
         {
             //_container.RegisterType<IFileSystem, FileSystem>();
-            _container.RegisterInstance(new Credentials("virtocommercecom", "v1rtocommerce"));
+            _container.RegisterInstance(new Credentials("LOGIN", "PASSWORD"));
             _container.RegisterInstance(new RepositoryInfo("VirtoCommerce", "vc-content"));
 
             _container.RegisterType<IFileRepository, GitHubFileRepository>();
