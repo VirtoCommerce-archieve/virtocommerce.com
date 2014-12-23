@@ -1,4 +1,5 @@
-﻿<script>
+﻿@using System.Configuration
+<script>
 	(function() {
 		var _fbq = window._fbq || (window._fbq = []);
 		if (!_fbq.loaded) {
@@ -9,11 +10,11 @@
 			s.parentNode.insertBefore(fbds, s);
 			_fbq.loaded = true;
 		}
-		_fbq.push(['addPixelId', '633370876772981']);
+		_fbq.push(['addPixelId', '@ConfigurationManager.AppSettings["FacebookTrackerId"]']);
 	})();
 	window._fbq = window._fbq || [];
 	window._fbq.push(['track', 'PixelInitialized', {}]);
 </script>
 <noscript>
-	<img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=633370876772981&amp;ev=PixelInitialized" />
+	<img height="1" width="1" alt="" style="display:none" src="@string.Format("https://www.facebook.com/tr?id={0}&amp;ev=PixelInitialized", ConfigurationManager.AppSettings["FacebookTrackerId"])" />
 </noscript>

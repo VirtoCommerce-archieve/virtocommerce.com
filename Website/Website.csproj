@@ -362,6 +362,7 @@
     <Content Include="Views\Page\Post.cshtml" />
     <Content Include="Views\old\OnlineDemo.cshtml" />
     <Content Include="Views\Shared\_FacebookTrackerPartial.cshtml" />
+    <Content Include="Views\Shared\_MicrosoftApplicationInsights.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
