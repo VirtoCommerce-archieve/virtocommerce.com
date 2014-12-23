@@ -31,7 +31,7 @@ namespace VirtoCommerce.Controllers
                 var scmUrl = "https://virtocommerce-public.scm.azurewebsites.net/deploy";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authToken);
                 var deployResponse = await client.PostAsJsonAsync(scmUrl, new { format = "basic", url = "https://github.com/VirtoCommerce/virtocommerce.com.git" });//.GetAsync(scmUrl);//.PutAsJsonAsync(scmUrl, new StringContent("{}", Encoding.UTF8, "application/json"));
-                var output = await deployResponse.Content.ReadAsStringAsync();
+                //var output = await deployResponse.Content.ReadAsStringAsync();
             }
         }
     }
