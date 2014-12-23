@@ -27,6 +27,7 @@ namespace VirtoCommerce
             
 		}
 
+        /*
 		protected void Application_Error(object sender, EventArgs e)
 		{
 			Exception exception = Server.GetLastError();
@@ -58,5 +59,6 @@ namespace VirtoCommerce
 			controller.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
 			Response.End();
 		}
+         * */
 	}
 }

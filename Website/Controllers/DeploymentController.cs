@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace VirtoCommerce.Controllers
@@ -14,30 +18,20 @@ namespace VirtoCommerce.Controllers
     {
         [Route("")]
         [HttpGet]
-        public void Deploy()
+        public async void Deploy()
         {
-            DeployGit();
+            await DeployGit();
         }
 
-        public static bool DeployGit()
+        public async Task DeployGit()
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("url");
-            httpWebRequest.ContentType = "text/json";
-            httpWebRequest.Method = "POST";
-
-            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            using (var client = new HttpClient())
             {
-                var json = "{ \"format\": \"basic\", " + "  \"url\": \"https://github.com/VirtoCommerce/virtocommerce.com.git\" + \"}";
-
-                streamWriter.Write(json);
-            }
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            {
-                var responseText = streamReader.ReadToEnd();
-                //Now you have your response.
-                //or false depending on information in the response
-                return true;
+                var authToken = ConfigurationManager.AppSettings["DeployAuthenticationToken"];
+                var scmUrl = "https://virtocommerce-public.scm.azurewebsites.net/deploy";
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authToken);
+                var deployResponse = await client.PostAsJsonAsync(scmUrl, new { format = "basic", url = "https://github.com/VirtoCommerce/virtocommerce.com.git" });//.GetAsync(scmUrl);//.PutAsJsonAsync(scmUrl, new StringContent("{}", Encoding.UTF8, "application/json"));
+                var output = await deployResponse.Content.ReadAsStringAsync();
             }
         }
     }
