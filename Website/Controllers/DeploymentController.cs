@@ -21,7 +21,7 @@ namespace VirtoCommerce.Controllers
 
         public static bool DeployGit()
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://$virtocommerce-public:EajNtHWHlfrdHB3d5Ns6p6S0ZJJqk60yhggYf1hn2oasFph9Pzk7846pGGSN@virtocommerce-public.scm.azurewebsites.net/deploy");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("url");
             httpWebRequest.ContentType = "text/json";
             httpWebRequest.Method = "POST";
 
