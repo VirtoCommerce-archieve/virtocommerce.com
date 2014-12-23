@@ -159,10 +159,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Binders\MailModelBinder.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\MailController.cs" />
     <Compile Include="Controllers\PageController.cs" />
+    <Compile Include="Controllers\DeploymentController.cs" />
     <Compile Include="Extensions\CssRewriteUrlTransform.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -171,16 +173,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Contents\Includes\technologies.html" />
-    <None Include="App_Data\Contents\Pages\for-business-professionals.md" />
-    <None Include="App_Data\Contents\Pages\index.md" />
-    <None Include="App_Data\Contents\Pages\download-sdk.md" />
-    <None Include="App_Data\Contents\Pages\contact-partner.md" />
-    <None Include="App_Data\Contents\Pages\pickedition.md" />
-    <Content Include="App_Data\Contents\Pages\resources.md" />
-    <Content Include="App_Data\Contents\Pages\sitemap.md" />
-    <None Include="App_Data\Contents\Pages\thank-you-demo.md" />
-    <None Include="App_Data\Contents\Pages\thank-you-partner.md" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -294,37 +286,9 @@
     <Content Include="Content\fonts\seguisb.eot" />
     <Content Include="Content\fonts\seguisb.woff" />
     <Content Include="ApplicationInsights.config" />
-    <Content Include="App_Data\Contents\Pages\enterprise.json" />
-    <Content Include="App_Data\Contents\Includes\learn-more.html" />
-    <Content Include="App_Data\Contents\config.yml" />
-    <Content Include="App_Data\Contents\Pages\community-edition.md" />
-    <Content Include="App_Data\Contents\Pages\become-partner.md" />
-    <Content Include="App_Data\Contents\Pages\contact-us.md" />
-    <Content Include="App_Data\Contents\Pages\demo.md" />
-    <Content Include="App_Data\Contents\Pages\documentation.md" />
-    <None Include="App_Data\Contents\Pages\enterprise-edition.md" />
     <Content Include="Files\Feature-Guide.pdf" />
     <Content Include="Files\Kitmall-case-study.pdf" />
     <Content Include="Files\rtb-case-study.pdf" />
-    <Content Include="App_Data\Contents\Pages\features.md" />
-    <Content Include="App_Data\Contents\Pages\for-developers.md" />
-    <Content Include="App_Data\Contents\Pages\list-of-partners.md" />
-    <Content Include="App_Data\Contents\Pages\online-demo.md" />
-    <Content Include="App_Data\Contents\Pages\open-source-license.md" />
-    <Content Include="App_Data\Contents\Pages\privacy.md" />
-    <Content Include="App_Data\Contents\Pages\request-community-license.md" />
-    <Content Include="App_Data\Contents\Pages\research.md" />
-    <Content Include="App_Data\Contents\Pages\roadmap.md" />
-    <Content Include="App_Data\Contents\Pages\terms.md" />
-    <Content Include="App_Data\Contents\Pages\thank-you.md" />
-    <Content Include="App_Data\Contents\Pages\thank-you-community-request-license.md" />
-    <Content Include="App_Data\Contents\Pages\thank-you-contact-us.md" />
-    <Content Include="App_Data\Contents\Pages\thank-you-contributor.md" />
-    <Content Include="App_Data\Contents\Pages\thank-you-download.md" />
-    <Content Include="App_Data\Contents\Pages\thank-you-news-signup.md" />
-    <Content Include="App_Data\Contents\Pages\try-now.md" />
-    <Content Include="App_Data\Contents\Pages\try-now-download.md" />
-    <Content Include="App_Data\Contents\Pages\znode.md" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="robots.txt" />
     <Content Include="Scripts\bootstrap.js" />
@@ -400,6 +364,7 @@
     <Content Include="Views\Shared\_FacebookTrackerPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Helpers\" />
     <Folder Include="Views\Mail\" />
   </ItemGroup>

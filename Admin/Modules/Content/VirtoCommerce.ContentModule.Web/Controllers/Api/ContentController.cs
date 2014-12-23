@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Practices.ObjectBuilder2;
 
 namespace VirtoCommerce.ContentModule.Web.Controllers.Api
 {
@@ -79,11 +81,42 @@ namespace VirtoCommerce.ContentModule.Web.Controllers.Api
 
         [HttpPost]
         [ResponseType(typeof(ContentItem))]
+        [Route("collections/items/{itemId}")]
+        public async Task<IHttpActionResult> Save(string itemId, ContentItem item)
+        {
+            var contentItem = await _fileSystem.SaveContentItem(String.Empty, itemId, item);
+            return Ok(contentItem);
+        }
+
+        [HttpPost]
+        [ResponseType(typeof(ContentItem))]
         [Route("collections/{collection}/items/{itemId}/publish")]
         public async Task<IHttpActionResult> Publish(string collection, string itemId, ContentItem item)
         {
             var contentItem = await _fileSystem.SaveContentItem(collection, itemId, item);
             return Ok(contentItem);
+        }
+
+        [HttpDelete]
+        [ResponseType(typeof(ContentItem))]
+        [Route("collections/{collection}/items/{itemId}")]
+        public async Task<IHttpActionResult> Delete(string collection, string itemId)
+        {
+            await _fileSystem.DeleteContentItem(collection, itemId);
+            return Ok();
+        }
+
+        [HttpDelete]
+        [ResponseType(typeof(void))]
+        [Route("collections/{collection}/items")]
+        public async Task<IHttpActionResult> Delete(string collection, [FromUri]string[] ids)
+        {
+            foreach (var id in ids)
+            {
+                await _fileSystem.DeleteContentItem(collection, id);
+            }
+            
+            return StatusCode(HttpStatusCode.NoContent);
         }
 
         private void PublishFile(string collection, string oldItemId, ContentItem item)

@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace VirtoCommerce.ContentModule.Web.Repositories
 {
+    using System.Reflection.Emit;
     using System.Runtime.InteropServices;
+    using System.Web.UI.WebControls;
 
     using Octokit;
+    using Octokit.Models.Request;
 
     using VirtoCommerce.ContentModule.Web.Model;
     using VirtoCommerce.Framework.Web.Common;
@@ -57,7 +60,7 @@ namespace VirtoCommerce.ContentModule.Web.Repositories
 
         public async Task<ContentItem> GetContentItem(string collection, string name)
         {
-            var allFiles = await _client.Repository.Contents.GetForPath(_repository.Owner, _repository.Name, String.Format("{0}/{1}", collection, name));
+            var allFiles = await _client.Repository.Contents.GetForPath(_repository.Owner, _repository.Name, CreatPath(collection, name));
 
             var contentItem = allFiles.SingleOrDefault();
             var ret = new ContentItem() { Id = contentItem.Name };
@@ -74,6 +77,32 @@ namespace VirtoCommerce.ContentModule.Web.Repositories
 
         public async Task<ContentItem> SaveContentItem(string collection, string name, ContentItem item)
         {
+            // Determine if file exists
+            var existingItem = await GetItem(collection, name);
+
+            var path = CreatPath(collection, item.Id);
+            var contentUTF8Bytes = Encoding.UTF8.GetBytes(item.Content);
+            var sha = String.Empty;
+
+            if (existingItem == null) // create new
+            {
+                var response = await _client.Repository.Contents.CreateFile(
+                    _repository.Owner,
+                    _repository.Name,
+                    path,
+                    new CreateFileRequest() { Message = "Updating file from admin", Content = Convert.ToBase64String(contentUTF8Bytes) });                               
+            }
+            else // update existing
+            {
+                var response = await _client.Repository.Contents.UpdateFile(
+                    _repository.Owner,
+                    _repository.Name,
+                    path,
+                    new UpdateFileRequest() { Message = "Updating file from admin", Content = Convert.ToBase64String(contentUTF8Bytes), Sha = existingItem.Sha});               
+            }
+            
+         
+            /*
             var repository = await _client.Repository.Get(_repository.Owner, _repository.Name);
 
             var files = new Dictionary<string, string> { {String.Format("{0}/{1}", collection, item.Id), item.Content} };
@@ -81,21 +110,44 @@ namespace VirtoCommerce.ContentModule.Web.Repositories
             var reference = await _client.SaveFiles(repository, "website checkin", files);
 
             return item;
-        }
+             * */
 
-        public Task<CollectionItem> SaveCollectionItem(string collection, CollectionItem item)
-        {
-            throw new NotImplementedException();
+            return item;
         }
 
         public async Task DeleteContentItem(string collection, string name)
         {
-            throw new NotImplementedException();
+            var existingItem = await GetItem(collection, name);
+            var path = CreatPath(collection, name);
+            if (existingItem != null)
+            {
+                await
+                        _client.Repository.Contents.DeleteFile(
+                            _repository.Owner,
+                            _repository.Name,
+                            path,
+                            new DeleteFileRequest() { Message = "Updating file from admin", Sha = existingItem.Sha });
+            }
         }
 
-        public Task DeleteCollectionItem(string collection)
+        private async Task<DirectoryContent> GetItem(string collection, string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var existingItems = await _client.Repository.Contents.GetForPath(_repository.Owner, _repository.Name, CreatPath(collection, name));
+                if (existingItems.Count == 0) return null;
+                return existingItems.SingleOrDefault();
+            }
+            catch (NotFoundException)
+            {
+                return null;
+            }
+        }
+
+        private string CreatPath(string collection, string fileName)
+        {
+            var path = String.IsNullOrEmpty(collection) ? fileName : String.Format("{0}/{1}", collection, fileName);
+            return path;
         }
     }
 

@@ -10,16 +10,21 @@ using VirtoCommerce.Controllers;
 
 namespace VirtoCommerce
 {
-	public class MvcApplication : System.Web.HttpApplication
+    using System.Web.Http;
+
+    using VirtoCommerce.App_Start;
+
+    public class MvcApplication : System.Web.HttpApplication
 	{
 		protected void Application_Start()
 		{
 			ModelBinders.Binders[typeof(MailModelBinder)] = new MailModelBinder();
-
+            GlobalConfiguration.Configure(WebApiConfig.Register);
 			AreaRegistration.RegisterAllAreas();
 			FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
+            
 		}
 
 		protected void Application_Error(object sender, EventArgs e)

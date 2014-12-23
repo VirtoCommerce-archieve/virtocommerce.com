@@ -37,7 +37,7 @@ namespace MarketplaceWeb.Controllers
 			var result = ViewEngines.Engines.FindView(this.ControllerContext, viewName, null);
 			if (result == null || result.View == null)
 			{
-				var filesPath = HostingEnvironment.MapPath("~/App_Data/Contents");
+				var filesPath = HostingEnvironment.MapPath("~/App_Data/vc-contents");
 				var service = new ContentPublishingService(filesPath, new[] { new LiquidTemplateEngine(filesPath) });
 
 				var item = service.GetContentItem(pageName.Contains("/") ? pageName : String.Format("/pages/{0}", pageName));

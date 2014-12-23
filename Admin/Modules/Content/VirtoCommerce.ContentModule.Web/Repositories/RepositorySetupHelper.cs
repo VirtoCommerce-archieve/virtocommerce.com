@@ -20,6 +20,11 @@ namespace VirtoCommerce.ContentModule.Web.Repositories
                     Content = c.Value,
                     Encoding = EncodingType.Utf8
                 };
+
+                //new Blob() {}
+
+                // Try getting an exisiting blob first
+
                 var baselineBlobResult = await client.GitDatabase.Blob.Create(repository.Owner.Login, repository.Name, baselineBlob);
 
                 collection.Add(new NewTreeItem
