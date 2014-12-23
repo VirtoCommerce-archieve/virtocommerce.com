@@ -191,8 +191,8 @@
     <Content Include="Content\images\advantages\demo-console.png" />
     <Content Include="Content\images\azure.png" />
     <Content Include="Content\images\azurex2.png" />
-    <Content Include="Content\images\bg-community.jpg" />
     <Content Include="Content\images\bg-enterprise.jpg" />
+    <Content Include="Content\images\bg-community.jpg" />
     <Content Include="Content\images\bg-pattern-2.jpg" />
     <Content Include="Content\images\bg-pattern.jpg" />
     <Content Include="Content\images\bg-planet.png" />
