@@ -1,3 +1,2 @@
 [config]
 project = Website
-command = deploy.cmd
