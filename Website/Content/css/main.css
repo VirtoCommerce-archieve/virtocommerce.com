@@ -1271,12 +1271,31 @@
 						box-sizing: border-box;
 			}
 
+			.price-form .control-group.normal
+			{
+				clear: both;
+				float: none;
+				padding: 10px 0 0 30px;
+				text-align: left;
+				width: auto;
+			}
+
+				.price-form .control-group.normal a
+				{
+					color: #fff;
+					display: inline-block;
+					font-size: 16px;
+					line-height: 1.2;
+					margin: 4px 0 0;
+					vertical-align: top;
+				}
+
 			.price-form .form-input + .form-input
 			{
 				margin: 14px 0 0;
 			}
 
-			.price-form .form-text
+			.price-form .control-group .form-text
 			{
 				height: 98px;
 				resize: none;
