@@ -2315,7 +2315,8 @@
 	/* Headings */
 	h2,
 	.head_sub-title,
-	.head-title
+	.head-title,
+	.title
 	{
 		color: #000;
 		font-family: 'Segoe UI';
@@ -2323,7 +2324,7 @@
 		margin: 45px 0 35px;
 	}
 
-	h2.title
+	.title
 	{
 		font-family: 'Segoe UI';
 		margin: 45px 0 0;
@@ -2818,6 +2819,33 @@
 		font-size: 15px;
 		margin: 15px 0;
 	}
+
+	/* Brand */
+	.brand
+	{
+		cursor: pointer;
+		display: inline-block;
+	}
+
+		.brand img,
+		.brand .slogan
+		{
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.brand img
+		{
+			border-right: 1px solid #ddd;
+			padding: 0 10px 0 0;
+		}
+
+		.brand .slogan
+		{
+			font-size: 16px;
+			line-height: 1.2;
+			margin: 12px 0 0 5px;
+		}
 
 
 
