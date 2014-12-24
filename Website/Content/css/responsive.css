@@ -14,10 +14,16 @@
 
 	h2,
 	.head_sub-title,
-	.head-title
+	.head-title,
+	.title
 	{
 		font-size: 50px;
 		margin: 65px 0 55px;
+	}
+
+	.title
+	{
+		margin-bottom: 0;
 	}
 
 	h3,
@@ -996,9 +1002,15 @@
 
 	h2,
 	.head_sub-title,
-	.head-title
+	.head-title,
+	.title
 	{
 		font-size: 34px;
+	}
+
+	.title
+	{
+		margin-bottom: 0;
 	}
 
 	h3,
@@ -1011,7 +1023,6 @@
 	.sub-title
 	{
 		font-size: 18px;
-		margin: 20px 0 0;
 	}
 
 	.text,
@@ -1764,9 +1775,15 @@
 @media (max-width: 640px) {
 	h2,
 	.head_sub-title,
-	.head-title
+	.head-title,
+	.title
 	{
 		font-size: 34px;
+	}
+
+	.title
+	{
+		margin-bottom: 0;
 	}
 
 	/* Enterprise */
@@ -1801,9 +1818,15 @@
 @media (max-width: 460px) {
 	h2,
 	.head_sub-title,
-	.head-title
+	.head-title,
+	.title
 	{
 		font-size: 24px;
+	}
+
+	.title
+	{
+		margin-bottom: 0;
 	}
 
 	h3,
