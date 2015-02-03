@@ -565,19 +565,29 @@
 					width: 110px;
 				}
 
-				.main-enterprise .costumers .list-item.kalla
+				.main-enterprise .costumers .list-item.helvetia
+				{
+					background-position: 0 0;
+				}
+
+				.main-enterprise .costumers .list-item.kitmall
 				{
 					background-position: -110px 0;
 				}
 
-				.main-enterprise .costumers .list-item.caromba
+				.main-enterprise .costumers .list-item.kalla
 				{
 					background-position: -220px 0;
 				}
 
-				.main-enterprise .costumers .list-item.ns
+				.main-enterprise .costumers .list-item.caromba
 				{
 					background-position: -330px 0;
+				}
+
+				.main-enterprise .costumers .list-item.markus
+				{
+					background-position: -440px 0;
 				}
 
 			.main-enterprise .costumers .all-costumers
@@ -2886,7 +2896,7 @@
 	.main-enterprise .costumers .list-item
 	{
 		background-image: url(../images/icons/partnersx2.png);
-		background-size: 440px 60px;
+		background-size: 550px 60px;
 	}
 
 	.your-costumers .planet .satelite .ico,
