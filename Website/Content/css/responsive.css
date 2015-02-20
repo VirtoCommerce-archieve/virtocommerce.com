@@ -1753,7 +1753,12 @@
 		margin: 0;
 	}
 
-	.footer-copy
+	.footer-copy p
+	{
+		font-size: 9px;
+	}
+
+	.footer-copy .menu
 	{
 		display: none;
 	}
