@@ -208,6 +208,7 @@
     <Content Include="Content\images\business-features\6.png" />
     <Content Include="Content\images\business-features\7.png" />
     <Content Include="Content\images\business-features\8.png" />
+    <Content Include="Content\images\business-features\multi-tenant.png" />
     <Content Include="Content\images\china.jpg" />
     <Content Include="Content\images\features\1.jpg" />
     <Content Include="Content\images\features\2.jpg" />
