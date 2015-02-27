@@ -26,9 +26,22 @@
 	<base href="@Url.Content("~")" />
 
 	@Html.Partial("_FacebookTrackerPartial")
+
+	<style>
+		.google-like {
+			position: fixed;
+			right: 0;
+			top: 20px;
+			z-index: 50;
+		}
+	</style>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
 	@Html.Partial("_GoogleTagManagerPartial")
+
+	<div class="google-like"><div class="g-plusone" data-size="tall" data-href="http://virtocommerce.com"></div></div>
+
 	<div class="grid"></div>
 	<div id="layout">
 		<div class="layout-canvas">
