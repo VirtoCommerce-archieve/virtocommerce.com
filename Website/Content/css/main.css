@@ -2337,14 +2337,14 @@
 	.title
 	{
 		color: #000;
-		font-family: 'Segoe UI';
+		font-family: 'Lato';
 		font-size: 40px;
 		margin: 45px 0 35px;
 	}
 
 	.title
 	{
-		font-family: 'Segoe UI';
+		font-family: 'Lato';
 		margin: 45px 0 0;
 	}
 
@@ -2358,7 +2358,7 @@
 
 	.bold
 	{
-		font-family: 'Segoe UI Bold';
+		font-family: 'Lato';
 	}
 
 	.sub-title
