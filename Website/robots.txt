@@ -1,2 +1,3 @@
 ﻿User-agent: *
 Disallow: /js/*.js$
+Disallow: /mp/
