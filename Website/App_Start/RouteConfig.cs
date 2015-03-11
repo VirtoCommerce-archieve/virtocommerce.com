@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -15,7 +16,15 @@ namespace VirtoCommerce
 
 			routes.MapMvcAttributeRoutes();
 
-			routes.IgnoreRoute("marketplace");
+			var virtoCommerceIgnoreRoutes = ConfigurationManager.AppSettings["VirtoCommerceIgnoreRoutes"];
+
+			if (virtoCommerceIgnoreRoutes != null)
+			{
+				foreach (var route in virtoCommerceIgnoreRoutes.Split(new [] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+				{
+					routes.IgnoreRoute(route);
+				}
+			}
 
 			routes.MapRoute(
 				name: "Default",
