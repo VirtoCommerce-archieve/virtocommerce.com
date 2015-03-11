@@ -25,8 +25,6 @@ namespace MarketplaceWeb.Controllers
 		public ActionResult DisplayPage(string pageName)
 		{
 			SetMeta();
-			var telemetry = new Microsoft.ApplicationInsights.TelemetryClient();
-			telemetry.TrackTrace("page request");
 
 			if (String.IsNullOrEmpty(pageName))
 			{

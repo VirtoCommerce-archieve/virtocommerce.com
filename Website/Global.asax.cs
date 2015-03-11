@@ -32,9 +32,6 @@ namespace VirtoCommerce
 			Exception exception = Server.GetLastError();
 			Response.Clear();
 
-			var telemetry = new Microsoft.ApplicationInsights.TelemetryClient();
-			telemetry.TrackTrace("error request");
-
 			HttpException httpException = exception as HttpException ?? new HttpException(500, "Internal Server Error", exception);
 
 			var routeData = new RouteData();
