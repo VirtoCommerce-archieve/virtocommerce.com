@@ -1,3 +1,6 @@
 ﻿User-agent: *
 Disallow: /js/*.js$
 Disallow: /mp/
+Disallow: /mp/*?*
+Disallow: /marketplace/
+Disallow: /marketplace/*?*
