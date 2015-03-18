@@ -29,31 +29,31 @@ namespace VirtoCommerce
 
 		protected void Application_Error(object sender, EventArgs e)
 		{
-			Exception exception = Server.GetLastError();
-			Response.Clear();
+			//Exception exception = Server.GetLastError();
+			//Response.Clear();
 
-			HttpException httpException = exception as HttpException ?? new HttpException(500, "Internal Server Error", exception);
+			//HttpException httpException = exception as HttpException ?? new HttpException(500, "Internal Server Error", exception);
 
-			var routeData = new RouteData();
-			routeData.Values.Add("controller", "Error");
-			routeData.Values.Add("fromAppErrorEvent", true);
+			//var routeData = new RouteData();
+			//routeData.Values.Add("controller", "Error");
+			//routeData.Values.Add("fromAppErrorEvent", true);
 
-			switch (httpException.GetHttpCode())
-			{
-				case 404:
-					routeData.Values.Add("action", "Error404");
-					break;
+			//switch (httpException.GetHttpCode())
+			//{
+			//	case 404:
+			//		routeData.Values.Add("action", "Error404");
+			//		break;
 
-				default:
-					routeData.Values.Add("action", "Error500");
-					break;
-			}
+			//	default:
+			//		routeData.Values.Add("action", "Error500");
+			//		break;
+			//}
 
-			Server.ClearError();
+			//Server.ClearError();
 
-			IController controller = new ErrorController();
-			controller.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
-			Response.End();
+			//IController controller = new ErrorController();
+			//controller.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
+			//Response.End();
 		}
 	}
 }
