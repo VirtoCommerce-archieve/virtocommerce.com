@@ -228,6 +228,7 @@
     <Content Include="Content\images\insights.jpg" />
     <Content Include="Content\images\join\bg.png" />
     <Content Include="Content\images\join\dialog.png" />
+    <Content Include="Content\images\laoffice.jpg" />
     <Content Include="Content\images\logo.jpg" />
     <Content Include="Content\images\logox2.jpg" />
     <Content Include="Content\images\microsoft.png" />
