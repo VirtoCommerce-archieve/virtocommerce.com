@@ -4,3 +4,6 @@ Disallow: /mp/
 Disallow: /mp/*?*
 Disallow: /marketplace/
 Disallow: /marketplace/*?*
+Disallow: /market/
+Disallow: /market/*?*
+Disallow: /shopping-cart

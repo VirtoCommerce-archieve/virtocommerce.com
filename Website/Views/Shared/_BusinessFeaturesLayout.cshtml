@@ -1,0 +1,71 @@
+﻿@using System.Configuration
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title</title>
+	<meta content="@ViewBag.Author" name="author" />
+	<meta content="@ViewBag.Description" name="description" />
+	<meta content="@ViewBag.Keywords" name="keywords" />
+	<meta content="@ViewBag.ItemPropName" itemprop="name" />
+	<meta content="@ViewBag.ItemPropDescription" itemprop="description" />
+	<meta content="@ViewBag.ItemPropImage" itemprop="image" />
+
+	<link rel="canonical" href="@ViewBag.Canonical" />
+
+	<meta property="og:image" content="http://virtocommerce.com/Content/images/vc_fb.jpg" />
+	<meta property="og:title" content="Best ASP.NET Shopping Cart Software - Free Community Edition" />
+	<meta property="og:site_name" content="Virtocommerce" />
+
+	<meta property="twitter:card" content="summary">
+	<meta property="twitter:title" content="Virto Commerce">
+	<meta property="twitter:description" content="Virto Commerce is a powerful ecommerce platform that includes everything you need to create an online store and sell online. Try it free with Free Community License">
+	<meta property="twitter:image" content="http://virtocommerce.com/Content/images/vc_fb-2.jpg">
+	<meta property="twitter:site" content="@("@Virtocommerce")">
+
+	<link href="https://plus.google.com/+Virtocommerce" rel="publisher" />
+	<meta name="google-site-verification" content="@ConfigurationManager.AppSettings["GoogleSiteVerificationId"]" />
+	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+	@Html.Partial("_MicrosoftApplicationInsights")
+
+	@Styles.Render("~/defaultCSS")
+	@Scripts.Render("~/defaultJS")
+
+	<script src="~/Scripts/js/base64.js"></script>
+	<script src="~/Scripts/js/hider.js"></script>
+
+	<base href="@Url.Content("~")" />
+
+	@Html.Partial("_FacebookTrackerPartial")
+
+	<style>
+		.google-like {
+			position: fixed;
+			right: 0;
+			top: 20px;
+			z-index: 9999;
+		}
+	</style>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+	@Html.Partial("_GoogleTagManagerPartial")
+
+	<div class="google-like"><div class="g-plusone" data-size="tall" data-href="http://virtocommerce.com"></div></div>
+
+	<div class="grid"></div>
+	<div id="layout">
+		<div class="layout-canvas">
+			@Html.Partial("_SwipePartial")
+			@Html.Partial("_HeaderPartial")
+			@RenderBody()
+			@Html.Partial("_FooterPartial")
+		</div>
+	</div>
+	@Html.Partial("_GoogleAnalyticsPartial")
+</body>
+</html>

@@ -6,11 +6,11 @@ using System.Web;
 namespace MarketplaceWeb.Controllers
 {
 	using System.Net.Mail;
-	using System.Web.Hosting;
-	using System.Web.Mvc;
-
-	using VirtoCommerce.Publishing;
-	using VirtoCommerce.Publishing.Engines;
+using System.Web.Hosting;
+using System.Web.Mvc;
+using VirtoCommerce.Helpers.Models;
+using VirtoCommerce.Publishing;
+using VirtoCommerce.Publishing.Engines;
 
 
 	//[RoutePrefix("")]
@@ -41,7 +41,10 @@ namespace MarketplaceWeb.Controllers
 
 				var item = service.GetContentItem(pageName.Contains("/") ? pageName : String.Format("/pages/{0}", pageName));
 				if (item != null)
+				{
+					SetSpecialMeta(item);
 					return this.View(item.Layout, item);
+				}
 			}
 
 			return View(viewName);
@@ -55,6 +58,13 @@ namespace MarketplaceWeb.Controllers
 			ViewBag.ItemPropName = "Virto Commerce";
 			ViewBag.ItemPropDescription = "Multi Channel Ecommerce Platform | Enterprise Shopping Cart Software | VirtoCommerce";
 			ViewBag.ItemPropImage = "/Content/images/virtocommerce.png";
+		}
+
+		private void SetSpecialMeta(ContentItem item)
+		{
+			ViewBag.Title = item.Title;
+			ViewBag.Canonical = item.Canonical;
+			ViewBag.Description = item.MetaDescription;
 		}
 	}
 }

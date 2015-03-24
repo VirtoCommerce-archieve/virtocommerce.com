@@ -196,6 +196,10 @@
     <Content Include="Content\images\for-dev\features-cloud-onpremise.png" />
     <Content Include="Content\images\for-dev\features-cloud-search.png" />
     <Content Include="Content\images\for-dev\features-cloud.png" />
+    <Content Include="Content\images\icons\business-features-mini.png" />
+    <Content Include="Content\images\icons\business-features-minix2.png" />
+    <Content Include="Content\images\icons\business-features.png" />
+    <Content Include="Content\images\icons\business-featuresx2.png" />
     <Content Include="Content\images\icons\calendar.png" />
     <Content Include="Content\images\icons\calendarx2.png" />
     <Content Include="Content\images\icons\costumers-ipad.png" />
@@ -246,6 +250,8 @@
     <Content Include="Content\images\technologies\net.jpg" />
     <Content Include="Content\images\technologies\sql.jpg" />
     <Content Include="Content\images\technologies\web.jpg" />
+    <Content Include="Content\images\vc_fb-2.jpg" />
+    <Content Include="Content\images\vc_fb.jpg" />
     <Content Include="Content\images\workflow.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -336,6 +342,8 @@
     <Content Include="Views\Shared\_FacebookTrackerPartial.cshtml" />
     <Content Include="Views\Shared\_MicrosoftApplicationInsights.cshtml" />
     <Content Include="Views\Shared\_GoogleAnalyticsPartial.cshtml" />
+    <Content Include="Views\Shared\_BusinessFeaturesLayout.cshtml" />
+    <Content Include="Views\Page\BusinessPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

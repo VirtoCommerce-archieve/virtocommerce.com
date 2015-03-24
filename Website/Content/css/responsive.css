@@ -203,6 +203,42 @@
 		max-width: 540px;
 	}
 
+	.list.__video .list-item
+	{
+		width: 241px;
+	}
+
+	.business-cnt .head
+	{
+		margin: 0 0 40px;
+	}
+
+	.business-cnt .head .title
+	{
+		font-size: 40px;
+	}
+
+	.business-cnt .sub-title
+	{
+		font-size: 30px;
+	}
+
+	.business-cnt .text
+	{
+		font-size: 14px;
+	}
+
+	.related-products
+	{
+		margin-top: 60px;
+		padding: 40px 0 0;
+	}
+
+	.related-products .sub-title
+	{
+		margin: 0 0 60px;
+	}
+
 	/* Footer */
 	.footer-wrap .column .dev .menu + .menu
 	{
@@ -245,8 +281,8 @@
 
 	.__opened .layout-canvas
 	{
-		-webkit-transform: translateX(200px);
-				transform: translateX(200px);
+		-webkit-transform: translateX(260px);
+				transform: translateX(260px);
 	}
 	
 	/* Header
@@ -798,6 +834,38 @@
 		font-size: 15px;
 	}
 
+	.business-features .business-menu
+	{
+		display: none;
+	}
+
+	.business-features .business-cnt
+	{
+		margin: 0;
+	}
+
+	.list.__video .list-item
+	{
+		width: 220px;
+	}
+
+	.buttons .column
+	{
+		width: 50%;
+	}
+
+	.related-products
+	{
+		padding-top: 20px;
+	}
+
+	.related-products .list .list-item
+	{
+		display: block;
+		overflow: hidden;
+		width: 100%;
+	}
+
 	/* Trynow */
 	.try-now,
 	.documentation,
@@ -1041,8 +1109,8 @@
 
 	.__opened .layout-canvas
 	{
-		-webkit-transform: translateX(200px);
-				transform: translateX(200px);
+		-webkit-transform: translateX(260px);
+				transform: translateX(260px);
 	}
 
 	/* Header
@@ -1561,6 +1629,96 @@
 		max-width: 100%;
 	}
 
+	.business-features .business-menu
+	{
+		display: none;
+	}
+
+	.business-features .business-cnt
+	{
+		margin: 0;
+	}
+
+	.list.__video .list-item
+	{
+		width: 220px;
+	}
+
+	.buttons .column
+	{
+		width: 50%;
+	}
+
+	.related-products
+	{
+		padding-top: 20px;
+	}
+
+	.related-products .list .list-item
+	{
+		display: block;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.business-cnt .head
+	{
+		min-height: inherit;
+	}
+
+	.business-cnt .head .title::after,
+	.business-cnt .head .title::before,
+	.business-cnt .head::after,
+	.business-cnt .head::before
+	{
+		display: none;
+	}
+
+	.business-cnt .list.__video
+	{
+		margin: 20px 0 30px;
+		text-align: center;
+	}
+
+	.business-cnt .list.__video::after
+	{
+		display: none;
+	}
+
+	.list.__video .list-item
+	{
+		margin: 0 0 20px;
+		width: 100%;
+	}
+
+	.list.__video .list-pic
+	{
+		display: inline-block;
+		width: 220px;
+	}
+
+	.related-products .list-pic
+	{
+		height: 80px;
+		width: 80px;
+	}
+
+	.related-products .list-info
+	{
+		margin: 0 0 0 100px;
+	}
+
+	.related-products .list-info .button
+	{
+		height: 30px;
+		width: 80px;
+	}
+
+	.related-products .list-info .button::after
+	{
+		height: 30px;
+	}
+
 	/* Try now */
 	.try-now,
 	.documentation
@@ -1753,12 +1911,7 @@
 		margin: 0;
 	}
 
-	.footer-copy p
-	{
-		font-size: 9px;
-	}
-
-	.footer-copy .menu
+	.footer-copy
 	{
 		display: none;
 	}
@@ -2043,6 +2196,16 @@
 	.features-list .descr
 	{
 		font-size: 13px;
+	}
+
+	.buttons .column
+	{
+		width: 100%;
+	}
+
+	.buttons .button
+	{
+		margin: 10px 0 0;
 	}
 
 	/* Try now */

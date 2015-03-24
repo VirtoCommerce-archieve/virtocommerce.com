@@ -34,6 +34,11 @@ namespace VirtoCommerce.Helpers.Models
                             Title = (string)setting.Value;
                             break;
                         }
+					case "canonical":
+						{
+							Canonical = (string)setting.Value;
+							break;
+						}
                     case "layout":
                         {
                             Layout = (string)setting.Value;
@@ -105,6 +110,7 @@ namespace VirtoCommerce.Helpers.Models
 
         //public Published Published { get; set; }
         public string Title { get; set; }
+		public string Canonical { get; set; }
         public string Content { get; set; }
         public string Layout { get; set; }
         public IDictionary<string, dynamic> Settings { get; set; }
