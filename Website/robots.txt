@@ -7,3 +7,5 @@ Disallow: /marketplace/*?*
 Disallow: /market/
 Disallow: /market/*?*
 Disallow: /shopping-cart
+Disallow: /apps/
+Disallow: /apps/*?*
