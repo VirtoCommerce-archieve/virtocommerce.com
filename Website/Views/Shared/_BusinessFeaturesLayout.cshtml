@@ -14,15 +14,15 @@
 
 	<link rel="canonical" href="@ViewBag.Canonical" />
 
-	<meta property="og:image" content="http://virtocommerce.com/Content/images/vc_fb.jpg" />
-	<meta property="og:title" content="Best ASP.NET Shopping Cart Software - Free Community Edition" />
-	<meta property="og:site_name" content="Virtocommerce" />
+	<meta property="og:image" content="@ViewBag.OgImage" />
+	<meta property="og:title" content="@ViewBag.OgTitle" />
+	<meta property="og:site_name" content="@ViewBag.OgSitename" />
 
-	<meta property="twitter:card" content="summary">
-	<meta property="twitter:title" content="Virto Commerce">
-	<meta property="twitter:description" content="Virto Commerce is a powerful ecommerce platform that includes everything you need to create an online store and sell online. Try it free with Free Community License">
-	<meta property="twitter:image" content="http://virtocommerce.com/Content/images/vc_fb-2.jpg">
-	<meta property="twitter:site" content="@("@Virtocommerce")">
+	<meta property="twitter:card" content="@ViewBag.TwitterCard">
+	<meta property="twitter:title" content="@ViewBag.TwitterTitle">
+	<meta property="twitter:description" content="@ViewBag.TwitterDescription">
+	<meta property="twitter:image" content="@ViewBag.TwitterImage">
+	<meta property="twitter:site" content="@ViewBag.TwitterSite">
 
 	<link href="https://plus.google.com/+Virtocommerce" rel="publisher" />
 	<meta name="google-site-verification" content="@ConfigurationManager.AppSettings["GoogleSiteVerificationId"]" />

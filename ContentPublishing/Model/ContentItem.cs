@@ -71,6 +71,46 @@ namespace VirtoCommerce.Helpers.Models
                             MetaDescription = (string)setting.Value;
                             break;
                         }
+					case "og-image":
+						{
+							OgImage = (string)setting.Value;
+							break;
+						}
+					case "og-title":
+						{
+							OgTitle = (string)setting.Value;
+							break;
+						}
+					case "og-sitename":
+						{
+							OgSitename = (string)setting.Value;
+							break;
+						}
+					case "twitter-card":
+						{
+							TwitterCard = (string)setting.Value;
+							break;
+						}
+					case "twitter-title":
+						{
+							TwitterTitle = (string)setting.Value;
+							break;
+						}
+					case "twitter-description":
+						{
+							TwitterDescription = (string)setting.Value;
+							break;
+						}
+					case "twitter-image":
+						{
+							TwitterImage = (string)setting.Value;
+							break;
+						}
+					case "twitter-site":
+						{
+							TwitterSite = (string)setting.Value;
+							break;
+						}
                     case "tags":
                     case "keywords":
                         {
@@ -115,6 +155,16 @@ namespace VirtoCommerce.Helpers.Models
         public string Layout { get; set; }
         public IDictionary<string, dynamic> Settings { get; set; }
         public string FileName { get; set; }
+
+		public string OgImage { get; set; }
+		public string OgTitle { get; set; }
+		public string OgSitename { get; set; }
+
+		public string TwitterCard { get; set; }
+		public string TwitterTitle { get; set; }
+		public string TwitterDescription { get; set; }
+		public string TwitterImage { get; set; }
+		public string TwitterSite { get; set; }
 
         public string Url { get; set; }
 
