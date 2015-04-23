@@ -66,15 +66,15 @@ using VirtoCommerce.Publishing.Engines;
 			ViewBag.Canonical = item.Canonical;
 			ViewBag.Description = item.MetaDescription;
 
-			//ViewBag.OgImage = item.OgImage;
-			//ViewBag.OgTitle = item.OgTitle;
-			//ViewBag.OgSitename = item.OgSitename;
+			ViewBag.OgImage = item.OgImage;
+			ViewBag.OgTitle = item.OgTitle;
+			ViewBag.OgSitename = item.OgSitename;
 
-			//ViewBag.TwitterImage = item.TwitterImage;
-			//ViewBag.TwitterCard = item.TwitterCard;
-			//ViewBag.TwitterDescription = item.TwitterDescription;
-			//ViewBag.TwitterTitle = item.TwitterTitle;
-			//ViewBag.TwitterSite = item.TwitterSite;
+			ViewBag.TwitterImage = item.TwitterImage;
+			ViewBag.TwitterCard = item.TwitterCard;
+			ViewBag.TwitterDescription = item.TwitterDescription;
+			ViewBag.TwitterTitle = item.TwitterTitle;
+			ViewBag.TwitterSite = item.TwitterSite;
 		}
 	}
 }
