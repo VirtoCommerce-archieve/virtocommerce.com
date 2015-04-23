@@ -50,6 +50,17 @@
 			z-index: 9999;
 		}
 	</style>
+	<script>
+		$(function () {
+			var items = $('.menu.__business-features li a');
+			for (var i = 0; i < items.length; i++) {
+				$(items[i]).parent().removeClass('__selected');
+				if ($(items[i]).attr('href') === window.location.pathname) {
+					$(items[i]).parent().addClass('__selected');
+				}
+			}
+		});
+	</script>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>

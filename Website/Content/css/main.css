@@ -392,7 +392,7 @@
 			filter: alpha(opacity=50);
 		}
 
-		.__langs .menu-item.active
+		.menu.__langs .menu-item.active
 		{
 			opacity: 1;
 
@@ -1042,7 +1042,7 @@
 		margin-top: 60px;
 	}
 
-		.advantages .list-item
+		.advantages .list .list-item
 		{
 			margin: 0 0 50px;
 			overflow: hidden;
@@ -2595,6 +2595,11 @@
 					.footer-wrap .column .dev .menu-item.stackoverflow .link-white:before
 					{
 						background-position: -216px 0;
+					}
+
+					.footer-wrap .column .dev .menu-item.marketplace .link-white:before
+					{
+						background-position: -252px 0;
 					}
 
 		.footer-wrap .column .social
