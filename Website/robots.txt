@@ -1,10 +1,2 @@
 ﻿User-agent: *
 Disallow: /js/*.js$
-Disallow: /mp/
-Disallow: /mp/*?*
-Disallow: /marketplace/
-Disallow: /marketplace/*?*
-Disallow: /market/
-Disallow: /market/*?*
-Disallow: /apps/
-Disallow: /apps/*?*

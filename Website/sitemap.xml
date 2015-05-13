@@ -1,117 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<url>
-		<loc>http://virtocommerce.com/</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/our-offers/enterprise-edition</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/our-offers/community-edition</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/resources</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/partners/become-partner</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/partners/list-of-partners</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/contact-us</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/features/multi-tenant</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-	<url>
-		<loc>http://virtocommerce.com/try-now/online-demo</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/try-now</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/try-now-download</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/demo</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/download-sdk</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
+	<sitemap>
 
-	<url>
-		<loc>http://virtocommerce.com/shopping-cart</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/b2b-ecommerce</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/product-information-management</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/ecommerce-hosting</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/website-design</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/ecommerce-website</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/ecommerce-marketing</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/price-engine</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	<url>
-		<loc>http://virtocommerce.com/multi-tenant</loc>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	
-</urlset>
+		<loc>http://virtocommerce.com/main_sitemap.xml</loc>
+
+	</sitemap>
+
+	<sitemap>
+
+		<loc>http://virtocommerce.com/apps/categories_sitemap.xml</loc>
+
+	</sitemap>
+
+	<sitemap>
+
+		<loc>http://virtocommerce.com/apps/modules_sitemap.xml</loc>
+
+	</sitemap>
+
+	<sitemap>
+
+		<loc>http://virtocommerce.com/apps/vendors_sitemap.xml</loc>
+
+	</sitemap>
+
+</sitemapindex>
