@@ -252,6 +252,7 @@
     <Content Include="Content\images\technologies\web.jpg" />
     <Content Include="Content\images\vc_fb-2.jpg" />
     <Content Include="Content\images\vc_fb.jpg" />
+    <Content Include="Content\images\virtocommerce.png" />
     <Content Include="Content\images\workflow.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

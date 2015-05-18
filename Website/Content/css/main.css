@@ -1,6 +1,36 @@
 /* ==========================================================================
    Base layer
    ========================================================================== */
+/* Lists */
+    .list,
+    .menu
+    {
+        list-style: none;
+    }
+
+        .list .list-item,
+        .menu .menu-item
+        {
+            margin: 0;
+            padding: 0;
+            text-indent: 0;
+        }
+
+        .list.__inline .list-item,
+        .menu.__inline .menu-item
+        {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            word-spacing: 0;
+        }
+
+        .list .list-item:before,
+        .menu .menu-item:before
+        {
+            display: none;
+        }
+
 #layout
 {
 	min-height: 100%;
@@ -35,7 +65,7 @@
 		.swipe .menu-item
 		{
 			font-size: 13px;
-			padding: 10px 15px;
+			padding: 8px 15px;
 		}
 
 		.swipe .sub-menu
@@ -3131,36 +3161,6 @@
 	{
 		border: 2px solid #ea5564;
 	}
-
-	/* Lists */
-	.list,
-	.menu
-	{
-		list-style: none;
-	}
-
-		.list .list-item,
-		.menu .menu-item
-		{
-			margin: 0;
-			padding: 0;
-			text-indent: 0;
-		}
-
-		.list.__inline .list-item,
-		.menu.__inline .menu-item
-		{
-			display: inline-block;
-			margin: 0;
-			padding: 0;
-			word-spacing: 0;
-		}
-
-		.list .list-item:before,
-		.menu .menu-item:before
-		{
-			display: none;
-		}
 
 	/* Images */
 	.img-300
