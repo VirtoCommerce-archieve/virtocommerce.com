@@ -172,6 +172,7 @@
     <Content Include="Content\images\bg-pattern.jpg" />
     <Content Include="Content\images\bg-planet.png" />
     <Content Include="Content\images\bg-research.jpg" />
+    <Content Include="Content\images\Blue-black.png" />
     <Content Include="Content\images\business-features\1.png" />
     <Content Include="Content\images\business-features\2.png" />
     <Content Include="Content\images\business-features\3.png" />
@@ -242,6 +243,7 @@
     <Content Include="Content\images\partners\aydus-consulting.jpg" />
     <Content Include="Content\images\partners\icube.jpg" />
     <Content Include="Content\images\partners\olympic.jpg" />
+    <Content Include="Content\images\PayPal.png" />
     <Content Include="Content\images\promise.jpg" />
     <Content Include="Content\images\schema.png" />
     <Content Include="Content\images\technologies\angularjs.png" />
