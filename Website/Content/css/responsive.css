@@ -238,6 +238,21 @@
 		margin: 0 0 60px;
 	}
 
+	.pricing-row .pricing-row_name
+	{
+		font-size: 30px;
+	}
+
+	.pricing-row .pricing-row_cost
+	{
+		font-size: 30px;
+	}
+
+	.pricing-row .pricing-row_cost *
+	{
+		font-size: 20px;
+	}
+
 	/* Footer */
 	.footer-wrap .column .dev .menu + .menu
 	{
@@ -957,6 +972,54 @@
 	.contacts .list-item
 	{
 		font-size: 15px;
+	}
+
+	/* Pricing */
+	.list.__plans .list-item
+	{
+		width: 50%;
+	}
+
+	.list.__plans :nth-child(3) .list-name::before
+	{
+		display: none;
+	}
+
+	.list.__plans .list-item:last-child .list-name
+	{
+		-webkit-border-radius: 0;
+				border-radius: 0;
+	}
+
+	.pricing-hosted .hosting
+	{
+		padding: 0;
+	}
+
+	.pricing-hosted .developer
+	{
+		margin: 30px 0 0;
+	}
+
+	.pricing-additional .add-ons,
+	.pricing-additional .training
+	{
+		float: none;
+		margin: 0 0 30px;
+		width: 100%;
+	}
+
+	.pricing-additional .column + .column,
+	.pricing-additional .training
+	{
+		padding: 0;
+	}
+	
+	.pricing-row .pricing-row_descr,
+	.pricing-row .pricing-row_cost,
+	.pricing-row .pricing-row_cost ~ .pricing-row_text
+	{
+		margin: 0;
 	}
 
 	/* Footer */
@@ -1869,6 +1932,70 @@
 		font-size: 11px;
 	}
 
+	/* Pricing */
+	.list.__plans .list-item
+	{
+		width: 50%;
+	}
+
+	.list.__plans :nth-child(3) .list-name::before
+	{
+		display: none;
+	}
+
+	.list.__plans .list-item:last-child .list-name
+	{
+		-webkit-border-radius: 0;
+				border-radius: 0;
+	}
+
+	.list.__plans .list-item ul
+	{
+		height: 170px;
+	}
+
+	.pricing-additional .add-ons,
+	.pricing-additional .training
+	{
+		float: none;
+		margin: 0 0 30px;
+		width: 100%;
+	}
+
+	.pricing-additional .column + .column,
+	.pricing-additional .training
+	{
+		padding: 0;
+	}
+	
+	.pricing-row .pricing-row_descr,
+	.pricing-row .pricing-row_cost,
+	.pricing-row .pricing-row_cost ~ .pricing-row_text
+	{
+		margin: 0;
+	}
+
+	.management-team .list-item,
+	.our-offices .list-item
+	{
+		margin: 0 0 20px;
+		width: 50%;
+	}
+
+	.management-team .list-pic
+	{
+		max-height: 100px;
+		max-width: 100px;
+	}
+
+	.management-team .list-pic::after
+	{
+		font-size: 11px;
+		height: 30px;
+		line-height: 28px;
+		width: 30px;
+	}
+
 	/* Footer */
 	.footer-wrap
 	{
@@ -1969,6 +2096,30 @@
 	.znode .exchange
 	{
 		display: none;
+	}
+
+	.pricing-hosted .one-time,
+	.pricing-hosted .hosting
+	{
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+
+	.pricing-hosted .pricing-text
+	{
+		height: auto;
+	}
+
+	.pricing-hosted .pricing-cost,
+	.list.__types .list-price
+	{
+		margin: 0 0 10px;
+	}
+
+	.list.__types .list-item
+	{
+		width: 100%;
 	}
 }
 
@@ -2237,5 +2388,47 @@
 	.form .form-input
 	{
 		width: 100%;
+	}
+
+	/* Pricing */
+	.list.__plans .list-item
+	{
+		width: 100%;
+	}
+
+	.list.__plans .list-item + .list-item .list-name::before
+	{
+		display: none;
+	}
+
+	.list.__plans .list-item:last-child .list-name
+	{
+		-webkit-border-radius: 0;
+				border-radius: 0;
+	}
+
+	.list.__plans .list-item ul
+	{
+		height: auto;
+	}
+
+	.management-team .list-item,
+	.our-offices .list-item
+	{
+		width: 100%;
+	}
+
+	.management-team .list-pic
+	{
+		max-height: 150px;
+		max-width: 150px;
+	}
+
+	.management-team .list-pic::after
+	{
+		font-size: 15px;
+		height: 40px;
+		line-height: 38px;
+		width: 40px;
 	}
 }

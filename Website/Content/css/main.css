@@ -2517,6 +2517,484 @@
 						}
 
 
+
+/* Pricing */
+.pricing
+{
+	text-align: center;
+}
+
+	.pricing .column
+	{
+		text-align: left;
+	}
+
+	.pricing .one-time,
+	.pricing .hosting
+	{
+		float: left;
+		padding: 0 20px 0 0;
+		width: 50%;
+
+		-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+
+	.pricing .pricing-t
+	{
+		font-size: 30px;
+		height: 65px;
+		margin: 0 0 20px;
+	}
+
+		.pricing .pricing-t *
+		{
+			color: #999;
+			display: block;
+			font-size: 14px;
+		}
+
+	.pricing .list.__plans
+	{
+		border-bottom: 1px solid #dedede;
+		overflow: hidden;
+		text-align: left;
+		word-spacing: -6px;
+
+		-webkit-border-radius: 5px;
+				border-radius: 5px;
+	}
+
+		.list.__plans .list-item
+		{
+			background: rgba(0,0,0,.05);
+			display: inline-block;
+			position: relative;
+			text-align: center;
+			vertical-align: top;
+			width: 25%;
+			word-spacing: 0;
+
+			-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+		}
+
+		.list.__plans .list-item::after,
+		.list.__plans .list-item:last-child::before
+		{
+			background: #dedede;
+			bottom: 0;
+			content: '';
+			left: 0;
+			position: absolute;
+			top: 54px;
+			width: 1px;
+		}
+
+		.list.__plans .list-item:last-child::before
+		{
+			content: '';
+			left: auto;
+			display: block;
+			right: 0;
+		}
+
+		.list.__plans .list-item:first-child
+		{
+			border-left: none;
+		}
+
+			.list.__plans .list-name
+			{
+				background: #fcb040;
+				color: #fff;
+			    font-size: 24px;
+			    font-weight: 600;
+			    padding: 10px 0;
+			}
+
+			.list.__plans .list-name::before
+			{
+				background: #fff;
+				bottom: 0;
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				width: 1px;
+			}
+
+			.list.__plans :first-child .list-name::before
+			{
+				display: none;
+			}
+
+			.list.__plans .__selected .list-name
+			{
+				background: #ea5564;
+			}
+
+			.list.__plans .list-item:first-child .list-name
+			{
+				border-left: none;
+
+				-webkit-border-radius: 5px 0 0;
+						border-radius: 5px 0 0;
+			}
+
+			.list.__plans .list-item:last-child .list-name
+			{
+				-webkit-border-radius: 0 5px 0 0;
+						border-radius: 0 5px 0 0;
+			}
+
+			.list.__plans .list-price
+			{
+			    font-size: 36px;
+			    font-weight: bold;
+			    height: 54px;
+			    line-height: 1;
+			    padding: 10px 0;
+			}
+
+				.list.__plans .list-price span
+				{
+					color: #ea5564;
+					display: block;
+					font-size: 10px;
+					margin: 5px 0 0;
+					text-transform: uppercase;
+				}
+
+			.list.__plans .list-item ul
+			{
+				display: inline-block;
+				height: 150px;
+				list-style: none;
+				padding: 20px;
+				width: 100%;
+
+				-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+			}
+
+				.list.__plans .list-item li
+				{
+					font-size: 13px;
+					text-align: left;
+					text-indent: -17px;
+				}
+
+			.list.__plans .list-btn
+			{
+				padding: 20px 0;
+			}
+
+				.list.__plans .list-btn .button
+				{
+					width: 170px;
+				}
+
+			.list.__plans .list-price,
+			.list.__plans ul
+			{
+				border-bottom: 1px solid #dedede;
+			}
+
+.pricing-hosted
+{
+	text-align: center;
+}
+
+	.pricing-hosted .columns
+	{
+		text-align: left;
+	}
+
+	.pricing-hosted .one-time,
+	.pricing-hosted .hosting
+	{
+		float: left;
+		padding: 0 30px 0 0;
+		width: 50%;
+
+		-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+
+		.pricing-hosted .pricing-name
+		{
+			background: #ea5564;
+			color: #fff;
+			font-size: 24px;
+			height: 50px;
+			line-height: 44px;
+			text-align: center;
+		}
+
+		.pricing-hosted .__plus .pricing-name
+		{
+			padding-left: 50px;
+			position: relative;
+		}
+
+		.pricing-hosted .__plus .pricing-name::after
+		{
+			background: #6c6f71;
+			content: '+';
+			font-size: 30px;
+			height: 50px;
+			line-height: 44px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 50px;
+		}
+
+		.pricing-hosted .pricing-text
+		{
+			color: #999;
+			font-size: 15px;
+			height: 22px;
+			margin: 5px 0;
+		}
+
+	.pricing-hosted .list.__types
+	{
+		word-spacing: -6px;
+	}
+
+		.list.__types .list-item
+		{
+			color: #363636;
+			display: inline-block;
+			vertical-align: top;
+			width: 33.3333%;
+			word-spacing: 0;
+		}
+
+			.pricing-hosted .pricing-cost,
+			.list.__types .list-price
+			{
+				color: #ea5564;
+				font-size: 36px;
+				margin: 10px 0 30px;
+			}
+
+			.list.__types .list-descr
+			{
+				padding: 0 30px 0 0;
+			}
+
+				.pricing-hosted .pricing-descr *,
+				.list.__types .list-descr *
+				{
+					font-size: 15px;
+					margin: 15px 0;
+				}
+
+			.list.__types .list-name
+			{
+				font-size: 30px;
+				line-height: 1;
+			}
+
+.pricing-additional
+{
+	text-align: center;
+}
+
+	.pricing-additional .add-ons,
+	.pricing-additional .training
+	{
+		float: left;
+		text-align: left;
+		width: 50%;
+
+		-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+
+	.pricing-additional .training
+	{
+		padding: 0 0 0 30px;
+	}
+
+		.pricing-additional .pricing-name
+		{
+			background: #ea5564;
+			color: #fff;
+			font-size: 24px;
+			height: 50px;
+			line-height: 44px;
+			margin: 0 0 20px;
+			text-align: center;
+		}
+
+			.pricing-additional .column + .column
+			{
+				padding: 0 0 0 30px;
+
+				-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+			}
+
+		.pricing-additional .pricing-row
+		{
+			margin: 0 0 10px;
+		}
+
+			.pricing-row .pricing-row_name
+			{
+				font-size: 26px;
+				margin: 0 0 10px;
+			}
+
+			.pricing-row .pricing-row_descr
+			{
+				color: #787878;
+				font-size: 15px;
+				margin: 0 0 20px;
+			}
+
+			.pricing-row .pricing-row_cost
+			{
+				color: #ea5564;
+				font-size: 26px;
+				margin: 0 0 30px;
+			}
+
+				.pricing-row .pricing-row_cost *
+				{
+					font-size: 16px;
+				}
+
+			.pricing-row .pricing-row_text
+			{
+				color: #999;
+				font-size: 14px;
+			}
+
+			.pricing-row .pricing-row_cost ~ .pricing-row_text
+			{
+				margin: -30px 0 0;
+			}
+
+
+/* About us */
+.our-story,
+.our-team,
+.management-team
+{
+	font-size: 15px;
+	margin: 0 0 50px;
+}
+
+	.our-story h3,
+	.our-team h3
+	{
+		margin: 0 0 5px;
+	}
+
+	.management-team .list,
+	.our-offices .list
+	{
+		margin: 0 -15px;
+		word-spacing: -6px;
+	}
+
+		.management-team .list-item,
+		.our-offices .list-item
+		{
+			display: inline-block;
+			padding: 0 15px;
+			text-align: center;
+			vertical-align: top;
+			width: 25%;
+			word-spacing: 0;
+
+			-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+		}
+
+		.our-offices .list-item
+		{
+			text-align: left;
+		}
+
+			.management-team .list-pic
+			{
+				max-height: 200px;
+				margin: 0 auto 20px;
+				position: relative;
+				max-width: 200px;
+			}
+
+			.management-team .list-pic::after
+			{
+				background: #ea5564;
+				color: #fff;
+				content: attr(data-office);
+				font-size: 16px;
+				height: 50px;
+				line-height: 48px;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				top: 0;
+				width: 50px;
+
+				-webkit-border-radius: 50%;
+						border-radius: 50%;
+			}
+
+				.management-team .list-pic img
+				{
+					display: block;
+					max-width: 100%;
+				}
+
+			.management-team .list-name,
+			.our-offices .list-location
+			{
+				color: #363636;
+				font-size: 18px;
+				margin: 0 0 5px;
+			}
+
+			.management-team .list-office
+			{
+				color: #787878;
+				font-size: 15px;
+			}
+
+			.management-team .list-descr,
+			.our-offices .list-descr
+			{
+				font-size: 15px;
+			}
+
+				.management-team .list-descr *,
+				.our-offices .list-descr *
+				{
+					padding: 15px 0 0;
+				}
+
+			.management-team .list-country
+			{
+				font-size: 15px;
+				margin: 20px 0 0;
+			}
+
+			.our-offices .list-map
+			{
+				background: #ccc;
+				height: 150px;
+				margin: 0 0 10px;
+				width: 100%;
+			}
+
+
 /* Footer
 ========================================================================== */
 .footer-wrap
@@ -3264,6 +3742,11 @@
 		padding: 0;
 	}
 
+	table.data
+	{
+		width: 100%;
+	}
+
 	table th,
 	table td
 	{
@@ -3273,6 +3756,13 @@
 		padding: 10px;
 		text-align: left;
 		vertical-align: top;
+	}
+
+	table.data td
+	{
+		border-left: none;
+		border-right: none;
+		padding: 15px 10px;
 	}
 
 	table th,
