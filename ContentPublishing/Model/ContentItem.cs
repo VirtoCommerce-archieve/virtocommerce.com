@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using VirtoCommerce.Publishing.Model;
 
 namespace VirtoCommerce.Helpers.Models
 {
@@ -56,9 +57,9 @@ namespace VirtoCommerce.Helpers.Models
                         }
                     case "published":
                         {
-                            //Published published;
-                            //Enum.TryParse((string)setting.Value, true, out published);
-                            //Published = published;
+                            Published published;
+                            Enum.TryParse((string)setting.Value, true, out published);
+                            Published = published;
                             break;
                         }
                     case "series":
@@ -165,6 +166,8 @@ namespace VirtoCommerce.Helpers.Models
 		public string TwitterDescription { get; set; }
 		public string TwitterImage { get; set; }
 		public string TwitterSite { get; set; }
+
+        public Published Published { get; set; }
 
         public string Url { get; set; }
 
