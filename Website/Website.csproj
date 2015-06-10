@@ -161,6 +161,7 @@
     <Content Include="Content\fonts\segoeuib.svg" />
     <Content Include="Content\fonts\seguisb.svg" />
     <Content Include="Content\images\about\alexander-siniouguine.jpg" />
+    <Content Include="Content\images\about\bg-team.jpg" />
     <Content Include="Content\images\about\eugeny-grigul.jpg" />
     <Content Include="Content\images\about\eugeny-tatarincev.jpg" />
     <Content Include="Content\images\about\igoris-berniukevicius.jpg" />
