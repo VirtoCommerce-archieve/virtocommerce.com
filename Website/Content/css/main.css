@@ -2896,6 +2896,10 @@
 	text-align: center;
 }
 
+.our-story {
+    margin-top: 50px;
+}
+
 .our-team
 {
 	background: url(../images/about/bg-team.jpg) no-repeat scroll 0 0;
