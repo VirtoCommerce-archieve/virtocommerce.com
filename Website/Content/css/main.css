@@ -3007,7 +3007,8 @@
 				.management-team .list-descr *,
 				.our-offices .list-descr *
 				{
-					padding: 15px 0 0;
+					padding: 15px 15px 0;
+				    text-align: left;
 				}
 
 			.management-team .list-country
