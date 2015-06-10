@@ -3007,8 +3007,7 @@
 				.management-team .list-descr *,
 				.our-offices .list-descr *
 				{
-					padding: 15px 15px 0;
-				    text-align: left;
+					padding: 15px 0 0;
 				}
 
 			.management-team .list-country
@@ -3610,6 +3609,11 @@
 	{
 		font-family: inherit;
 		font-size: inherit;
+	}
+
+	.control-group
+	{
+		word-spacing: 0;
 	}
 
 	.control-group label
