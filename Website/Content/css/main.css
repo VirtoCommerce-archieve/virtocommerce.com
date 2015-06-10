@@ -2887,8 +2887,38 @@
 .management-team
 {
 	font-size: 15px;
-	margin: 0 0 50px;
+	margin-bottom: 50px;
+	text-align: left;
 }
+
+.about
+{
+	text-align: center;
+}
+
+.our-team
+{
+	background: url(../images/about/bg-team.jpg) no-repeat scroll 0 0;
+	background-size: cover;
+	color: #fff;
+	height: 340px;
+	text-align: center;
+}
+
+.our-team::after
+{
+	display: inline-block;
+	content: '';
+	height: 100%;
+	vertical-align: middle;
+}
+
+	.our-team .our-inner
+	{
+		display: inline-block;
+		text-align: left;
+		vertical-align: middle;
+	}
 
 	.our-story h3,
 	.our-team h3
@@ -2993,6 +3023,42 @@
 				margin: 0 0 10px;
 				width: 100%;
 			}
+
+
+.our-services .column:first-child
+{
+	margin: 0 0 0 33.3333%;
+}
+
+	.our-services p
+	{
+		font-size: 15px;
+		margin: 15px 30px 15px 0;
+	}
+
+	.our-services .our-services-price
+	{
+		margin: 15px 0;
+	}
+
+		.our-services-price
+		{
+			font-size: 15px;
+		}
+
+		.our-services-price .small
+		{
+			color: #787878;
+			display: block;
+			font-size: 11px;
+			margin: 0 0 2px;
+		}
+
+		.our-services-price .big
+		{
+			color: #ea5564;
+			font-size: 20px;
+		}
 
 
 /* Footer

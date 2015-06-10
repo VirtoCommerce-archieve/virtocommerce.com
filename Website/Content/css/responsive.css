@@ -1022,6 +1022,11 @@
 		margin: 0;
 	}
 
+	.our-services .column:first-child
+	{
+		margin: 0 0 30px;
+	}
+
 	/* Footer */
 	.footer-wrap
 	{
@@ -1994,6 +1999,11 @@
 		height: 30px;
 		line-height: 28px;
 		width: 30px;
+	}
+
+	.our-services .column:first-child
+	{
+		margin: 0 0 30px;
 	}
 
 	/* Footer */
