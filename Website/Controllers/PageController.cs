@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 using VirtoCommerce.Helpers;
 
 namespace MarketplaceWeb.Controllers
@@ -48,6 +49,10 @@ namespace MarketplaceWeb.Controllers
 				{
 					SetSpecialMeta(item);
 					return this.View(item.Layout, item);
+				}
+				else
+				{
+                    throw new HttpException(404, "Page doesn't exist.");
 				}
 			}
 

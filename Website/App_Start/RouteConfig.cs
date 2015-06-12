@@ -32,6 +32,10 @@ namespace VirtoCommerce
                 defaults: new { controller = "Page", action = "Asset" }
             );
 
+            routes.MapRoute(
+              name: "Error",
+              url: "Error/{code}",
+              defaults: new { controller = "Error", action = "Index", code = 500 });
 
 			routes.MapRoute(
 				name: "Default",
