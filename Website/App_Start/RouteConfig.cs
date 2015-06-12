@@ -26,6 +26,13 @@ namespace VirtoCommerce
 				}
 			}
 
+            routes.MapRoute(
+                name: "Asset",
+                url: "assets/{*assetId}",
+                defaults: new { controller = "Page", action = "Asset" }
+            );
+
+
 			routes.MapRoute(
 				name: "Default",
 				url: "{*pageName}",

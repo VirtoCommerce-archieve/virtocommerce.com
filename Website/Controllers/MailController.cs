@@ -1,11 +1,7 @@
 ﻿using SendGrid;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Web;
 using System.Web.Mvc;
 using VirtoCommerce.Binders;
 using VirtoCommerce.Models;
@@ -23,7 +19,7 @@ namespace VirtoCommerce.Controllers
 			var username = ConfigurationManager.AppSettings["SendGridUsername"];
 			var password = ConfigurationManager.AppSettings["SendGridPassword"];
 
-			SendGridMessage message = new SendGridMessage();
+			var message = new SendGridMessage();
 
 			message.AddTo(ConfigurationManager.AppSettings["SupportToEmail"]);
 			message.From = new MailAddress(model.To, model.FullName);
