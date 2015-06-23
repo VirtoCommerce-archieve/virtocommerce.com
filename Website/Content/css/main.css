@@ -1198,6 +1198,7 @@
 				position: relative;
 			}
 
+            .partner .list-item,
 			.roadmap .list-item
 			{
 				margin: 0 0 50px;
@@ -2066,6 +2067,7 @@
 		word-spacing: 0;
 	}
 
+        .roadmap form,
 		.partner form
 		{
 			background: #6c6f71;
@@ -2078,11 +2080,13 @@
 			word-spacing: 0;
 		}
 
+        .roadmap form label,
 		.partner form label
 		{
 			color: #fff;
 		}
 
+            .roadmap .column .control-group,
 			.partner .column .control-group
 			{
 				margin: 0 20px 20px 0;

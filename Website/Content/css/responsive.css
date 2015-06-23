@@ -650,6 +650,7 @@
 	}
 
 	.proposal .list-item,
+    .partner .list-item,
 	.roadmap .list-item
 	{
 		margin: 0 0 30px;
@@ -661,7 +662,8 @@
 		min-height: 120px;
 	}
 
-	.roadmap .list-item
+	.roadmap .list-item,
+    .partner .list-item
 	{
 		padding: 0;
 	}
