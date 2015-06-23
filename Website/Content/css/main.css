@@ -3035,10 +3035,23 @@
 				width: 100%;
 			}
 
+.our-services
+{
+	text-align: center;
+}
 
 .our-services .column:first-child
 {
 	margin: 0 0 0 33.3333%;
+}
+
+.our-services .column
+{
+	padding: 0 10px;
+	text-align: left;
+
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
 }
 
 	.our-services p
@@ -3845,6 +3858,11 @@
 		border-left: none;
 		border-right: none;
 		padding: 15px 10px;
+	}
+
+	table.data.__three td
+	{
+		width: 33.3333%;
 	}
 
 	table th,
