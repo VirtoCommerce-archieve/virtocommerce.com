@@ -28,9 +28,9 @@ body
 {
 	background: #fff;
 	color: #363636;
-	font-family: 'Segoe UI';
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 20px;
-	line-height: 1.4;
+	line-height: 1.6;
 }
 
 /* Clearfix */

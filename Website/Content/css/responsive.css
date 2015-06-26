@@ -1109,6 +1109,11 @@
 		margin: 30px 0 0 ;
 	}
 
+	.features-meta .column
+	{
+		width: 50%;
+	}
+
 	/* Partner */
 	.partner
 	{
@@ -1643,9 +1648,9 @@
 		margin: 25px 0 10px;
 	}
 
-	.features-content
+	.features-content .column .feature-descr
 	{
-		display: none;
+		margin: 0;
 	}
 
 	.feature-info,
@@ -1654,6 +1659,11 @@
 	.feauture-soc_name
 	{
 		display: none;
+	}
+
+	.features-content iframe
+	{
+		height: 300px;
 	}
 
 	.features-meta
@@ -2065,6 +2075,11 @@
 	.columns .block
 	{
 		margin: 30px 0 0;
+	}
+
+	.features-meta .column:first-child
+	{
+		display: none;
 	}
 }
 
