@@ -1120,6 +1120,18 @@
 		text-align: center;
 	}
 
+		.try-it .try-it-text
+		{
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.try-it .button
+		{
+			margin: 0 20px;
+			vertical-align: middle;
+		}
+
 	/* Technologies */
 	.try-it + .technologies .list
 	{
