@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
+﻿using System.Configuration;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace VirtoCommerce.Controllers
 {
-    using System.IO;
-
     [RoutePrefix("api/deploy")]
     public class DeploymentController : ApiController
     {

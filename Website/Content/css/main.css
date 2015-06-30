@@ -1210,6 +1210,7 @@
 				position: relative;
 			}
 
+            .partner .list-item,
 			.roadmap .list-item
 			{
 				margin: 0 0 50px;
@@ -1588,6 +1589,11 @@
 			padding: 0;
 		}
 
+		.features-content .feature-descr
+		{
+			padding: 0;
+		}
+
 		.feature-descr
 		{
 			clear: both;
@@ -1732,6 +1738,7 @@
 	{
 		border-bottom: 1px solid #e6e6e6;
 		padding: 0 0 30px;
+	    overflow: hidden;
 	}
 
 	.features-list .list-item + .list-item
@@ -2077,6 +2084,7 @@
 		word-spacing: 0;
 	}
 
+        .roadmap form,
 		.partner form
 		{
 			background: #6c6f71;
@@ -2089,11 +2097,13 @@
 			word-spacing: 0;
 		}
 
+        .roadmap form label,
 		.partner form label
 		{
 			color: #fff;
 		}
 
+            .roadmap .column .control-group,
 			.partner .column .control-group
 			{
 				margin: 0 20px 20px 0;
@@ -2909,6 +2919,10 @@
 	text-align: center;
 }
 
+.our-story {
+    margin-top: 50px;
+}
+
 .our-team
 {
 	background: url(../images/about/bg-team.jpg) no-repeat scroll 0 0;
@@ -3021,6 +3035,7 @@
 				.our-offices .list-descr *
 				{
 					padding: 15px 0 0;
+					text-align: left;
 				}
 
 			.management-team .list-country
@@ -3347,7 +3362,7 @@
 		color: #000;
 		font-family: 'Lato';
 		font-size: 40px;
-		margin: 45px 0 35px;
+		margin: 25px 0 35px;
 	}
 
 	.title
@@ -3615,7 +3630,7 @@
 
 	.columns .block
 	{
-		margin: 60px 30px 0 0;
+		margin: 30px 30px 0 0;
 	}
 
 	.three .column

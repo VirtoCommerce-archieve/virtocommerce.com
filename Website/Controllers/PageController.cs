@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
+using VirtoCommerce.Helpers;
 
 namespace MarketplaceWeb.Controllers
 {
-	using System.Net.Mail;
-using System.Web.Hosting;
-using System.Web.Mvc;
-using VirtoCommerce.Helpers.Models;
-using VirtoCommerce.Publishing;
-using VirtoCommerce.Publishing.Engines;
+    using System.Web.Hosting;
+    using System.Web.Mvc;
+    using VirtoCommerce.Helpers.Models;
+    using VirtoCommerce.Publishing;
+    using VirtoCommerce.Publishing.Engines;
 
 
 	//[RoutePrefix("")]
@@ -20,6 +18,13 @@ using VirtoCommerce.Publishing.Engines;
 		{
 			return View();
 		}
+
+        [Route("assets/{*assetId}")]
+        public ActionResult Asset(string assetId)
+        {
+            var virtualPath = String.Format("~/App_Data/vc-contents/{0}", assetId);
+            return new DownloadResult(virtualPath);
+        }
 
 		//[Route("{pagename}")]
 		public ActionResult DisplayPage(string pageName)
@@ -44,6 +49,10 @@ using VirtoCommerce.Publishing.Engines;
 				{
 					SetSpecialMeta(item);
 					return this.View(item.Layout, item);
+				}
+				else
+				{
+                    throw new HttpException(404, "Page doesn't exist.");
 				}
 			}
 

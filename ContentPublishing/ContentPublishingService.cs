@@ -59,20 +59,22 @@ namespace VirtoCommerce.Publishing
         /// <summary>
         /// Loads all content items in the certain collection
         /// </summary>
-        /// <param name="collectioName"></param>
+        /// <param name="context"></param>
+        /// <param name="collectionFolder"></param>
         /// <returns></returns>
-        private ContentItem[] GetCollectionContentItemsInternal(SiteContext context, string collectionFolder)
+        private IEnumerable<ContentItem> GetCollectionContentItemsInternal(SiteContext context, string collectionFolder)
         {
+            var extensions = new HashSet<string>(new[] { ".md", ".markdown", ".html" }, StringComparer.OrdinalIgnoreCase);
             var items = new List<ContentItem>();
             if (_fileSystem.Directory.Exists(collectionFolder))
             {
-                items.AddRange(_fileSystem.Directory
-                    .GetFiles(collectionFolder, "*.*", SearchOption.AllDirectories)
-                    .Select(file => CreateContentItem(context, file, _Config))
-                    .Where(post => post != null)
-                );
+                var files = _fileSystem.DirectoryInfo.FromDirectoryName(collectionFolder).GetFiles("*", SearchOption.AllDirectories)
+                    .Where(x => extensions.Contains(x.Extension));
+                items.AddRange(
+                    files.Select(file => CreateContentItem(context, file.FullName, _Config))
+                        .Where(post => post != null));
             }
-            return items.ToArray();
+            return items;
         }
 
         private SiteContext BuildSiteContext(string sourceFolder)

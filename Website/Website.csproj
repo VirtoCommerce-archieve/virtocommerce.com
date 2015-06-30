@@ -144,6 +144,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DownloadResult.cs" />
+    <Compile Include="Helpers\ExtensionMapper.cs" />
     <Compile Include="Models\MailModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -357,7 +359,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Helpers\" />
     <Folder Include="Views\Mail\" />
   </ItemGroup>
   <ItemGroup>
