@@ -67,6 +67,7 @@ namespace VirtoCommerce.Helpers.Models
                             //Series = (Series)setting.Value;
                             break;
                         }
+                    case "description":
                     case "metadescription":
                         {
                             MetaDescription = (string)setting.Value;
