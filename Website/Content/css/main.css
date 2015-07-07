@@ -521,7 +521,7 @@
 
 		.main-enterprise .presentation
 		{
-			background: url(../images/imac.png) no-repeat scroll 100% 35px;
+			background: url(/assets/images/home/hero.png) no-repeat scroll 100% 35px;
 			background-size: 550px;
 			height: 100%;
 			position: relative;
