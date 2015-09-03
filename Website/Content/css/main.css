@@ -1079,6 +1079,11 @@
 			padding: 0;
 		}
 
+        .advantages .features-list li {
+            padding: 0;
+            list-style-type: circle;
+        }
+
 			.advantages .list-item img
 			{
 				border: 1px solid #ccc;
