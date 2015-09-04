@@ -1066,11 +1066,17 @@
 		}
 
 	/* Advantages */
-	.advantages
+	.advantages 
 	{
 		margin-bottom: 10px;
 		margin-top: 60px;
 	}
+
+		.advantages h2
+		{
+			margin-top: 10px;
+            margin-bottom: 10px;
+		}
 
         .advantages .list-item+.list-item {
             margin: 50px 0 0;
@@ -1122,6 +1128,34 @@
 			{
 				font-size: 15px;
 			}
+
+    /* capabilities */
+    .capabilities {
+        padding-top: 30px;
+    }
+
+    .capabilities .block p {
+        font-size: 16px;
+    }
+
+	.capabilities .list li
+	{
+		font-size: 16px;
+        list-style: none;
+	}
+    .capabilities li:before {
+        display: none;
+    }
+
+	.capabilities h2
+	{
+		font-size: 23px;
+	}
+
+	.capabilities h3
+	{
+		font-size: 18px;
+	}
 
 	/* Try it */
 	.try-it

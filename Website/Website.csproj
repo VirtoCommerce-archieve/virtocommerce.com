@@ -358,7 +358,7 @@
     <Content Include="Views\Page\BusinessPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\vc-contents\images\features\" />
     <Folder Include="Views\Mail\" />
   </ItemGroup>
   <ItemGroup>
