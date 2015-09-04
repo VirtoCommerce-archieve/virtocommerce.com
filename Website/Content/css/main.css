@@ -1082,7 +1082,7 @@
         .advantages .features-list li {
             padding: 0;
             text-indent: 0px;
-
+            list-style-type: none;
         }
 
 			.advantages .list-item img
