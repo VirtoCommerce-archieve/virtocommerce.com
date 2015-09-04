@@ -1085,6 +1085,10 @@
             list-style-type: none;
         }
 
+        .advantages .list-item+.list-item {
+            margin: 50px 0 0;
+        }
+
 			.advantages .list-item img
 			{
 				border: 1px solid #ccc;
