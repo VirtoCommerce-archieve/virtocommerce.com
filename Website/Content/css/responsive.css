@@ -876,6 +876,11 @@
 		width: 220px;
 	}
 
+	.list.__studies .list-item
+	{
+		width: 50%;
+	}
+
 	.buttons .column
 	{
 		width: 50%;
@@ -1732,6 +1737,11 @@
 	.list.__video .list-item
 	{
 		width: 220px;
+	}
+
+	.list.__studies .list-item
+	{
+		width: 100%;
 	}
 
 	.buttons .column

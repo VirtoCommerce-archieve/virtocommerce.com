@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <NuGetPackageImportStamp>201c5d43</NuGetPackageImportStamp>
     <ApplicationInsightsResourceId>/subscriptions/81cc4531-c0e9-47c9-b752-0e9d4d46d2ff/resourcegroups/Группа/providers/microsoft.insights/components/virtocommerce-www</ApplicationInsightsResourceId>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -150,10 +151,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\flags.css" />
     <Content Include="Content\css\fonts.css" />
     <Content Include="Content\css\main.css" />
@@ -264,14 +261,7 @@
     <Content Include="Content\images\virtocommerce.png" />
     <Content Include="Content\images\workflow.jpg" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\fonts\segoeui.eot" />
     <Content Include="Content\fonts\segoeui.woff" />
     <Content Include="Content\fonts\segoeuib.eot" />
@@ -286,8 +276,6 @@
     <Content Include="google7cdac468480e4ec4.html" />
     <Content Include="main_sitemap.xml" />
     <Content Include="robots.txt" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
@@ -301,7 +289,6 @@
     <Content Include="Scripts\js\main.js" />
     <Content Include="Scripts\js\modernizr.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
