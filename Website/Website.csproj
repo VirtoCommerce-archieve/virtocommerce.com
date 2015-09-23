@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <NuGetPackageImportStamp>201c5d43</NuGetPackageImportStamp>
     <ApplicationInsightsResourceId>/subscriptions/81cc4531-c0e9-47c9-b752-0e9d4d46d2ff/resourcegroups/Группа/providers/microsoft.insights/components/virtocommerce-www</ApplicationInsightsResourceId>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -150,6 +151,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BingSiteAuth.xml" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -282,6 +284,7 @@
     <Content Include="Files\Feature-Guide.pdf" />
     <Content Include="Files\Kitmall-case-study.pdf" />
     <Content Include="Files\rtb-case-study.pdf" />
+    <Content Include="yandex_4c3405717751701c.html" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="google7cdac468480e4ec4.html" />
     <Content Include="main_sitemap.xml" />
@@ -308,7 +311,9 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="sitemap.xml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
