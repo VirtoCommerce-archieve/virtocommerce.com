@@ -114,14 +114,20 @@
 	/* Advantages */
 	.advantages .list-item p
 	{
-		font-size: 20px;
+		font-size: 16px;
+	}
+
+	.advantages .features-list li
+	{
+		font-size: 16px;
 	}
 
 	.technologies .list
 	{
 		height: auto;
 		padding: 30px 0;
-	}
+	} 
+
 
 	/* About VC */
 	.about-vc p
@@ -605,6 +611,11 @@
 		font-size: 15px;
 	}
 
+	.advantages .features-list li
+	{
+		font-size: 15px;
+	}
+
 	.advantages .list-item .link
 	{
 		font-size: 13px;
@@ -863,6 +874,11 @@
 	.list.__video .list-item
 	{
 		width: 220px;
+	}
+
+	.list.__studies .list-item
+	{
+		width: 50%;
 	}
 
 	.buttons .column
@@ -1721,6 +1737,11 @@
 	.list.__video .list-item
 	{
 		width: 220px;
+	}
+
+	.list.__studies .list-item
+	{
+		width: 100%;
 	}
 
 	.buttons .column
