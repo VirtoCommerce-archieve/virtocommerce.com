@@ -29,6 +29,7 @@ namespace MarketplaceWeb.Controllers
 		//[Route("{pagename}")]
 		public ActionResult DisplayPage(string pageName)
 		{
+            pageName = TrimPageName(pageName);
 			SetMeta();
             SetPartnerCanonicalLink();
 
@@ -87,7 +88,17 @@ namespace MarketplaceWeb.Controllers
             }
         }
 
-		private void SetSpecialMeta(ContentItem item)
+        private string TrimPageName(string pageName)
+        {
+            if (!string.IsNullOrEmpty(pageName) && pageName.EndsWith("/"))
+            {
+                pageName = pageName.TrimEnd('/');
+            }
+
+            return pageName;
+        }
+
+        private void SetSpecialMeta(ContentItem item)
 		{
 			ViewBag.Title = item.Title;
 			ViewBag.Canonical = item.Canonical;
