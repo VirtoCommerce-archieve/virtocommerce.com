@@ -12,6 +12,10 @@
 	<meta content="@ViewBag.ItemPropDescription" itemprop="description" />
 	<meta content="@ViewBag.ItemPropImage" itemprop="image" />
 	<link href="https://plus.google.com/+Virtocommerce" rel="publisher" />
+    @if(ViewBag.IsPartnerCanonical)
+    {
+        <link rel="canonical" href="@Url.Content("~/contact-partner")">
+    }
 	<meta name="google-site-verification" content="@ConfigurationManager.AppSettings["GoogleSiteVerificationId"]" />
 	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
 

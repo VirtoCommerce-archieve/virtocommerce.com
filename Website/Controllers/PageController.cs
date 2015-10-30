@@ -30,6 +30,7 @@ namespace MarketplaceWeb.Controllers
 		public ActionResult DisplayPage(string pageName)
 		{
 			SetMeta();
+            SetPartnerCanonicalLink();
 
 			if (String.IsNullOrEmpty(pageName))
 			{
@@ -68,6 +69,23 @@ namespace MarketplaceWeb.Controllers
 			ViewBag.ItemPropDescription = "Multi Channel Ecommerce Platform | Enterprise Shopping Cart Software | VirtoCommerce";
 			ViewBag.ItemPropImage = "/Content/images/virtocommerce.png";
 		}
+
+        private void SetPartnerCanonicalLink()
+        {
+            ViewBag.IsPartnerCanonical = false;
+            try
+            {
+                var pid = (string)HttpContext.Request.QueryString["pid"];
+                if (!string.IsNullOrEmpty(pid))
+                {
+                    ViewBag.IsPartnerCanonical = true;
+                }
+            }
+            catch(Exception)
+            {
+
+            }
+        }
 
 		private void SetSpecialMeta(ContentItem item)
 		{
