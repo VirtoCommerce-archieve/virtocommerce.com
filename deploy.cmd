@@ -73,7 +73,7 @@ echo Handling .NET Web Application deployment.
 
 :: 1. Restore NuGet packages
 IF /I "VirtoCommerce.com.sln" NEQ "" (
-  call :ExecuteCmd nuget restore "%DEPLOYMENT_SOURCE%\VirtoCommerce.com.sln"
+::  call :ExecuteCmd nuget restore "%DEPLOYMENT_SOURCE%\VirtoCommerce.com.sln"
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
