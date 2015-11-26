@@ -20,7 +20,7 @@ IF %ERRORLEVEL% NEQ 0 (
 
 setlocal enabledelayedexpansion
 
-SET ARTIFACTS=%~dp0%..\artifacts
+SET ARTIFACTS=%~dp0%artifacts
 
 IF NOT DEFINED DEPLOYMENT_SOURCE (
   SET DEPLOYMENT_SOURCE=%~dp0%.
@@ -57,9 +57,10 @@ IF DEFINED CLEAN_LOCAL_DEPLOYMENT_TEMP (
   mkdir "%DEPLOYMENT_TEMP%"
 )
 
-IF NOT DEFINED MSBUILD_PATH (
-  SET MSBUILD_PATH=%WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild.exe
-)
+IF NOT DEFINED ProgramFiles(x86) SET ProgramFiles(x86)=%ProgramFiles%
+IF NOT DEFINED MSBUILD_PATH IF EXIST "%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe" SET MSBUILD_PATH=%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe
+IF NOT DEFINED MSBUILD_PATH IF EXIST "%ProgramFiles(x86)%\MSBuild\12.0\Bin\MSBuild.exe" SET MSBUILD_PATH=%ProgramFiles(x86)%\MSBuild\12.0\Bin\MSBuild.exe
+IF NOT DEFINED MSBUILD_PATH SET MSBUILD_PATH=%WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild.exe
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: Deployment
@@ -73,7 +74,7 @@ echo Handling .NET Web Application deployment.
 
 :: 1. Restore NuGet packages
 IF /I "VirtoCommerce.com.sln" NEQ "" (
-::  call :ExecuteCmd nuget restore "%DEPLOYMENT_SOURCE%\VirtoCommerce.com.sln"
+  call :ExecuteCmd nuget restore "%DEPLOYMENT_SOURCE%\VirtoCommerce.com.sln"
   IF !ERRORLEVEL! NEQ 0 goto error
 )
 
@@ -85,6 +86,9 @@ IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
 )
 
 IF !ERRORLEVEL! NEQ 0 goto error
+
+:: Clear build output
+call :ExecuteCmd "%MSBUILD_PATH%" "%DEPLOYMENT_SOURCE%\Website\Website.csproj" /nologo /verbosity:m /t:Clean /p:Configuration=Release;SolutionDir="%DEPLOYMENT_SOURCE%\.\\" %SCM_BUILD_ARGS%
 
 :: 3. KuduSync
 IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
@@ -105,6 +109,7 @@ goto end
 :ExecuteCmd
 setlocal
 set _CMD_=%*
+echo command=%_CMD_%
 call %_CMD_%
 if "%ERRORLEVEL%" NEQ "0" echo Failed exitCode=%ERRORLEVEL%, command=%_CMD_%
 exit /b %ERRORLEVEL%
