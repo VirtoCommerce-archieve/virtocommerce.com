@@ -78,6 +78,14 @@
 		width: 620px;
 	}
 
+    .presentation-image .image
+	{
+		height: 353px;
+		left: 27px;
+		top: 27px;
+		width: 566px;
+	}
+
 	.presentation-title
 	{
 		font-size: 38px;
