@@ -70,10 +70,12 @@
 		height: 635px;
 	}
 
-	.main-enterprise .presentation
+	.presentation-image
 	{
 		background-size: auto;
-		background-position: 100% 60px;
+		height: 572px;
+		top: 60px;
+		width: 620px;
 	}
 
 	.presentation-title

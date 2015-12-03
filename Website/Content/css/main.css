@@ -521,8 +521,6 @@
 
 		.main-enterprise .presentation
 		{
-			background: url(/assets/images/home/hero.png) no-repeat scroll 100% 35px;
-			background-size: 550px;
 			height: 100%;
 			position: relative;
 			z-index: 50;
@@ -534,7 +532,6 @@
 				left: 0;
 				position: absolute;
 				top: 0;
-				width: 480px;
 			}
 
 				.presentation-title
@@ -577,6 +574,27 @@
 						margin: 0 15px 0 0;
 						word-spacing: 0;
 					}
+
+			.presentation-image
+			{
+				background: url(/assets/images/home/hero.png) no-repeat scroll 0 0;
+				background-size: 550px 507px;
+				height: 507px;
+				position: absolute;
+				right: 0;
+				top: 30px;
+				width: 550px;
+			}
+
+				.presentation-image .image
+				{
+					height: 353px;
+					left: 27px;
+					position: absolute;
+					top: 27px;
+					width: 566px;
+					z-index: 50;
+				}
 
 		.main-enterprise .costumers
 		{
