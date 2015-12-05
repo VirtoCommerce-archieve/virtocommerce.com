@@ -3510,7 +3510,7 @@
 	.title
 	{
 		color: #000;
-		font-family: 'Lato';
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 		font-size: 40px;
 		margin: 25px 0 35px;
 		font-weight: 200;
@@ -3519,7 +3519,7 @@
 
 	.title
 	{
-		font-family: 'Lato';
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 		margin: 45px 0 0;
 		font-weight: 200;
 		text-rendering: optimizeLegibility;
@@ -3537,7 +3537,7 @@
 
 	.bold
 	{
-		font-family: 'Lato';
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	}
 
 	.sub-title
