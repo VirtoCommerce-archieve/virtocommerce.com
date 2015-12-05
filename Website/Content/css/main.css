@@ -486,6 +486,8 @@
 				font-family: 'Segoe UI Semibold';
 				font-size: 50px;
 				padding: 25px 0 30px;
+				font-weight: 200;
+    				text-rendering: optimizeLegibility;
 			}
 
 			.slider-descr
