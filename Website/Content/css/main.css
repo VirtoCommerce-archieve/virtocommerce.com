@@ -551,8 +551,10 @@
 				.presentation_sub-title
 				{
 					color: #fff;
-					font-family: "Segoe UI Semibold";
+					font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 					line-height: 1.2;
+					font-weight: 200;
+    					text-rendering: optimizeLegibility;
 				}
 
 					.presentation-title span,
