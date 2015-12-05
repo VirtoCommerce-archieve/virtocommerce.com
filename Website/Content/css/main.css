@@ -1352,6 +1352,8 @@
 				{
 					font-size: 30px;
 					margin: 0 0 15px;
+					font-weight: 200;
+    					text-rendering: optimizeLegibility;
 				}
 
 				.proposal-descr,
