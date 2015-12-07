@@ -395,6 +395,11 @@
 				box-sizing: border-box;
 	}
 
+    .presentation-image
+    {
+        display: none;
+    }
+
 	.presentation-title
 	{
 		display: inline-block;
@@ -1309,6 +1314,11 @@
 				box-sizing: border-box;
 	}
 
+    .presentation-image
+    {
+        display: none;
+    }
+
 	.presentation-title
 	{
 		display: inline-block;
@@ -1470,7 +1480,11 @@
 
 	.advantages .list-item img
 	{
-		display: none;
+        float: none;
+		width: 100%;
+
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
 	}
 
 	.advantages .list-item p
@@ -2139,6 +2153,11 @@
 		-webkit-box-sizing: border-box;
 				box-sizing: border-box;
 	}
+
+    .presentation-image
+    {
+        display: none;
+    }
 
 	.presentation-title
 	{
