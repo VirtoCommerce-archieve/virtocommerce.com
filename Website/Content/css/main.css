@@ -1259,7 +1259,9 @@
 		}
 
 	/* Proposal */
-	.proposal
+	.proposal,
+    .social-proof,
+    .vc-poll
 	{
 		text-align: center;
 	}
@@ -1364,6 +1366,76 @@
 					color: #787878;
 					margin: 0 0 15px;
 				}
+
+    .social-proof
+    {
+        margin-bottom: 40px;
+    }
+
+    .social-proof .columns
+    {
+        margin: 0 -20px;
+    }
+
+        .social-proof .column
+        {
+            padding: 0 20px;
+
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+        }
+
+            .social-proof .sp-row
+            {
+                margin: 0 0 20px;
+                overflow: hidden;
+            }
+
+                .sp-row .sp-pic
+                {
+                    float: left;
+                    width: 80px;
+                }
+
+                    .sp-pic img
+                    {
+                        display: block;
+                        max-width: 100%;
+                    }
+
+                    .sp-pic .sp-name
+                    {
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+
+                .sp-row .sp-descr
+                {
+                    display: block;
+                    font-size: 14px;
+                    overflow: hidden;
+                    padding: 0 0 0 20px;
+                    text-align: left;
+                }
+
+    .vc-poll .poll-row
+    {
+        margin: 0 0 20px;
+        text-align: left;
+    }
+
+        .vc-poll input
+        {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .vc-poll .poll-descr
+        {
+            display: inline-block;
+            font-size: 18px;
+            vertical-align: middle;
+        }
 
 	/* Prices */
 	.prices
