@@ -29,7 +29,12 @@ namespace MarketplaceWeb.Controllers
 		//[Route("{pagename}")]
 		public ActionResult DisplayPage(string pageName)
 		{
-            pageName = TrimPageName(pageName);
+            if(!string.IsNullOrEmpty(pageName) && pageName.EndsWith("/"))
+            {
+                pageName = pageName.TrimEnd('/');
+                return RedirectPermanent("~/" + pageName);
+            }
+
 			SetMeta();
             SetPartnerCanonicalLink();
 
@@ -86,16 +91,6 @@ namespace MarketplaceWeb.Controllers
             {
 
             }
-        }
-
-        private string TrimPageName(string pageName)
-        {
-            if (!string.IsNullOrEmpty(pageName) && pageName.EndsWith("/"))
-            {
-                pageName = pageName.TrimEnd('/');
-            }
-
-            return pageName;
         }
 
         private void SetSpecialMeta(ContentItem item)
