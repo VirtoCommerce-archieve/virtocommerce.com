@@ -112,6 +112,24 @@
 							transition: none;
 				}
 
+		.swipe .form-input
+		{
+			background: rgba(0, 0, 0, 0.2);
+		    border: 1px solid #fcb040;
+		    color: #fcb040;
+		    font-size: 14px;
+		    height: 40px;
+		    margin: 0 15px;
+		    padding: 10px;
+		    width: 228px;
+
+		    -webkit-border-radius: 5px;
+		    		border-radius: 5px;
+
+		    -webkit-box-sizing: border-box;
+		    		box-sizing: border-box;
+		}
+
 
 
 	.responsive,
@@ -174,8 +192,8 @@
 		background: url(../images/icons/phone.png) no-repeat scroll 50% 50%;
 		cursor: pointer;
 		display: inline-block;
-		height: 16px;
-		margin: 20px 0 0 10px;
+		height: 24px;
+		margin: 12px 0 0 10px;
 		padding: 10px;
 		position: relative;
 		width: 16px;
@@ -223,6 +241,40 @@
 			font-size: 15px;
 		}
 
+	/* Head Search */
+	.head-search
+	{
+		margin: 20px 0 0 10px;
+		position: relative;
+		width: 120px;
+
+		-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+
+	.head-search input
+	{
+		border: 1px solid #ddd;
+		font-size: 12px;
+		padding: 5px 30px 5px 5px;
+		width: 100%;
+
+		-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+
+	.head-search .btn
+	{
+		background: url(../images/icons/search.png) no-repeat scroll 0 0;
+		border: none;
+		cursor: pointer;
+		height: 14px;
+		position: absolute;
+		right: 7px;
+		top: 7px;
+		width: 14px;
+	}
+
 	/* Mobile btn */
 	.mobile-btn
 	{
@@ -252,7 +304,7 @@
 	.head-menu
 	{
 		float: right;
-		margin: 20px 0 0;
+		margin: 15px 0 0;
 	}
  
 		.head-menu .menu
@@ -269,7 +321,7 @@
 				line-height: 1;
 				text-align: center;
 				vertical-align: text-top;
-				width: 130px;
+				width: 115px;
 			}
 
 			.no-touch .head-menu .menu.__inline .menu-item.dropdown:hover
@@ -342,7 +394,7 @@
 					background: #fff;
 					border: 1px solid #e8e9ea;
 					margin: 0 0 0 -1px;
-					min-width: 130px;
+					min-width: 115px;
 					opacity: 0;
 					position: absolute;
 					padding: 0 0 15px;
@@ -362,7 +414,7 @@
 					left: 0;
 					position: absolute;
 					top: -1px;
-					width: 130px;
+					width: 115px;
 				}
 
 				.no-touch .head-menu .menu-item.dropdown:hover .menu.__sub
@@ -437,6 +489,7 @@
 
 	.logo,
 	.head-phone,
+	.head-search,
 	.menu.__langs
 	{
 		display: inline-block;
@@ -4183,6 +4236,12 @@
 	.head-phone
 	{
 		background-image: url(../images/icons/phonex2.png);
+		background-size: 16px 16px;
+	}
+
+	.head-phone
+	{
+		background-image: url(../images/icons/searchx2.png);
 		background-size: 16px 16px;
 	}
 

@@ -37,7 +37,6 @@
 		background-color: transparent;
 		background-position: 0 50%;
 		cursor: default;
-		height: auto;
 		padding: 10px 0 10px 20px;
 		width: auto;
 	}
@@ -62,6 +61,11 @@
 	.head-phone_num *
 	{
 		color: #787878;
+	}
+
+	.head-search
+	{
+		width: 200px;
 	}
 	
 	/* Enterprise */
@@ -1238,6 +1242,11 @@
 	.head-phone
 	{
 		margin: 10px 0 0;
+	}
+
+	.head-search
+	{
+		display: none;
 	}
 
 	.mobile-btn
