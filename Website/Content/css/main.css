@@ -565,6 +565,23 @@
 	margin: 0 0 30px;
 }
 
+	#google-search table
+	{
+		margin: 0;
+	}
+
+	#google-search td
+	{
+		border: none;
+		font-size: 13px;
+		padding: 0 8px;
+	}
+
+	#google-search .gsc-url-top
+	{
+		font-size: 12px;
+	}
+
 	/* Enterprise block */
 	.main-enterprise
 	{

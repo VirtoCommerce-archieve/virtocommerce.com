@@ -67,6 +67,21 @@ var VC = {
 		var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
 			results = regex.exec(location.search);
 		return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	},
+
+	addGoogleSearch: function() {
+		if($('#google-search').length) {
+			$('#google-search').html('<gcse:searchresults-only/>');
+
+			var cx = '009379243938517090614:hldteapo-am';
+		    var gcse = document.createElement('script');
+		    gcse.type = 'text/javascript';
+		    gcse.async = true;
+		    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+		        '//cse.google.com/cse.js?cx=' + cx;
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(gcse, s);
+		}
 	}
 }
 
@@ -141,12 +156,16 @@ $(function () {
 
 	/* Меняем описание для блока Joined */
 	VC.changeJoined();
+
+	/* Добавляем Google search */
+	VC.addGoogleSearch();
 	
 
 	$(window).resize(function () {
 		VC.changeCostumers();
 		VC.changeJoined();
 	});
+
 
 	if ($('[name="PartnerId"]').length > 0) {
 		$('[name="PartnerId"]').val(VC.getParameterByName("pid"));
