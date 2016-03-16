@@ -3426,6 +3426,7 @@
 		.footer-wrap .column .links
 		{
 			float: left;
+			width: 125px;
 		}
 
 		.footer-wrap .column .dev
