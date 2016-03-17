@@ -1,0 +1,71 @@
+/* HTML 5 elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{ 
+	display: block;
+}
+
+*
+{
+	margin: 0;
+	outline: none;
+	padding: 0;
+}
+
+html, body
+{
+	height: 100%;
+	width: 100%;
+}
+
+html
+{
+	font-size: 100%;
+
+	-webkit-text-size-adjust: 100%;
+}
+
+body
+{
+	background: #fff;
+	color: #363636;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Clearfix */
+.clearfix:after
+{
+	clear: both;
+	content: '';
+	display: block;
+	font-size: 0;
+}
+
+/* Images */
+img
+{
+	border: none;
+}
+
+/* Headings */
+h1, h2, h3
+{
+	font-weight: normal;
+}
+
+h4
+{
+	margin: 20px 0;
+}
+
+p
+{
+	margin: 15px 0;
+}
+
+ol
+{
+	padding: 0 0 0 20px;
+}
