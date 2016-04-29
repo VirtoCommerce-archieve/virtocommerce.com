@@ -2,24 +2,27 @@ User-agent: *
 Disallow: /js/*.js$
 Disallow: /our-offers/agile-b2b-ecommerce
 Disallow: /static/b2b.htm
-Disallow: /glossary
+Disallow: /*glossary*
 Sitemap: http://virtocommerce.com/sitemap.xml
 
 User-agent: Googlebot
 Disallow: /js/*.js$
 Disallow: /our-offers/agile-b2b-ecommerce
 Disallow: /static/b2b.htm
+Disallow: /*glossary*
 Sitemap: http://virtocommerce.com/sitemap.xml
 
 User-Agent: Bingbot
 Disallow: /js/*.js$
 Disallow: /our-offers/agile-b2b-ecommerce
 Disallow: /static/b2b.htm
+Disallow: /*glossary*
 Sitemap: http://virtocommerce.com/sitemap.xml
 
 User-agent: Yandex
 Disallow: /js/*.js$
 Disallow: /our-offers/agile-b2b-ecommerce
 Disallow: /static/b2b.htm
+Disallow: /*glossary*
 Sitemap: http://virtocommerce.com/sitemap.xml
 Host: virtocommerce.com
