@@ -43,6 +43,11 @@
     	margin: 0 0 0 20px;
     }
 
+    ol
+    {
+        padding: 0 0 0 26px;
+    }
+
 #layout
 {
 	min-height: 100%;
