@@ -36,6 +36,13 @@
             display: none;
         }
 
+    ul ul,
+    ol ul,
+    ol ol
+    {
+    	margin: 0 0 0 20px;
+    }
+
 #layout
 {
 	min-height: 100%;
@@ -3684,7 +3691,6 @@
 	{
 		color: inherit;
 		font-size: 24px;
-		margin: 0 0 25px;
 		font-weight: 200;
 		text-rendering: optimizeLegibility;
 	}
