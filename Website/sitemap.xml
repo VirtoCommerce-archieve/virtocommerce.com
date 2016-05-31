@@ -10,19 +10,19 @@
 
 	<sitemap>
 
-		<loc>http://virtocommerce.com/apps/categories_sitemap.xml</loc>
+		<loc>https://virtocommerce.com/apps/categories_sitemap.xml</loc>
 
 	</sitemap>
 
 	<sitemap>
 
-		<loc>http://virtocommerce.com/apps/modules_sitemap.xml</loc>
+		<loc>https://virtocommerce.com/apps/modules_sitemap.xml</loc>
 
 	</sitemap>
 
 	<sitemap>
 
-		<loc>http://virtocommerce.com/apps/vendors_sitemap.xml</loc>
+		<loc>https://virtocommerce.com/apps/vendors_sitemap.xml</loc>
 
 	</sitemap>
 
