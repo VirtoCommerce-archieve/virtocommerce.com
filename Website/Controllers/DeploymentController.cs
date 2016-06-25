@@ -32,7 +32,7 @@ namespace VirtoCommerce.Controllers
                 */
                 
                 var triggerUrl = ConfigurationManager.AppSettings["DeploymentTriggerUrl"];
-                var deployResponse = await client.PostAsJsonAsync(triggerUrl);
+                var deployResponse = await client.PostAsJsonAsync(triggerUrl, new { format = "basic", url = "https://github.com/VirtoCommerce/virtocommerce.com.git" });
             }
         }
     }
