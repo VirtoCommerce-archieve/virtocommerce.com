@@ -31,7 +31,9 @@ namespace VirtoCommerce.Controllers
                 var deployResponse = await client.PostAsJsonAsync(scmUrl, new { format = "basic", url = "https://github.com/VirtoCommerce/virtocommerce.com.git" });
                 */
                 
+                var authToken = ConfigurationManager.AppSettings["DeployAuthenticationToken"];
                 var triggerUrl = ConfigurationManager.AppSettings["DeploymentTriggerUrl"];
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authToken);
                 var deployResponse = await client.PostAsJsonAsync(triggerUrl, new { format = "basic", url = "https://github.com/VirtoCommerce/virtocommerce.com.git" });
             }
         }
