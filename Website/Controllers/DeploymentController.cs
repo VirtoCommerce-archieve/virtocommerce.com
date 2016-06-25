@@ -23,11 +23,16 @@ namespace VirtoCommerce.Controllers
         {
             using (var client = new HttpClient())
             {
+                // auth token stopped working in June 2016, maybe due to updates
+                /*
                 var authToken = ConfigurationManager.AppSettings["DeployAuthenticationToken"];
                 var scmUrl = "https://virtocommerce-public.scm.azurewebsites.net/deploy";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authToken);
-                var deployResponse = await client.PostAsJsonAsync(scmUrl, new { format = "basic", url = "https://github.com/VirtoCommerce/virtocommerce.com.git" });//.GetAsync(scmUrl);//.PutAsJsonAsync(scmUrl, new StringContent("{}", Encoding.UTF8, "application/json"));
-                //var output = await deployResponse.Content.ReadAsStringAsync();
+                var deployResponse = await client.PostAsJsonAsync(scmUrl, new { format = "basic", url = "https://github.com/VirtoCommerce/virtocommerce.com.git" });
+                */
+                
+                var triggerUrl = ConfigurationManager.AppSettings["DeploymentTriggerUrl"];
+                var deployResponse = await client.PostAsJsonAsync(triggerUrl);
             }
         }
     }
