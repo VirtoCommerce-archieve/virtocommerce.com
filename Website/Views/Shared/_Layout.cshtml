@@ -11,13 +11,13 @@
 	<meta content="@ViewBag.ItemPropName" itemprop="name" />
 	<meta content="@ViewBag.ItemPropDescription" itemprop="description" />
 	<meta content="@ViewBag.ItemPropImage" itemprop="image" />
-	<link href="https://plus.google.com/+Virtocommerce" rel="publisher" />
+	<link href="//plus.google.com/+Virtocommerce" rel="publisher" />
     @if(ViewBag.IsPartnerCanonical)
     {
         <link rel="canonical" href="@Url.Content("~/contact-partner")">
     }
 	<meta name="google-site-verification" content="@ConfigurationManager.AppSettings["GoogleSiteVerificationId"]" />
-	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+	<script type="text/javascript" async="" src="//www.google-analytics.com/ga.js"></script>
 
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
@@ -41,7 +41,7 @@
 			z-index: 9999;
 		}
 	</style>
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="//apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
 	@Html.Partial("_GoogleTagManagerPartial")
